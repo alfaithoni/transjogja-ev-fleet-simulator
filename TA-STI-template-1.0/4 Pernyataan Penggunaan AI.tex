@@ -3,35 +3,53 @@
 Saya yang bertanda tangan di bawah ini menyatakan bahwa dalam penulisan dokumen Tugas Akhir ini,
 saya menggunakan alat bantu kecerdasan artifisial (AI) untuk beberapa aspek tertentu di dalam proses penulisan,
 seperti yang tercantum dalam tabel berikut.
-\begin{table}[h]
-\begin{tabular}{|p{0.5cm}| p{4cm} | p{2.5cm} | p{2.5cm} | p{3cm} @{}| }
-\hline
-\textbf{No.} & \textbf{Jenis} & \textbf{Alat Bantu} & \textbf{Tingkat} & \textbf{Tempat}\\
-\hline
-1 & Memeriksa ejaan dan tata bahasa & Google Gemini & Sedang & Seluruh bab \\
-\hline
-2 & Pembuatan teks & Google Gemini & Sedang & Seluruh bab \\
-\hline
-3 & Pembuatan grafik, gambar, atau ilustrasi & Matplotlib (via Gemini) & Sedang & Bab VI \\
-\hline
-4 & Pencarian informasi atau referensi & Google Gemini & Rendah & Bab II \\
-\hline
-5 & Penyusunan bahan diskusi & Google Gemini & Tinggi & Seluruh bab \\
-\hline
-6 & Penyusunan kode program & Google Gemini & Tinggi & Skrip Python \\
-\hline
-7 & Penyusunan formula atau perhitungan matematis & Google Gemini & Sedang & Bab IV dan VI \\
-\hline
-8 & Penyusunan konsep desain atau algoritma & Google Gemini & Tinggi & Bab IV dan VI \\
-\hline
-9 & Penyusunan analisis data & Google Gemini & Tinggi & Bab VI \\
-\hline
-10 & Penyusunan kesimpulan atau rekomendasi & Google Gemini & Sedang & Bab VI dan VII \\
-\hline
-\end{tabular}
-\end{table}
 
+\footnotesize
+\begin{longtable}{|p{0.4cm}| p{2.2cm} | p{2.2cm} | p{1.1cm} | p{1.6cm} | >{\raggedright\arraybackslash}p{5.8cm}| }
+\hline
+\textbf{No.} & \textbf{Jenis} & \textbf{Alat Bantu} & \textbf{Tingkat} & \textbf{Tempat} & \textbf{Penjelasan}\\
+\hline
+\endfirsthead
 
+\multicolumn{6}{l}{\textit{(Lanjutan dari halaman sebelumnya)}} \\
+\hline
+\textbf{No.} & \textbf{Jenis} & \textbf{Alat Bantu} & \textbf{Tingkat} & \textbf{Tempat} & \textbf{Penjelasan}\\
+\hline
+\endhead
+
+\hline
+\multicolumn{6}{r}{\textit{Bersambung ke halaman berikutnya.}} \\
+\endfoot
+
+\hline
+\endlastfoot
+
+1 & Memeriksa ejaan dan tata bahasa & Google Gemini, Claude & Sedang & Seluruh bab & Pemeriksaan akhir ejaan dan tata bahasa pada seluruh bab. \\
+\hline
+2 & Pembuatan teks & Google Gemini, Claude & Sedang & Seluruh bab & Digunakan sebagai lawan diskusi untuk menyusun draf kalimat/paragraf, substansi dan keputusan akhir tetap pada penulis. \\
+\hline
+3 & Pembuatan grafik, gambar, atau ilustrasi & Matplotlib (via Google Antigravity) & Sedang & Bab VI & Penulisan kode \textit{plotting} untuk grafik hasil skenario simulasi, berdasarkan \path{data/comparison_table_stochastic.csv}. \\
+\hline
+4 & Pencarian informasi atau referensi & Google Gemini, Claude & Rendah & Bab II & Membantu menyusun ringkasan literatur awal, seluruh sumber tetap ditelusuri dan diverifikasi langsung dari sumber aslinya oleh penulis. \\
+\hline
+5 & Penyusunan bahan diskusi & Google Gemini, Claude & Tinggi & Seluruh bab & Digunakan berulang sebagai lawan diskusi untuk menajamkan rumusan masalah, batasan masalah, dan interpretasi hasil. \\
+\hline
+6 & Penyusunan kode program & Google Gemini dan Claude (via Google Antigravity) & Tinggi & Skrip Python & Eksekusi penulisan/pengeditan kode melalui Google Antigravity (proporsi Gemini/Claude relatif seimbang), diaudit berulang melalui sesi terpisah dengan Claude. \\
+\hline
+7 & Penyusunan formula atau perhitungan matematis & Google Gemini, Claude & Sedang & Bab IV dan VI & Membantu verifikasi turunan/implementasi formula (mis. model konsumsi energi) terhadap sumber aslinya. \\
+\hline
+8 & Penyusunan konsep desain atau algoritma & Google Gemini, Claude (via Antigravity dan sesi terpisah) & Tinggi & Bab IV dan VI & Diskusi desain ruang keputusan (lokasi, kapasitas, algoritma pengisian), diverifikasi melalui \textit{smoke-test} dan audit kode independen. \\
+\hline
+9 & Penyusunan analisis data & Google Gemini, Claude & Tinggi & Bab VI & Setiap angka agregat hasil simulasi diverifikasi ulang secara independen (termasuk memeriksa kewajaran hasil) sebelum dianggap valid. \\
+\hline
+10 & Penyusunan kesimpulan atau rekomendasi & Google Gemini, Claude & Sedang & Bab VI dan VII & Lawan diskusi untuk merumuskan kesimpulan dan arah penelitian lanjutan keputusan akhir isi dan interpretasi tetap pada penulis. \\
+\hline
+11 & Verifikasi revisi dosen pembimbing & Claude & Sedang & Seluruh bab & Poin-poin revisi dari dosen pembimbing diverifikasi satu per satu secara independen sebelum draf dianggap final. \\
+\hline
+\end{longtable}
+\normalsize
+
+\vspace{0.5cm}
 Bandung, \today\\
 \vspace{0.2cm}
 \includegraphics[width=3.2cm]{images/ttd.png}\\[-0.4cm]
