@@ -1,0 +1,21 @@
+\chapter*{ABSTRAK}
+\addcontentsline{toc}{chapter}{ABSTRAK}
+
+\begin{center}
+
+    \textbf{Simulasi Operasional Armada Bus Listrik untuk Perencanaan Infrastruktur SPKLU pada Elektrifikasi Penuh TransJogja} \\
+    \vspace{0.4cm}
+    oleh \\
+    \vspace{0.4cm}
+    Muhammad Hanif Al Faithoni\\
+    18221135\\
+\end{center}
+
+
+\begin{spacing}{1.0}
+Elektrifikasi penuh 20 koridor TransJogja menuntut perencanaan operasional dan investasi yang matang, khususnya terkait letak dan kapasitas Stasiun Pengisian Kendaraan Listrik Umum (SPKLU), serta mekanisme pengisian daya baterai yang optimal. Mengingat besarnya risiko pengujian langsung di lapangan, penelitian ini merancang simulasi operasi armada berbasis peristiwa diskrit (\textit{Discrete-Event Simulation}) untuk menjalankan seluruh koridor secara simultan. Mesin simulasi ini diintegrasikan dengan metode Monte Carlo ($N=100$ repetisi) menggunakan distribusi \textit{log-normal} (\textit{Coefficient of Variation} 15\% antar-hari dan 5\% antar-segmen) guna menangkap variabilitas lalu lintas, serta model konsumsi energi baterai rasional polinomial. Evaluasi terhadap 31 skenario komprehensif menghasilkan tiga temuan utama. Pertama, kapasitas SPKLU memiliki titik patah (\textit{regime shift}) yang sangat tajam; contohnya, pengurangan infrastruktur terdistribusi dari 19 menjadi 18 \textit{gun} melonjakkan rata-rata kelumpuhan rute dari 5,52 menjadi 8,85 kejadian per hari. Kedua, penambahan infrastruktur fisik dan algoritma penjadwalan dinamis memecahkan masalah yang berbeda. Penambahan kapasitas fisik pada titik kemacetan menjadi 26 \textit{gun} (S28) paling efektif menekan \textit{headway} rata-rata (26,14 menit) dan meloloskan 17 dari 20 rute pada toleransi kedatangan $\pm$10 menit, namun belum menghilangkan risiko kelumpuhan sepenuhnya (0,01 rute/hari). Sebaliknya, algoritma pengisian dinamis tanpa penambahan infrastruktur (S31) sukses mengeliminasi kelumpuhan rute menjadi nol, walau dengan \textit{headway} yang memburuk (33,10 menit). Ketiga, skenario kombinasi yang menggabungkan infrastruktur 26 \textit{gun} dan algoritma dinamis (S33) mencapai keandalan absolut dengan nol rute terdegradasi pada uji ketahanan 14 hari beruntun, dengan kompromi \textit{headway} moderat (30,78 menit). Karena tidak ada skenario yang meloloskan seluruh rute tanpa kelonggaran toleransi, temuan ini memberikan dasar kuantitatif bagi pembuat kebijakan untuk menyesuaikan target \textit{headway} layanan atau menambah investasi infrastruktur di atas skenario ekuilibrium yang ditemukan pada tugas akhir ini.
+
+\vspace{0.5cm}
+\noindent\textit{Kata kunci: bus listrik, simulasi peristiwa diskrit,
+infrastruktur SPKLU, TransJogja, Monte Carlo, pengisian daya dinamis.}
+\end{spacing}

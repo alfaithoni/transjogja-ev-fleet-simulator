@@ -1,0 +1,29 @@
+{
+  "scenario_id": "s3_mix_charging_n50",
+  "description": "Mix charging: opportunity charging (Adisucipto) saat SoC<=30% di siang hari + depot charging akhir shift. Tanpa bus tambahan. SPKLU tunggal Adisucipto.",
+  "charging_mechanism": "mix",
+  "extra_bus_per_route": 0,
+  "spklu_assignment": "single",
+  "single_spklu": {
+    "id": "SPKLU-ADI",
+    "name": "SPKLU Adisucipto",
+    "travel_min": 30,
+    "charge_min": 60
+  },
+  "depot_config": {
+    "pool_gamping": {
+      "id": "DEPOT-GAM",
+      "charge_min": 240
+    },
+    "pool_banguntapan": {
+      "id": "DEPOT-BGT",
+      "charge_min": 240
+    }
+  },
+  "spklu_n_gun_override": {
+    "SPKLU-ADI": 50,
+    "SPKLU-JOM": 50,
+    "SPKLU-CON": 50,
+    "SPKLU-GIW": 50
+  }
+}

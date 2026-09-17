@@ -1,0 +1,20 @@
+{
+  "scenario_id": "s9b_r14_dynamic_soc35",
+  "description": "Tahap 2B: Rute 14, initial_soc=35%, dynamic_charging=true. Definisi B overlap -> target 80%, durasi 43 menit.",
+  "charging_mechanism": "full_opportunity",
+  "extra_bus_per_route": 0,
+  "spklu_assignment": "single",
+  "single_spklu": {
+    "id": "SPKLU-ADI",
+    "name": "SPKLU Adisucipto",
+    "travel_min": 30,
+    "charge_min": 60
+  },
+  "dynamic_charging": true,
+  "dynamic_charging_params": {
+    "peak_target_soc_pct": 80.0,
+    "offpeak_target_soc_pct": 100.0,
+    "charge_rate_kw": 97.209
+  },
+  "initial_soc_pct": 35.0
+}

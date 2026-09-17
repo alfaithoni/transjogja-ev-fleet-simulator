@@ -1,0 +1,62 @@
+{
+    "scenario_id": "s17_probabilistic_4loc",
+    "scenario_name": "4 Loc: Data Driven",
+    "charging_mechanism": "full_opportunity",
+    "spklu_assignment": "multi_by_route",
+    "spklu_assignment_map": {
+        "SPKLU-ADI": [
+            "1A",
+            "14"
+        ],
+        "SPKLU-NGB": [
+            "1B",
+            "3B",
+            "6",
+            "9",
+            "10",
+            "11",
+            "13",
+            "15"
+        ],
+        "SPKLU-CON": [
+            "2A",
+            "2B",
+            "3A",
+            "4B",
+            "5B",
+            "12"
+        ],
+        "SPKLU-KRI": [
+            "4A",
+            "5A",
+            "8",
+            "L-1"
+        ]
+    },
+    "spklu_details": {
+        "SPKLU-ADI": {
+            "name": "SPKLU Adisucipto",
+            "n_gun": 5,
+            "travel_min": 60,
+            "charge_min": 60
+        },
+        "SPKLU-NGB": {
+            "name": "SPKLU-NGB",
+            "n_gun": 5,
+            "travel_min": 30,
+            "charge_min": 60
+        },
+        "SPKLU-CON": {
+            "name": "SPKLU Terminal Condong Catur",
+            "n_gun": 5,
+            "travel_min": 30,
+            "charge_min": 60
+        },
+        "SPKLU-KRI": {
+            "name": "SPKLU-KRI",
+            "n_gun": 5,
+            "travel_min": 30,
+            "charge_min": 60
+        }
+    }
+}

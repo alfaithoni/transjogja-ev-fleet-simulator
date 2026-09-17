@@ -1,0 +1,62 @@
+{
+    "scenario_id": "s18_old_assumption_4loc",
+    "scenario_name": "4 Loc: Old Assumption",
+    "charging_mechanism": "full_opportunity",
+    "spklu_assignment": "multi_by_route",
+    "spklu_assignment_map": {
+        "SPKLU-ADI": [
+            "1A",
+            "1B",
+            "6",
+            "10",
+            "13",
+            "14",
+            "15"
+        ],
+        "SPKLU-CON": [
+            "2A",
+            "2B",
+            "3A",
+            "12"
+        ],
+        "SPKLU-GIW": [
+            "3B",
+            "4A",
+            "4B",
+            "9",
+            "11"
+        ],
+        "SPKLU-JOM": [
+            "5A",
+            "5B",
+            "8",
+            "L-1"
+        ]
+    },
+    "spklu_details": {
+        "SPKLU-ADI": {
+            "name": "SPKLU Adisucipto",
+            "n_gun": 5,
+            "travel_min": 60,
+            "charge_min": 60
+        },
+        "SPKLU-CON": {
+            "name": "SPKLU Terminal Condong Catur",
+            "n_gun": 5,
+            "travel_min": 30,
+            "charge_min": 60
+        },
+        "SPKLU-GIW": {
+            "name": "SPKLU Terminal Giwangan",
+            "n_gun": 5,
+            "travel_min": 30,
+            "charge_min": 60
+        },
+        "SPKLU-JOM": {
+            "name": "SPKLU Terminal Jombor",
+            "n_gun": 5,
+            "travel_min": 30,
+            "charge_min": 60
+        }
+    }
+}

@@ -1,0 +1,53 @@
+\cleardoublepage
+\vspace{2cm}
+\begin{center}
+{\fontsize{14}{16.8}\selectfont\textbf{DAFTAR SIMBOL}}\\[1em]
+\end{center}
+\label{chap:simbol}
+\addcontentsline{toc}{chapter}{DAFTAR SIMBOL}
+\setcounter{chapter}{0}
+\setcounter{section}{0}
+\vspace{2em}
+
+
+
+
+\begin{longtable}{@{} l >{\raggedright\arraybackslash}p{6.5cm} c @{}}
+\multicolumn{1}{l}{\textbf{Notasi}} & \multicolumn{1}{l}{\textbf{Deskripsi}} & \multicolumn{1}{l}{\parbox[c]{3.5cm}{\centering\textbf{Pemakaian pertama kali}}} \\
+\midrule
+
+% Konsumsi Energi dan Baterai
+$EC(v)$ & Fungsi tingkat konsumsi energi (\textit{Energy Consumption}) dalam satuan kWh/km & \pageref{eq:ec-mamarikas} \\
+$v$ & Kecepatan operasional bus dalam satuan km/jam & \pageref{eq:ec-mamarikas} \\
+$a, b, c, d, e, f, g$ & Koefisien kalibrasi kurva energi spesifik bus pada model Mamarikas & \pageref{eq:ec-mamarikas} \\
+$SoC_i$ & \textit{State of Charge} (tingkat daya baterai tersisa) pada saat tiba di perhentian $i$ & \pageref{eq:soc-update} \\
+$E_{bat}$ & Total kapasitas maksimum baterai bus dalam satuan kWh & \pageref{eq:soc-update} \\
+$d_i$ & Jarak tempuh (metrik spasial) pada segmen perjalanan ke-$i$ dalam satuan km & \pageref{eq:soc-update} \\
+$v_i$ & Kecepatan rata-rata spesifik pada segmen ke-$i$ dalam satuan km/jam & \pageref{eq:soc-update} \\[1ex]
+
+% Variasi dan Randomisasi (Monte Carlo)
+$t_{\text{base}}$ & Waktu tempuh dasar ideal sebuah segmen perjalanan tanpa efek variasi & \pageref{eq:lognormal-time} \\
+$t_{\text{expected}}$ & Ekspektasi waktu tempuh harian setelah dikenakan pengali kemacetan & \pageref{eq:lognormal-time} \\
+$t_{\text{aktual}}$ & Waktu tempuh aktual pada satu realisasi simulasi (\textit{random variate}) & \pageref{eq:lognormal-time} \\
+$M_{\text{daily}}$ & \textit{Modifier} (faktor pengali) tingkat kemacetan harian sistemik & \pageref{eq:lognormal-time} \\
+$CV_{\text{seg}}$ & \textit{Coefficient of Variation} untuk kecepatan level segmen & \pageref{eq:lognormal-time} \\
+$\sigma$ & Parameter deviasi standar dari distribusi \textit{log-normal} & \pageref{eq:lognormal-time} \\
+$\mu$ & Parameter rata-rata (\textit{mean}) dari distribusi \textit{log-normal} & \pageref{eq:lognormal-time} \\
+$N$ & Total jumlah iterasi atau jumlah hari pengujian dalam \textit{Monte Carlo} & \pageref{alg:monte-carlo} \\[1ex]
+
+% Headway dan Layanan
+$\bar{h}_r$ & Rata-rata \textit{headway} (waktu jeda antar-keberangkatan) untuk koridor/rute $r$ & \pageref{eq:headway-dev} \\
+$\Delta h_r$ & Deviasi \textit{headway} rata-rata rute $r$ terhadap patokan standar Dishub & \pageref{eq:headway-dev} \\
+$h_{\text{target},r}$ & Target \textit{headway} resmi yang ditetapkan oleh Dishub DIY untuk rute $r$ & \pageref{eq:headway-dev} \\
+$t_{i,r}$ & Waktu riil keberangkatan rit perjalanan ke-$i$ pada rute $r$ & \pageref{eq:headway-dev} \\
+$N_r$ & Total jumlah keberangkatan rit yang berhasil diselesaikan pada rute $r$ & \pageref{eq:headway-dev} \\[1ex]
+
+% Simulasi, SPKLU, dan Rute Lumpuh
+$B_r$ & Himpunan armada bus yang ditugaskan beroperasi pada rute $r$ & \pageref{eq:degraded-route} \\
+$SoC_b$ & Tingkat daya baterai aktual dari armada bus spesifik $b$ & \pageref{eq:degraded-route} \\
+$w_{q,b}$ & Durasi tunggu (waktu antrean di SPKLU) yang dialami bus $b$ & \pageref{eq:degraded-route} \\
+$t_{\text{cas}}$ & Waktu simulasi riil (menit) saat bus $b$ mulai dialiri listrik di SPKLU & \pageref{eq:degraded-route} \\
+$t_{\text{akhir\_shift}}$ & Batas waktu akhir operasional layanan reguler harian (20.30) & \pageref{eq:degraded-route} \\
+$Q$ & Antrean peristiwa (\textit{Priority Queue}) pada mesin \textit{Discrete-Event Simulation} & \pageref{alg:des-loop} \\
+
+\end{longtable}

@@ -1,0 +1,15 @@
+{
+  "scenario_id": "s9a_r14_static_soc35",
+  "description": "Tahap 2A: Rute 14, initial_soc=35%, dynamic_charging=false. Baseline: charge selalu ke 100% (60 menit).",
+  "charging_mechanism": "full_opportunity",
+  "extra_bus_per_route": 0,
+  "spklu_assignment": "single",
+  "single_spklu": {
+    "id": "SPKLU-ADI",
+    "name": "SPKLU Adisucipto",
+    "travel_min": 30,
+    "charge_min": 60
+  },
+  "dynamic_charging": false,
+  "initial_soc_pct": 35.0
+}

@@ -1,0 +1,19 @@
+{
+  "scenario_id": "s0_asis_mikro",
+  "description": "AS-IS Skala Mikro: Simulasi kondisi nyata saat ini (eksisting) khusus untuk 1 koridor (L-1) yang menggunakan SPKLU Adisucipto secara eksklusif. Digunakan sebagai sanity check baseline validasi awal.",
+  "charging_mechanism": "full_opportunity",
+  "extra_bus_per_route": 0,
+  "spklu_assignment": "single",
+  "single_spklu": {
+    "id": "SPKLU-ADI",
+    "name": "SPKLU Adisucipto",
+    "travel_min": 30,
+    "charge_min": 60
+  },
+  "dynamic_charging": false,
+  "dynamic_charging_params": {},
+  "target_routes": ["L-1"],
+  "_notes": {
+    "expected_result": "Menyimulasikan kondisi nyata hari ini, rute L-1 akan charge siang hari ke 100% (60 menit) tanpa mekanisme dinamis apapun."
+  }
+}

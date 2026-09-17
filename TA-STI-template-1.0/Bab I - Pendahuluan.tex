@@ -1,0 +1,235 @@
+\cleardoublepage % memastikan bab baru dimulai di halaman ganjil (kanan)
+\chapter{PENDAHULUAN}
+\label{chap:pendahuluan}
+
+% --- Latar Belakang ---
+\section{Latar Belakang}
+
+%TODO-CITE: paragraf ini butuh 1-2 sitasi tentang tren elektrifikasi transportasi
+% publik di Indonesia/dunia (mis. target elektrifikasi bus BRT, peta jalan
+% kendaraan listrik nasional). Cari dari referensi yang sudah kamu kumpulkan
+% dan tambahkan entry-nya ke daftar-pustaka.bib.
+Elektrifikasi armada bus menjadi salah satu langkah yang mulai ditempuh
+operator transportasi publik di Indonesia untuk mengurangi emisi dan biaya
+operasional bahan bakar. TransJogja, sebagai operator Bus Rapid Transit di
+Daerah Istimewa Yogyakarta, telah memulai tahap awal elektrifikasi ini dengan
+mengoperasikan 2 unit bus listrik pada Rute L-1 (Terminal Jombor, Malioboro,
+Terminal Jombor), mengisi daya di satu Stasiun Pengisian Kendaraan Listrik
+Umum (SPKLU) di kawasan Adisucipto.
+
+Dinas Perhubungan (Dishub) DIY mempertimbangkan perluasan elektrifikasi ini
+ke seluruh 20 koridor\footnote{Dalam tugas akhir ini, istilah
+\textit{koridor} dan \textit{rute} dipakai bergantian untuk merujuk pada
+unit operasional yang sama -- salah satu dari 20 kode rute TransJogja
+(mis. 1A, 1B, 2A, dst.) -- dan tidak membedakan tingkat hierarki
+keduanya sebagaimana mungkin didefinisikan secara resmi oleh Dishub DIY.}
+TransJogja, yang berarti sekitar 124 sampai 128 bus
+(termasuk cadangan) akan beroperasi penuh bertenaga listrik. Perluasan pada
+skala ini
+membawa persoalan yang berbeda secara mendasar dari operasi 2 bus di 1 rute
+saat ini. Bus listrik memiliki jangkauan terbatas per satu kali pengisian
+penuh (untuk spesifikasi bus TransJogja, sekitar 150 km) dan waktu pengisian
+yang jauh lebih lama dibandingkan pengisian bahan bakar bus diesel. Jika
+lokasi dan kapasitas SPKLU tidak direncanakan dengan tepat, bus berisiko
+kehabisan daya di tengah rute, mengantre lama untuk mengisi daya, atau
+terpaksa memotong jumlah ritasenya, yang pada akhirnya menurunkan
+keteraturan jadwal (headway) yang dirasakan penumpang.
+
+Sampai saat penelitian ini dilakukan, belum ada studi kuantitatif yang
+menjawab pertanyaan operasional mendasar untuk skenario elektrifikasi penuh
+ini: pada titik mana di sepanjang rute bus harus mengisi daya, berapa banyak
+SPKLU yang dibutuhkan dan di lokasi mana, berapa kapasitas (jumlah SPKLU)
+tiap SPKLU harus disediakan, dan mekanisme pengisian daya apa (saat beroperasi
+di sela rit, di depot, atau kombinasi keduanya) yang paling menjaga headway
+tetap sesuai target perencanaan Dishub DIY. Pengujian langsung di lapangan
+untuk menjawab pertanyaan-pertanyaan ini tidak praktis. Dibutuhkan investasi
+infrastruktur SPKLU dan pengadaan bus dalam jumlah besar sebelum hasilnya bisa
+diamati, dengan risiko kerugian operasional bila konfigurasi yang dipilih
+ternyata keliru.
+
+%TODO-CITE: 1 sitasi tentang penggunaan simulasi/Discrete Event Simulation
+% untuk perencanaan infrastruktur transportasi, sebagai justifikasi kenapa
+% pendekatan simulasi dipilih dibanding pengujian langsung.
+Simulasi menawarkan jalan keluar dari keterbatasan ini. Dengan memodelkan
+perilaku drain baterai tiap bus per segmen rute, mekanisme antrean di SPKLU,
+dan variasi kondisi lalu lintas harian, berbagai skenario lokasi, kapasitas,
+dan mekanisme pengisian daya dapat diuji secara cepat dan berulang tanpa
+biaya maupun risiko dari pengujian lapangan. Tugas akhir ini menyusun
+simulasi tersebut: model drain baterai non-linear berbasis literatur,
+mesin simulasi berbasis peristiwa diskrit (\textit{Discrete Event Simulation})
+untuk seluruh 20 koridor TransJogja, dan lapisan stokastik Monte Carlo untuk
+menangkap variasi waktu tempuh harian yang tidak bisa ditangkap oleh simulasi
+deterministik satu skenario saja.
+
+% --- Rumusan Masalah ---
+\section{Rumusan Masalah}
+
+Perluasan elektrifikasi TransJogja dari 2 bus di 1 koridor menjadi seluruh
+20 koridor membawa persoalan lokasi, kapasitas, dan mekanisme pengisian daya
+yang belum terjawab secara kuantitatif. Ketiadaan jawaban ini berisiko
+membuat Dishub DIY mengambil keputusan investasi infrastruktur SPKLU
+berdasarkan asumsi kualitatif semata. Misalnya, menempatkan SPKLU hanya di
+terminal-terminal utama yang sudah ada tanpa memperhitungkan pola permintaan
+pengisian daya riil per koridor, yang berujung pada kegagalan menjaga
+headway operasional setelah elektrifikasi penuh berjalan, atau pada
+pembangunan infrastruktur yang berlebih (dan karenanya boros) di lokasi yang
+sebenarnya tidak menjadi titik kebutuhan utama.
+
+Berdasarkan uraian tersebut, rumusan masalah pada tugas akhir ini adalah
+sebagai berikut:
+\begin{enumerate}
+	\item Bagaimana memodelkan drain baterai non-linear untuk bus listrik
+	TransJogja yang tervalidasi secara kualitatif terhadap data operasional
+	riil Rute L-1?
+	\item Bagaimana membangun mesin simulasi operasi armada yang dapat
+	menjalankan seluruh 20 koridor TransJogja secara simultan, termasuk
+	mekanisme antrean di SPKLU?
+	\item Bagaimana pengaruh skenario lokasi SPKLU terhadap headway operasional
+	dan tingkat kegagalan rute pada kondisi elektrifikasi penuh?
+	\item Berapa kapasitas SPKLU (jumlah SPKLU per lokasi) yang dibutuhkan tiap
+	lokasi, dan pada titik mana penambahan atau pengurangan kapasitas mulai
+	berdampak signifikan terhadap keandalan operasional?
+	\item Bagaimana pengaruh mekanisme pengisian daya (\textit{opportunity
+		charging}, \textit{depot charging}, dan kombinasi keduanya) terhadap
+	headway operasional dan kebutuhan penambahan armada?
+	\item Bagaimana hasil simulasi dapat disajikan secara visual agar mudah
+	dibaca dan dikomunikasikan kepada pemangku kepentingan?
+\end{enumerate}
+
+% --- Tujuan ---
+\section{Tujuan}
+
+Tujuan utama tugas akhir ini adalah menghasilkan rekomendasi kuantitatif
+mengenai lokasi, kapasitas, dan mekanisme pengisian daya SPKLU untuk skenario
+elektrifikasi penuh 20 koridor TransJogja, melalui simulasi drain baterai dan
+operasi armada. Secara lebih rinci, tugas akhir ini bertujuan untuk:
+\begin{enumerate}
+	\item Membangun model drain baterai non-linear untuk bus listrik TransJogja
+	yang divalidasi secara kualitatif\footnote{Validasi kualitatif di sini
+	berarti membandingkan kesesuaian arah dan orde besaran hasil simulasi
+	terhadap data riil, bukan kecocokan numerik presisi -- lihat metode
+	lengkap pada Bab V.} terhadap data operasional riil Rute L-1.
+	\item Membangun mesin simulasi operasi armada berbasis peristiwa diskrit
+	yang dapat menjalankan seluruh 20 koridor TransJogja secara simultan,
+	termasuk mekanisme antrean di SPKLU.
+	\item Membandingkan skenario lokasi SPKLU (kondisi saat ini, rencana yang
+	sudah ada, serta kandidat lokasi baru berbasis analisis data permintaan)
+	terhadap dampaknya pada headway dan tingkat kegagalan rute.
+	\item Membandingkan skenario kapasitas SPKLU (jumlah SPKLU per lokasi) untuk
+	menemukan titik ketika penambahan atau pengurangan kapasitas mulai
+	berdampak signifikan terhadap keandalan operasional (titik patah/\textit{regime
+		shift}).
+	\item Membandingkan skenario mekanisme pengisian daya (\textit{opportunity
+		charging}, \textit{depot charging}, serta \textit{mix charging} sebagai
+	kombinasi keduanya) pada cakupan evaluasi harian (\textit{single-day},
+	lihat Batasan Masalah), beserta kebutuhan penambahan armada yang menyertainya.
+	\item Menyediakan \textit{dashboard} visual yang menampilkan hasil simulasi dalam bentuk
+	peta skematik rute dan animasi pergerakan bus per skenario, sebagai alat
+	bantu komunikasi hasil kepada pemangku kepentingan.
+\end{enumerate}
+
+Kriteria keberhasilan tugas akhir ini adalah tersedianya perbandingan
+kuantitatif (headway aktual terhadap target Dishub DIY, jumlah rute yang
+mengalami kegagalan pengisian daya, dan kebutuhan kapasitas SPKLU) untuk
+minimal 3 skenario lokasi dan 4 skenario mekanisme pengisian daya, disertai
+model drain baterai yang tervalidasi secara kualitatif terhadap baseline
+Rute L-1.
+
+% --- Batasan Masalah ---
+\section{Batasan Masalah}
+
+Untuk menjaga tugas akhir ini tetap dapat diselesaikan dalam waktu yang
+tersedia, beberapa batasan berikut diterapkan:
+\begin{enumerate}
+	\item Simulasi tidak memodelkan keputusan pengemudi atau dispatch secara
+	\textit{real-time} di lapangan; pergerakan bus mengikuti jadwal rit yang
+	dibangkitkan dari data rute.
+	\item Skenario lokasi SPKLU merupakan \textit{input} yang dibandingkan satu
+	sama lain (kondisi saat ini, rencana yang sudah ada, dan kandidat baru
+	berbasis analisis data), bukan hasil optimasi otomatis dari algoritma
+	\textit{greenfield} (algoritma yang mencari lokasi optimal dari nol,
+	tanpa asumsi infrastruktur eksisting). Pemilihan lokasi kandidat dilakukan melalui
+	perbandingan skenario (\textit{grid search}/\textit{scenario comparison}),
+	bukan algoritma metaheuristik atau \textit{reinforcement learning} formal.
+	\item Simulasi tidak memodelkan efek cuaca atau perilaku penumpang secara
+	mendetail; variasi kondisi lalu lintas direpresentasikan sebagai parameter
+	variabilitas waktu tempuh.
+	\item Tugas akhir ini tidak mencakup studi kelayakan finansial atas investasi
+	infrastruktur SPKLU maupun pengadaan armada.
+	\item Simulasi bersifat harian dan berdiri sendiri per hari (\textit{single-day/stateless}):
+	status daya baterai tiap bus selalu diinisialisasi penuh pada awal hari
+	simulasi, tanpa membawa sisa hasil pengisian daya dari malam sebelumnya.
+	Akibatnya, perbandingan mekanisme pengisian daya pada tugas akhir ini
+	efektif menguji dua rezim operasional siang hari, yaitu \textit{opportunity
+		charging} tersedia versus tidak tersedia, dan bukan mengukur ketiga
+	mekanisme (\textit{opportunity}, \textit{depot}, \textit{mix}) sebagai tiga
+	kondisi yang sepenuhnya independen lintas hari.
+\end{enumerate}
+
+% --- Metodologi Pengerjaan TA ---
+\section{Metodologi}
+
+Tugas akhir ini dikerjakan mengikuti kerangka \textit{Design Thinking}, yang
+terdiri atas lima tahap: \textit{Empathize}, \textit{Define}, \textit{Ideate},
+\textit{Prototype}, dan \textit{Test}. Kelima tahap ini bersifat iteratif.
+Temuan pada tahap \textit{Test} beberapa kali membawa proses kembali ke tahap
+\textit{Ideate} untuk merevisi rancangan skenario sebelum diuji ulang. Kelima
+tahap tersebut diadaptasi ke konteks pengerjaan tugas akhir sebagai berikut:
+\begin{enumerate}
+	\item \textbf{Empathize (Pemahaman Kondisi Saat Ini):} investigasi kondisi
+	operasional TransJogja saat ini melalui data rute (jarak antar-halte,
+	jumlah bus, target headway per koridor), spesifikasi bus listrik, dan
+	aturan operasional pengisian daya, yang diperoleh dari dokumen internal
+	Dishub DIY/operator dan hasil wawancara dengan pihak terkait. Studi
+	literatur mengenai model konsumsi energi kendaraan listrik dan metode
+	simulasi peristiwa diskrit untuk sistem transportasi turut dilakukan pada
+	tahap ini sebagai dasar pemilihan pendekatan. Hasil tahap ini dijelaskan
+	pada Bab II.
+	\item \textbf{Define (Perumusan Masalah):} menganalisis data dan hasil studi
+	literatur dari tahap \textit{Empathize} untuk merumuskan persoalan secara
+	spesifik, menentukan baseline validasi (Rute L-1), dan menyusun daftar
+	skenario lokasi, kapasitas, serta mekanisme pengisian daya yang akan diuji.
+	Hasil tahap ini dijelaskan pada Bab III.
+	\item \textbf{Ideate (Perancangan Solusi):} merancang model drain baterai,
+	arsitektur mesin simulasi berbasis peristiwa diskrit, struktur data
+	skenario, dan rancangan dasbor visual, berdasarkan hasil perumusan masalah.
+	Hasil tahap ini dijelaskan pada Bab IV.
+	\item \textbf{Prototype (Implementasi):} membangun purwarupa model dan mesin
+	simulasi, mengalibrasi model drain baterai terhadap baseline Rute L-1, dan
+	mengimplementasikan dasbor visual berbasis web. Hasil tahap ini dijelaskan
+	pada Bab V.
+	\item \textbf{Test (Evaluasi):} menjalankan simulasi Monte Carlo (repetisi
+	hari dengan variasi waktu tempuh acak) untuk tiap skenario lokasi,
+	kapasitas, dan mekanisme pengisian daya, dibandingkan berdasarkan headway
+	aktual, tingkat kegagalan rute, dan metrik antrean SPKLU. Hasil pengujian
+	yang menunjukkan kekurangan pada rancangan skenario tertentu ditindaklanjuti
+	dengan kembali ke tahap \textit{Ideate} untuk perbaikan. Hasil tahap ini
+	dijelaskan pada Bab VI.
+\end{enumerate}
+Kesimpulan dan saran yang ditarik dari keseluruhan proses ini dijelaskan pada
+Bab VII.
+
+% --- Sistematika Penulisan ---
+\section{Sistematika Penulisan}
+
+Laporan tugas akhir ini disusun dalam tujuh bab dengan sistematika sebagai
+berikut:
+\begin{enumerate}
+	\item Bab I Pendahuluan: berisi latar belakang, rumusan masalah, tujuan,
+	batasan masalah, metodologi, dan sistematika penulisan.
+	\item Bab II Studi Literatur: berisi kajian mengenai model konsumsi energi
+	kendaraan listrik, metode simulasi peristiwa diskrit, dan penelitian
+	terkait perencanaan infrastruktur pengisian daya kendaraan listrik.
+	\item Bab III Analisis: berisi analisis kebutuhan data, penentuan baseline
+	validasi, dan rancangan skenario pengujian lokasi, kapasitas, serta
+	mekanisme pengisian daya SPKLU.
+	\item Bab IV Perancangan: berisi rancangan model drain baterai, arsitektur
+	mesin simulasi, struktur data skenario, dan rancangan dasbor visual.
+	\item Bab V Implementasi: berisi penjelasan implementasi model, mesin
+	simulasi, kalibrasi terhadap baseline Rute L-1, dan dasbor visual.
+	\item Bab VI Evaluasi: berisi hasil simulasi Monte Carlo dan perbandingan
+	skenario lokasi, kapasitas, dan mekanisme pengisian daya SPKLU terhadap
+	headway operasional dan tingkat kegagalan rute.
+	\item Bab VII Kesimpulan dan Saran: berisi kesimpulan dari hasil tugas akhir
+	dan saran untuk pengembangan lebih lanjut.
+\end{enumerate}

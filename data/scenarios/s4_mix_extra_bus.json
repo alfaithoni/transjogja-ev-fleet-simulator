@@ -1,0 +1,23 @@
+{
+  "scenario_id": "s4_mix_extra_bus",
+  "description": "Mix charging: Depot + Opportunity (Adisucipto saja) + 1 bus tambahan per koridor. Bandingkan dengan s3 (0 extra bus, 1 SPKLU) untuk mengukur kontribusi bus tambahan terhadap headway.",
+  "charging_mechanism": "mix",
+  "extra_bus_per_route": 1,
+  "spklu_assignment": "single",
+  "single_spklu": {
+    "id": "SPKLU-ADI",
+    "name": "SPKLU Adisucipto",
+    "travel_min": 30,
+    "charge_min": 60
+  },
+  "depot_config": {
+    "pool_gamping": {
+      "id": "DEPOT-GAM",
+      "charge_min": 240
+    },
+    "pool_banguntapan": {
+      "id": "DEPOT-BGT",
+      "charge_min": 240
+    }
+  }
+}

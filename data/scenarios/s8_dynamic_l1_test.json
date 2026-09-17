@@ -1,0 +1,24 @@
+{
+  "scenario_id": "s8_dynamic_l1_test",
+  "description": "Fase 3.6 Tahap 1: L-1 saja, dynamic_charging=true. Sanity check: trigger di off-peak (12:xx WIB), target_soc=100%, hasil harus identik 60 menit dengan baseline.",
+  "charging_mechanism": "full_opportunity",
+  "extra_bus_per_route": 0,
+  "spklu_assignment": "single",
+  "single_spklu": {
+    "id": "SPKLU-ADI",
+    "name": "SPKLU Adisucipto",
+    "travel_min": 30,
+    "charge_min": 60
+  },
+  "dynamic_charging": true,
+  "dynamic_charging_params": {
+    "peak_target_soc_pct": 80.0,
+    "offpeak_target_soc_pct": 100.0,
+    "charge_rate_kw": 97.209
+  },
+  "_notes": {
+    "charge_rate_kw_derivation": "battery_capacity_kwh_default(138.87) * 0.70 / 1 jam = 97.209 kW. Dikalibrasi agar 30%->100% = 60 menit, identik dengan baseline wawancara.",
+    "peak_windows_minutes": "60-150 (06:30-08:00) dan 630-750 (16:00-18:00)",
+    "expected_result": "L-1 trigger charging di menit 395/417 (off-peak) -> target_soc=100% -> durasi=60 menit -> identik dengan s1_baseline_opportunity"
+  }
+}

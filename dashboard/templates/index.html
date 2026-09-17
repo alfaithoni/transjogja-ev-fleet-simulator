@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TransJogja EV Sim — Dashboard Visualisasi</title>
+  <meta name="description" content="Dashboard simulasi bus listrik TransJogja: schematic map, playback animasi, analisis SoC, perbandingan skenario charging.">
+  <link rel="stylesheet" href="/static/css/style.css?v=2">
+  <!-- Chart.js dari CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+</head>
+<body>
+
+<!-- ══ Header ══════════════════════════════════════════════════════════════ -->
+<header class="app-header">
+  <div class="app-title">
+    <span class="icon">🚌</span>
+    <div>
+      TransJogja EV Sim
+      <span class="subtitle">Dashboard Visualisasi — Tugas Akhir</span>
+    </div>
+  </div>
+  <div class="header-badges">
+    <span class="badge badge-blue">20 Koridor</span>
+  </div>
+</header>
+
+<!-- ══ Body ════════════════════════════════════════════════════════════════ -->
+<div class="app-body">
+
+  <!-- ── Left: Schematic Map ─────────────────────────────────────────── -->
+  <div class="map-panel">
+    <div class="map-panel-header">
+      <h2>🗺 Schematic Map — Topologi 20 Koridor</h2>
+      <span id="map-loading" class="badge badge-yellow" style="display:none">Memuat…</span>
+    </div>
+    <div class="map-container">
+      <svg id="schematic-map"></svg>
+    </div>
+    <div id="route-legend" class="route-legend"></div>
+  </div>
+
+  <!-- ── Right: Controls + Metrics + Chart ──────────────────────────── -->
+  <div class="right-panel">
+    <div class="right-panel-inner">
+
+      <!-- Card 1: Panel Kontrol (T-17) -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">🎛 Panel Kontrol Simulasi</span>
+          <div id="status-badges" class="status-row"></div>
+        </div>
+        <div class="card-body">
+          <div class="controls-grid">
+
+            <!-- Dropdown Skenario -->
+            <div class="control-group">
+              <label class="control-label" for="select-scenario">Skenario</label>
+              <select id="select-scenario">
+                <option value="">Memuat…</option>
+              </select>
+            </div>
+
+            <!-- Dropdown Rute -->
+            <div class="control-group">
+              <label class="control-label" for="select-route">Koridor</label>
+              <select id="select-route">
+                <option value="ALL">Semua Rute</option>
+              </select>
+            </div>
+
+            <!-- Tombol Playback -->
+            <div class="control-group full">
+              <label class="control-label">Playback</label>
+              <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+                <div class="playback-controls">
+                  <button id="btn-play"  class="btn btn-primary">▶ Play</button>
+                  <button id="btn-pause" class="btn btn-secondary" disabled>⏸ Pause</button>
+                  <button id="btn-reset" class="btn btn-secondary">⏹ Reset</button>
+                  <button id="btn-regenerate" class="btn btn-secondary" title="Hasilkan Trace Simulasi 1 Hari Acak Baru" style="background-color:var(--bg-card);border:1px solid var(--border);color:var(--text-secondary)">🎲 Acak Ulang</button>
+                </div>
+                <div class="speed-btns">
+                  <button class="speed-btn" data-speed="1">1×</button>
+                  <button class="speed-btn" data-speed="5">5×</button>
+                  <button class="speed-btn active" data-speed="10">10×</button>
+                  <button class="speed-btn" data-speed="30">30×</button>
+                  <button class="speed-btn" data-speed="60">60×</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Time Slider -->
+            <div class="control-group full">
+              <div class="time-display">
+                <span class="time-label">05:30</span>
+                <span id="time-current" class="time-current">05:30</span>
+                <span class="time-label">01:30</span>
+              </div>
+              <input type="range" id="time-slider" min="0" max="1200" value="0" step="1">
+            </div>
+
+          </div><!-- .controls-grid -->
+        </div><!-- .card-body -->
+      </div><!-- .card -->
+
+      <!-- Card 2: Tabel Perbandingan Skenario (T-18) -->
+      <div class="card" style="display:flex;flex-direction:column;min-height:0;flex:1;">
+        <div class="card-header">
+          <span class="card-title">📊 Perbandingan Semua Skenario</span>
+          <span class="badge badge-blue" style="font-size:9px">Klik baris untuk memilih skenario</span>
+        </div>
+        <div class="card-body" style="padding:0;display:flex;flex-direction:column;min-height:0;flex:1;">
+          <div class="metrics-table-wrap" style="flex:1;overflow-y:auto;scrollbar-width:thin;">
+            <table id="metrics-table">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div style="padding:8px 14px;font-size:9px;color:var(--text-dim);border-top:1px solid var(--border);">
+            ⚠ s2 (full_depot): avg_headway = null karena semua rute degraded sebelum hari selesai.
+            Metrik utama s2 adalah routes_degraded_count dan total_breach_hard_limit.
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Grafik SoC (T-18) -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">🔋 Grafik SoC (Seluruh Armada Bus)</span>
+          <span style="font-size:10px;color:var(--text-secondary)" id="chart-route-label"></span>
+        </div>
+        <div class="card-body">
+          <div class="chart-container">
+            <canvas id="soc-canvas"></canvas>
+          </div>
+          <div style="margin-top:8px;font-size:9px;color:var(--text-dim);display:flex;gap:12px;flex-wrap:wrap;">
+            <span>🟡 — Charge threshold (30% SoC)</span>
+            <span>🔴 — Hard limit (20% SoC, AC mati)</span>
+            <span>▲ Charging event</span>
+            <span>✕ Stranded event</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- .right-panel-inner -->
+  </div><!-- .right-panel -->
+
+</div><!-- .app-body -->
+
+<!-- Tooltip for map hover -->
+<div id="map-tooltip" class="map-tooltip">
+  <div class="tooltip-title"></div>
+  <div class="tooltip-body"></div>
+</div>
+
+<!-- Main app (ES module) -->
+<script type="module" src="/static/js/app.js?v=9"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+    "scenario_id": "s11_v2_r14_n1",
+    "description": "Mini test V2 Queue-Aware Dynamic Charging on Route 14 with n_gun=1",
+    "charging_mechanism": "full_opportunity",
+    "extra_bus_per_route": 0,
+    "spklu_assignment": "multi_by_route",
+    "spklu_assignment_map": {
+        "SPKLU-ADI": ["14"]
+    },
+    "spklu_details": {
+        "SPKLU-ADI": {
+            "name": "SPKLU Adisucipto",
+            "travel_min": 30,
+            "charge_min": 60
+        }
+    },
+    "depot_config": {
+        "pool_banguntapan": {
+            "id": "DEPOT-BGT",
+            "charge_min": 240
+        }
+    },
+    "spklu_n_gun_override": {
+        "SPKLU-ADI": 1
+    },
+    "dynamic_charging": true,
+    "dynamic_charging_params": {
+        "peak_target_soc_pct": 80.0,
+        "offpeak_target_soc_pct": 100.0,
+        "charge_rate_kw": 97.209,
+        "queue_threshold_min": 15
+    }
+}

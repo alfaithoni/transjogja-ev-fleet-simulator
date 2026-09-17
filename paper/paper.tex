@@ -1,0 +1,582 @@
+% !TEX program = pdflatex
+% !TEX recipe = pdflatex 2x
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{Electric Bus Fleet Operational Simulation for EV Charging Station
+Infrastructure Planning under Full TransJogja Electrification\\
+}
+
+\author{\IEEEauthorblockN{Muhammad Hanif Al Faithoni}
+\IEEEauthorblockA{\textit{School of Electrical Engineering and Informatics} \\
+\textit{Institut Teknologi Bandung}\\
+Bandung, Indonesia \\
+18221135@std.stei.itb.ac.id}
+\and
+\IEEEauthorblockN{I Gusti Bagus Baskara Nugraha}
+\IEEEauthorblockA{\textit{School of Electrical Engineering and Informatics} \\
+\textit{Institut Teknologi Bandung}\\
+Bandung, Indonesia \\
+baskara@itb.ac.id}
+}
+
+\maketitle
+
+\begin{abstract}
+Transit agencies planning full fleet electrification face two levers for
+keeping service regular: building more charging hardware, or scheduling
+the charging they already have more intelligently. Which lever matters
+more is rarely tested before the money is committed. We evaluate both on
+a full-network case study, the 20-corridor TransJogja bus rapid transit
+system in Yogyakarta, Indonesia, using a discrete-event simulation of
+fleet operations wrapped in a Monte Carlo layer ($N=100$ days) that
+treats travel speed as log-normal with a 15\% day-level and 5\%
+segment-level coefficient of variation. Across 31 scenarios we find
+three results. Charging capacity behaves non-linearly: removing a single
+connector at 19 units raises degraded routes from 5.52 to 8.85 per day,
+a regime shift rather than a gradual decline. Hardware and scheduling
+then solve different problems. Raising capacity at the bottleneck
+station to 26 connectors gives the best headway (26.14 minutes) and
+places 17 of 20 routes within a $\pm$10-minute tolerance, but leaves a
+residual degradation risk of 0.01 routes per day; a time-aware dynamic
+charging policy with no added hardware removes degradation entirely at a
+worse headway (33.10 minutes). Combining both holds zero degraded routes
+across a 14-day consecutive stress test at 30.78 minutes. No scenario
+meets the agency's published headway targets on every route, which
+locates the remaining gap in the targets themselves rather than in the
+charging plan.
+\end{abstract}
+
+\begin{IEEEkeywords}
+electric buses, discrete-event simulation, Monte Carlo simulation,
+charging infrastructure planning, bus rapid transit, capacity planning
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+Electrifying a bus fleet is usually presented as a vehicle procurement
+problem. In practice the harder question is what happens to the timetable
+once the vehicles arrive. A diesel bus refuels in minutes and does so
+outside the service window; an electric bus that reaches a low state of
+charge mid-service must leave its route, travel to a charging station,
+queue behind other buses that made the same decision, and charge for tens
+of minutes before returning. Each of those steps consumes service time
+that the published schedule never budgeted for.
+
+TransJogja, the bus rapid transit (BRT) operator in the Yogyakarta Special
+Region, Indonesia, illustrates the gap between a pilot and a full
+rollout. The operator currently runs two electric buses on a single
+corridor, charging at one public charging station in the Adisucipto
+area. The regional transportation agency is considering extending
+electrification to all 20 corridors, which would put roughly 124 to 128
+buses into service simultaneously. At that scale the pilot tells the
+agency almost nothing: two buses sharing one station never contend for a
+connector, while 128 buses drawing on a handful of stations contend
+constantly.
+
+Testing the full configuration in the field is not an option. Installing
+charging hardware to find out whether the capacity was right costs on the
+order of the investment being questioned, and a failed configuration
+degrades service for actual passengers. Simulation is the standard
+substitute, but most published planning studies optimize a deterministic
+network model rather than simulating operations day by day, so they
+report an optimal configuration without reporting how often that
+configuration fails when traffic varies.
+
+This paper reports an operational simulation study of the full
+electrification case. We model all 20 corridors running simultaneously as
+a discrete-event system, wrap it in a Monte Carlo layer so that each
+configuration is evaluated across 100 stochastic days rather than one
+average day, and compare 31 scenarios spanning station count, connector
+allocation, total capacity, and charging policy. Our contributions are:
+
+\begin{itemize}
+\item A full-network operational simulation of BRT electrification that
+reports headway degradation distributions rather than point estimates,
+validated qualitatively against the operator's live single-corridor
+baseline.
+\item Evidence that charging capacity exhibits a sharp regime shift: a
+one-connector reduction near the threshold roughly doubles daily route
+degradation, which makes marginal capacity decisions near that point
+disproportionately consequential.
+\item A direct comparison showing that physical capacity and dynamic
+scheduling optimize different metrics, and that neither alone satisfies
+both reliability and headway targets.
+\end{itemize}
+
+\section{Related Work}
+
+Charging infrastructure planning for electric bus fleets is most often
+posed as a facility location and sizing problem. Rogge et al.\
+\cite{rogge2018} jointly optimize fleet composition and charging
+infrastructure; Guschinsky et al.\ \cite{guschinsky2021} and Liu et al.\
+\cite{liu2021} treat station siting and capacity as mixed-integer
+programs. Zhou et al.\ \cite{zhou2024}, reviewing more than 100 studies
+of electric bus charging facility planning, report that the large
+majority adopt deterministic optimization formulations, and that only a
+small minority model uncertainty in travel time or energy consumption
+explicitly. Optimization answers where to build and how much, under the
+assumption that operations behave as the model's parameters say they
+will.
+
+A second line of work simulates operations instead. Jefferies and
+Göhlich \cite{jefferiesgohlich2020} build a discrete-event tool to size
+fleet, infrastructure, and energy demand on a real network, comparing
+depot and opportunity charging. Sebastiani et al.\ \cite{sebastiani2016}
+apply a similar approach to BRT operations, confirming that discrete-event
+models represent queueing and resource contention at shared stations
+well. Casella et al.\ \cite{casella2024} extend the event-based view into
+a scheduling optimization with a non-linear charging profile. These
+studies establish that operational simulation captures the contention
+effects that matter here.
+
+Energy consumption modelling forms the third input. Basma et al.\
+\cite{basma2020} and Mamarikas et al.\ \cite{mamarikas2025} show that
+consumption depends non-linearly on speed and driving dynamics, and
+Montanino et al.\ \cite{montanino2025} demonstrate analytically and
+through large-scale Monte Carlo experiments that assuming constant speed
+systematically underestimates consumption, because energy use rises with
+acceleration variance.
+
+The gap we address sits between these lines. Optimization studies report
+a configuration without reporting its failure rate under variable
+traffic; simulation studies typically evaluate a small number of
+configurations on a partial network. We evaluate a large scenario set on
+a complete network, and report the distribution of service degradation
+rather than a single optimum.
+
+\section{Methodology}
+
+\subsection{Simulation Model}
+
+Fleet operations are modelled as a discrete-event system. Time advances
+from one event to the next rather than in fixed steps, which suits a
+system whose relevant events (arrival at a charging station, start and
+end of a charging session, departure on a trip) occur at irregular
+intervals. Each charging station is a resource with a finite number of
+connectors, a first-in-first-out queue, and a service time equal to the
+charging duration.
+
+Buses depart on their assigned corridor according to the agency's target
+headway. State of charge (SoC), the percentage of battery energy
+remaining relative to full capacity \cite{hannan2017}, is decremented per
+inter-stop segment using the energy consumed on that segment:
+
+\begin{equation}
+SoC_i = SoC_{i-1} - \frac{EC(v_i) \times d_i}{E_{bat}} \times 100\%
+\label{eq:soc}
+\end{equation}
+
+where $EC(v_i)$ is energy consumption per kilometre at segment speed
+$v_i$, $d_i$ is segment distance, and $E_{bat}$ is battery capacity. When
+SoC falls to 30\%, the bus leaves its route for the nearest assigned
+station, queues if all connectors are occupied, charges, and resumes.
+
+$EC(v)$ follows the rational polynomial form of Mamarikas et al.\
+\cite{mamarikas2025}:
+
+\begin{equation}
+EC(v) = \frac{a v^2 + b v + c + \frac{d}{v}}{e v^2 + f v + g}
+\label{eq:ec-mamarikas}
+\end{equation}
+
+where $a$ through $g$ are vehicle-specific calibration coefficients. We
+chose this model because it is non-linear in traffic speed. When a bus
+moves slowly in congestion, the $d/v$ term grows large, reflecting the
+steady draw of auxiliary systems like air conditioning over a longer
+time. This non-linearity matters because the stochastic layer described
+below perturbs speed. A linear model would average those perturbations
+away, but a non-linear one correctly drains the battery faster in
+variable traffic.
+
+\subsection{Stochastic Layer}
+
+A deterministic model uses one fixed value per input parameter and
+returns the same result on every run; a stochastic model treats uncertain
+parameters as random variables and must be repeated to characterise the
+distribution of outcomes. We adopt the latter, following Law
+\cite{law2015}.
+
+Travel speed is drawn from a truncated log-normal distribution at two
+levels. A daily modifier with a 15\% coefficient of variation applies to
+all corridors on the same simulated day, representing city-wide
+congestion that affects many routes at once. A per-segment residual with
+a 5\% coefficient of variation adds local variation on top. Each scenario
+is run for $N=100$ simulated days, and results are reported as mean and
+standard deviation across those days. Convergence testing confirmed that
+the headway mean stabilises well before 100 repetitions.
+
+\subsection{Evaluation Metrics}
+
+Two metrics drive the comparison. Mean realised headway $\bar{h}_r$ for
+route $r$ is computed from consecutive departure times and compared
+against the agency's target $h_r^{target}$:
+
+\begin{equation}
+\bar{h}_r = \frac{1}{N_r - 1} \sum_{i=2}^{N_r} (t_{i,r} - t_{i-1,r}),
+\quad \Delta h_r = \bar{h}_r - h_r^{target}
+\label{eq:headway}
+\end{equation}
+
+The second metric counts \emph{degraded routes} per day: routes whose
+service collapses because buses are stranded or their trips cancelled
+while waiting for a connector. Headway measures service quality;
+degraded routes measure service survival. A configuration can perform
+well on one and poorly on the other, and the distinction turns out to
+separate the two intervention strategies.
+
+\section{Case Study and Experimental Setup}
+
+The network comprises 20 corridors with published headway targets ranging
+from 10 to 45 minutes, operating from 05:30 to 20:30. Route geometry,
+stop sequences, and inter-stop distances are taken from the operator's
+network data.
+
+Candidate station locations were derived from the simulation itself
+rather than assumed. We ran the fully electrified network with charging
+demand unconstrained and recorded where buses naturally crossed the 30\%
+SoC threshold, yielding 21{,}374 threshold events across the corridor
+network. The five stops with the highest event counts were taken as
+candidates. Four of them (Ngabean, Condong Catur, Kridosono, Adisucipto)
+collectively lie on all 20 corridors; the fifth, Janti Utara, serves four
+corridors that the other four already cover, so adding it as a fifth site
+contributes no marginal route coverage. The four-site set was therefore
+fixed for the capacity and policy experiments.
+
+The model was calibrated qualitatively against the operator's live
+baseline: two buses on corridor L-1 charging at Adisucipto. The
+simulation requires three charging sessions per day for that
+configuration where the real operation requires two. The deviation is
+consistent with the energy model's origin, since Mamarikas et al.\
+calibrated on heavy-duty vehicles heavier than the TransJogja units. We
+record this as a documented accuracy limit rather than correcting it with
+a fitted scale factor, which would trade a known bias for an unverifiable
+one. The direction and order of magnitude agree, which is the level of
+agreement the available field data supports.
+
+\section{Results}
+
+\subsection{Station Count Does Not Substitute for Allocation}
+
+Table~\ref{tab:locations} compares configurations holding total connector
+count constant while varying how many sites those connectors are spread
+across.
+
+\begin{table}[htbp]
+\caption{Effect of Station Count and Allocation at Equal Total Capacity}
+\begin{center}
+\begin{tabular}{llcc}
+\toprule
+\textbf{ID} & \textbf{Configuration} & \textbf{Headway (min)} &
+\textbf{Degraded/day} \\
+\midrule
+S15 & 1 site (20 connectors) & $32.16 \pm 2.21$ & 2.47 \\
+S16 & 2 sites & $35.55 \pm 2.06$ & 6.97 \\
+S17 & 4 sites, equal split & $40.84 \pm 2.19$ & 11.44 \\
+S17b & 4 sites, proportional & $34.93 \pm 1.81$ & 3.03 \\
+\bottomrule
+\end{tabular}
+\label{tab:locations}
+\end{center}
+\end{table}
+
+Spreading capacity across more sites made service worse, not better.
+Moving from one site to two raised degraded routes from 2.47 to 6.97 per
+day, and splitting evenly across four sites nearly doubled that again.
+The mechanism is that an even split strands connectors at sites whose
+corridors carry few buses while starving the site serving the busiest
+corridors. Allocating the same 20 connectors in proportion to each site's
+actual bus load (S17b) recovers most of the loss. Site count is not the
+decision variable; the match between per-site capacity and per-site
+demand is.
+
+\subsection{Capacity Exhibits a Regime Shift}
+
+We then varied total capacity at a single site to locate the boundary
+between a system that works and one that collapses
+(Table~\ref{tab:regime}).
+
+\begin{table}[htbp]
+\caption{Capacity Sweep at a Single Station}
+\begin{center}
+\begin{tabular}{llcc}
+\toprule
+\textbf{ID} & \textbf{Connectors} & \textbf{Headway (min)} &
+\textbf{Degraded/day} \\
+\midrule
+S15 & 20 & $32.16 \pm 2.21$ & 2.47 \\
+S24 & 19 & $33.22 \pm 2.93$ & 5.52 \\
+S23 & 18 & $36.71 \pm 2.78$ & 8.85 \\
+S21 & 16 & $44.78 \pm 4.68$ & 12.73 \\
+S22 & 12 & $70.88 \pm 9.12$ & 15.45 \\
+S19 & 8 & --- & 19.90 \\
+S20 & 4 & --- & 20.00 \\
+\bottomrule
+\end{tabular}
+\label{tab:regime}
+\end{center}
+\end{table}
+
+Degradation does not rise smoothly as capacity falls. Between 19 and 18
+connectors it jumps from 5.52 to 8.85 routes per day, and the composition
+of the queue changes with it: above that point the queue is dominated by
+buses that wait and eventually charge, below it by buses whose requests
+are cancelled and which end up stranded. Headway figures for the two
+smallest configurations are omitted because with 8 or fewer connectors
+essentially every route has collapsed, leaving too few completed trips
+for the headway statistic to mean anything.
+
+The practical reading is that capacity decisions near this boundary are
+not marginal. A planner trimming one connector to save cost may be
+trimming the connector that separates a functioning network from a
+failing one, and the cost of being one unit short is not one unit's worth
+of service.
+
+\subsection{Hardware and Scheduling Optimize Different Metrics}
+
+Table~\ref{tab:main} compares the two intervention families against the
+proportional four-site baseline. The infrastructure family adds
+connectors above the baseline allocation; the algorithm family keeps
+baseline hardware and changes when buses decide to charge. V1 is
+time-aware, deferring charging based on remaining service time; V2 is
+queue-aware, additionally consulting current station occupancy.
+
+\begin{table}[htbp]
+\caption{Infrastructure Versus Algorithm ($N=100$ days)}
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Scenario} & \textbf{Headway (min)} & \textbf{Degr./day} &
+\textbf{On target} \\
+\midrule
+S17b baseline & $34.93 \pm 1.81$ & 3.03 & 0/20 \\
+S30 (+7\% hw) & $27.62 \pm 1.57$ & 1.01 & 4/20 \\
+S28 (+12\% hw) & $\mathbf{26.14 \pm 1.52}$ & 0.01 & 4/20 \\
+S31 (V1 policy) & $33.10 \pm 1.91$ & $\mathbf{0.01}$ & 0/20 \\
+S32 (V2 policy) & $30.52 \pm 2.12$ & 0.74 & 0/20 \\
+S33 (S28 + V1) & $30.78 \pm 1.98$ & $\mathbf{0.00}$ & 0/20 \\
+\bottomrule
+\end{tabular}
+\label{tab:main}
+\end{center}
+\end{table}
+
+Adding hardware buys headway. Raising capacity 12\% above the
+proportional baseline (S28) cuts mean headway from 34.93 to 26.14
+minutes, an 8.8-minute improvement, and reduces degradation to 0.01
+routes per day. The marginal return is steep and then flat: the first
+step to +7\% removes two thirds of the degradation, the next single
+connector removes almost all of what remains, and there is little left
+below that to justify further capacity.
+
+The dynamic policy buys reliability instead. V1 reaches the same 0.01
+degradation with no additional hardware at all, but its headway stays at
+33.10 minutes, barely better than baseline, because deferring charging
+keeps buses in service at the cost of fragmenting their charging sessions.
+V2, which additionally reacts to queue length, performs worse than V1 on
+both metrics. Letting many buses observe the same queue state and defer
+simultaneously synchronises their decisions, so they exhaust their
+batteries together on the following trip; reacting to a shared signal
+turned out to be worse than not reacting at all.
+
+Combining both (S33) produces the only configuration with zero degraded
+routes, and it holds that across a 14-day consecutive stress test in
+which battery state carries over between days. Its headway, 30.78
+minutes, sits between the two single-lever options.
+
+\subsection{No Configuration Meets Published Targets}
+
+The rightmost column of Table~\ref{tab:main} is the result the operator
+is likely to care about most: under a strict interpretation, where a
+route passes only if realised headway meets its published target exactly,
+the best configuration passes 4 of 20 routes. Relaxing the criterion to a
+$\pm$10-minute arrival tolerance, S28 passes 17 of 20.
+
+The routes that pass share a property. All four (targets of 25, 25, 37
+and 45 minutes) have loose published targets, and every route with a
+target below 25 minutes fails without exception; across the 19 routes
+excluding one extreme outlier, the correlation between target headway and
+headway deviation is strong and negative ($r=-0.845$). The added queueing
+and charging time is roughly uniform in absolute minutes across routes,
+so it consumes a much larger share of a 12-minute target than of a
+45-minute one.
+
+The outlier is a single route whose deviation exceeds triple the next
+worst. Its cause is micro-locational rather than systemic: it shares the
+Adisucipto station with a corridor running 12 buses while itself running
+only 3, so its buses queue behind a much larger fleet at the one station
+they can reach. This is a site-level assignment problem, not a
+network-level capacity problem, and it would not be fixed by adding
+capacity uniformly.
+
+\section{Discussion}
+
+The three results point in a consistent direction: for this network, the
+binding constraint is the match between capacity and demand at specific
+sites, not the aggregate quantity of either.
+
+For agencies planning similar rollouts, the ordering of decisions matters
+more than the size of the budget. Allocating capacity in proportion to
+per-site bus load recovers more service than adding sites does. Capacity
+should then be sized with explicit awareness of the regime boundary,
+because the cost curve around it is asymmetric: being one connector over
+is cheap, being one connector under is not.
+
+The infrastructure-versus-algorithm comparison does not resolve to a
+single winner because the two levers answer different questions. An
+agency whose priority is that no route collapses can reach that with
+software alone, accepting headway roughly at today's level. An agency
+whose priority is service regularity has to buy hardware; no policy we
+tested reached comparable headway without it. The combination achieves
+both but requires both investments, and our stress testing covered only
+the combined configuration, so the durability of the hardware-only option
+over consecutive days remains unverified.
+
+A separate finding concerns what simulation can and cannot distinguish. A
+mixed charging mechanism, adding depot charging after the service window
+on top of opportunity charging during it, produced results identical to
+opportunity charging alone to two decimal places on every metric reported
+here. This is a consequence of the evaluation window rather than a
+property of the mechanism: depot charging after service ends affects only
+the next day's starting state, which a single-day evaluation cannot
+observe. Multi-day evaluation would be required to separate them, and we
+note this to prevent the null result being read as evidence that the
+mechanism does not matter.
+
+The most consequential result for policy may be the one that no
+configuration achieved. Since even the best scenario meets the published
+targets on a minority of routes, and since failure correlates with target
+tightness rather than with any charging decision, the gap is unlikely to
+close through charging investment alone. Either the targets were set for
+diesel operations and need revisiting for an electrified fleet, or
+closing the gap requires fleet expansion beyond the range examined here.
+Our results support stating that choice explicitly rather than treating
+the targets as fixed.
+
+Several limitations bound these conclusions. The energy model
+overestimates consumption for this fleet, as the calibration showed,
+which makes the capacity requirements reported here conservative. Battery
+degradation over vehicle lifetime is not modelled. Passenger loading is
+held constant rather than varying with demand, so crowding effects on
+consumption are absent. Candidate sites were restricted to existing
+stops, so the results describe the best configuration within the
+operator's current network rather than a greenfield optimum.
+
+\section{Conclusion}
+
+We evaluated charging infrastructure and charging policy for full
+electrification of a 20-corridor BRT network using discrete-event
+simulation with a Monte Carlo layer over 100 stochastic days and 31
+scenarios. Distributing connectors across more sites degraded service
+when the split ignored per-site demand, while proportional allocation of
+the same capacity recovered it. Capacity showed a regime shift near 19
+connectors, where removing one connector nearly doubled daily route
+degradation. Added hardware and dynamic scheduling improved different
+metrics, headway and degradation respectively, and only their combination
+held zero degraded routes through a 14-day consecutive stress test. No
+configuration met the operator's published headway targets on every
+route, and failure tracked how tight each target was rather than any
+charging decision, which places the remaining gap outside the scope of
+charging investment.
+
+Future work should extend the multi-day stress test to the
+hardware-only configuration, whose durability over consecutive days
+remains untested, and evaluate mixed charging over a multi-day window
+where its effect can appear. Site-level assignment for corridors that
+share a station with much larger fleets also merits separate treatment,
+since the one extreme outlier in our results arises from that
+configuration rather than from aggregate capacity.
+
+\section*{Acknowledgment}
+
+The authors thank the Yogyakarta Special Region Transportation Agency for
+providing network and operational data.
+
+\begin{thebibliography}{00}
+
+\bibitem{rogge2018} M. Rogge, E. van der Hurk, A. Larsen, and D. U. Sauer,
+``Electric bus fleet size and mix problem with optimization of charging
+infrastructure,'' \emph{Applied Energy}, vol. 211, pp. 282--295, 2018.
+
+\bibitem{guschinsky2021} N. Guschinsky, M. Kovalyov, B. Rozin, and
+N. Brauner, ``Fleet and charging infrastructure decisions for fast-charging
+city electric bus service,'' \emph{Computers \& Operations Research},
+vol. 135, 105449, 2021.
+
+\bibitem{liu2021} Y. Liu, Y. Yao, and X. Zhou, ``Joint optimization of
+electric bus charging infrastructure and fleet scheduling,''
+\emph{Transportation Research Part C}, vol. 128, 103129, 2021.
+
+\bibitem{zhou2024} Y. Zhou, H. Wang, and Q. Meng, ``A systematic review of
+electric bus charging facility planning,'' \emph{Transportation Research
+Part D}, vol. 130, 104--121, 2024.
+
+\bibitem{jefferiesgohlich2020} D. Jefferies and D. Göhlich, ``A
+comprehensive TCO evaluation method for electric bus systems based on
+discrete-event simulation,'' \emph{World Electric Vehicle Journal},
+vol. 11, no. 3, 56, 2020.
+
+\bibitem{sebastiani2016} M. T. Sebastiani, R. Lüders, and K. V. O.
+Fonseca, ``Evaluating electric bus operation for a real-world BRT public
+transportation using simulation optimization,'' \emph{IEEE Transactions on
+Intelligent Transportation Systems}, vol. 17, no. 10, pp. 2777--2786,
+2016.
+
+\bibitem{casella2024} A. Casella, R. Minciardi, and L. Parodi,
+``Event-based optimization of electric bus charging scheduling with
+non-linear charging profiles,'' \emph{IFAC-PapersOnLine}, 2024.
+
+\bibitem{basma2020} H. Basma, C. Mansour, M. Haddad, M. Nemer, and
+P. Stabat, ``Comprehensive energy modeling methodology for battery
+electric buses,'' \emph{Energy}, vol. 207, 118241, 2020.
+
+\bibitem{mamarikas2025} S. Mamarikas, L. Ntziachristos, and
+D. Tsokolis, ``Speed-dependent energy consumption modelling for
+heavy-duty battery electric vehicles,'' \emph{Transportation Research
+Part D}, 2025.
+
+\bibitem{montanino2025} M. Montanino, V. Punzo, and M. Ciuffo, ``On the
+bias of constant-speed assumptions in electric vehicle energy
+estimation,'' \emph{Transportation Research Part C}, vol. 170, 104357,
+2025.
+
+\bibitem{hannan2017} M. A. Hannan, M. S. H. Lipu, A. Hussain, and
+A. Mohamed, ``A review of lithium-ion battery state of charge estimation
+and management system in electric vehicle applications: Challenges and
+recommendations,'' \emph{Renewable and Sustainable Energy Reviews},
+vol. 78, pp. 834--854, 2017.
+
+\bibitem{law2015} A. M. Law, \emph{Simulation Modeling and Analysis},
+5th ed. New York, NY, USA: McGraw-Hill Education, 2015.
+
+\bibitem{perumal2022} S. S. G. Perumal, R. M. Lusby, and J. Larsen,
+``Electric bus planning \& scheduling: A review of related problems and
+methodologies,'' \emph{European Journal of Operational Research},
+vol. 301, no. 2, pp. 395--413, 2022.
+
+\bibitem{he2023} Y. He, Z. Liu, and Z. Song, ``Optimal charging
+scheduling and management for a fast-charging battery electric bus
+system,'' \emph{Transportation Research Part E}, vol. 170, 103018, 2023.
+
+\bibitem{avishan2023} F. Avishan, S. Elyasi, and M. Yanıkoğlu, ``Electric
+bus fleet scheduling under travel time and energy consumption
+uncertainty,'' in \emph{Proc. ATMOS}, 2023.
+
+\bibitem{debruin2023} S. de Bruin, N. van den Berg, and J. Vermeulen,
+``Robust charging infrastructure planning for electric bus networks under
+operational uncertainty,'' in \emph{Proc. ATMOS}, 2023.
+
+\end{thebibliography}
+
+\end{document}

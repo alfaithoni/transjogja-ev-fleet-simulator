@@ -1,0 +1,17 @@
+{
+    "scenario_id": "s27_s17b_full_depot",
+    "scenario_name": "s17b + Full Depot",
+    "charging_mechanism": "full_depot",
+    "spklu_assignment": "none",
+    "extra_bus_per_route": 0,
+    "depot_config": {
+        "pool_gamping": {
+            "id": "DEPOT-GAM",
+            "charge_min": 240
+        },
+        "pool_banguntapan": {
+            "id": "DEPOT-BGT",
+            "charge_min": 240
+        }
+    }
+}

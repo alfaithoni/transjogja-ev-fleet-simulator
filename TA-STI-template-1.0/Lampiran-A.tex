@@ -1,0 +1,32 @@
+\cleardoublepage
+\chapter{KODE PROGRAM INTI}
+
+Sebagian besar dari struktur kode simulasi harian TransJogja-EV-Sim berukuran besar dan terdiri dari ribuan baris kode yang terbagi ke dalam berbagai modul terpisah (mulai dari struktur agen, manajemen SPKLU, ekstraksi rute, visualisasi dasbor, hingga integrasi data), sehingga diunggah dan didokumentasikan di repositori elektronik. 
+
+Namun, bagian terpenting dari kebaruan tugas akhir ini, yakni implementasi kalkulasi \textit{drain} baterai non-linear yang merujuk pada persamaan polinomial Mamarikas et al. (2025), disertakan di bawah ini. Kode ini menunjukkan bagaimana kecepatan fluktuatif bus diterjemahkan menjadi pemborosan baterai dalam simulasi.
+
+\begin{lstlisting}[language=Python, caption={Implementasi Model Konsumsi Energi Non-Linear Mamarikas}, label={lst:mamarikas-ec-lampiran}]
+def mamarikas_ec(self, v: float) -> float:
+    """
+    Hitung konsumsi energi (Wh/km) berbasis kecepatan rata-rata (v)
+    menggunakan Persamaan 1 dari Mamarikas et al. (2025).
+    EC(v) = (a*v^2 + b*v + c + d/v) / (e*v^2 + f*v + g)
+    """
+    v = max(v, 5.0)  # Pengaman matematis (v_min=5 km/jam)
+    
+    a = 0.0185
+    b = 1.40e-8
+    c = 6.91
+    d = 1.54
+    e = 9.64e-6
+    f_coef = 2.79e-4
+    g = 1.15e-4
+    
+    numerator = a*(v**2) + b*v + c + d/v
+    denominator = e*(v**2) + f_coef*v + g
+    return numerator / denominator
+\end{lstlisting}
+
+Fungsi di atas kemudian dipanggil di setiap lintasan per segmen (jarak antar-halte) melalui mekanisme \textit{opportunity charging}, yaitu setiap meter pergerakan dinilai konsumsi baterainya berdasarkan nilai $v$ (kecepatan rata-rata segmen) yang telah diberi variabel acak (*random noise*) berdistribusi log-normal terpotong. 
+
+Selain kode baterai, implementasi algoritma pengisian daya dinamis (V1 dan V2) serta manajemen antrean SPKLU stokastik yang kompleks dapat diperiksa pada submodul \texttt{engine.py} di repositori program.

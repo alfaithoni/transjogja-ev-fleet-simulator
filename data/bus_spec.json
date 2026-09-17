@@ -1,0 +1,62 @@
+{
+  "_comment": "Spesifikasi bus listrik TransJogja (PT MAB). Sumber: Hasil_Wawancara_Bus_Listrik_TransJogja.docx",
+  "_last_updated": "2026-08-06",
+
+  "battery_capacity_kwh_min": 127.74,
+  "battery_capacity_kwh_max": 150.0,
+  "battery_capacity_kwh_default": 138.87,
+
+  "max_range_km_full_charge": 150,
+  "passenger_capacity": 28,
+  "passenger_seated": 18,
+  "passenger_standing": 10,
+  "battery_cycle_life": 4000,
+
+  "operating_hours": {
+    "start": "05:30",
+    "end": "20:30",
+    "duration_min": 900,
+    "_comment": "Menit ke-0 = 05:30. Satuan waktu simulasi: menit."
+  },
+
+  "soc_thresholds": {
+    "min_to_charge_pct": 30,
+    "hard_limit_pct": 20,
+    "charge_to_pct": 100,
+    "_comment": "Mulai charging saat SoC <=30%. Hard limit (AC mati) di 20%. Charging selalu ke 100% agar 1 sesi = 1 siklus baterai."
+  },
+
+  "charging": {
+    "travel_to_spklu_min_default": 30,
+    "charging_duration_min_default": 60,
+    "total_downtime_per_session_min": 120,
+    "_comment": "Kondisi as-is: SPKLU Adisucipto. Downtime = tempuh (30) + isi (60) = 120 menit/sesi. (Sumber wawancara)"
+  },
+
+  "drain_model": {
+    "type": "nonlinear_v1",
+    "c_kwh_per_km": 0.9258,
+    "c_kwh_per_km_note": "Dikalibrasi dari: battery_capacity_kwh_default / max_range_km = 138.87 / 150 = 0.9258 kWh/km",
+    "k1": 0.005,
+    "k2": 0.020,
+    "k1_note": "Faktor koreksi SoC 30-70%. Pada L-1 (16.44km/rit), SoC selalu >70% dalam 1 rit awal sehingga k1 tidak aktif sampai rit ke-5+. Nilai 0.005 dipertahankan untuk rute panjang (>30km) yang SoC-nya bisa turun ke bawah 70% dalam 1 rit.",
+    "k2_note": "Faktor koreksi SoC <30%. Tidak berdampak pada normal operation (bus charging sebelum SoC <30%). Relevan untuk skenario darurat/breakdown.",
+    "calibration_baseline": {
+      "route_id": "L-1",
+      "route_km": 16.44,
+      "n_bus": 2,
+      "soc_after_trip_1_pct": 89.04,
+      "trips_before_30pct_threshold_skipped": 7,
+      "note": "Threshold 30% terlewat antar-rit (SoC 32.95% setelah rit-6, 20.76% setelah rit-7). Charging decision module Fase 2 harus cek SoC per-halte, bukan hanya akhir rit, agar charging terpicu tepat di 30%. Ini konsisten dengan data as-is: 2 sesi charging/hari/bus (rit 7 dan 14 dari ~18 rit/900 menit).",
+      "charging_sessions_per_bus_per_day": 2,
+      "downtime_per_session_min": 120,
+      "total_downtime_2bus_per_day_min": 480
+    }
+  },
+
+  "known_discrepancy": {
+    "bus_count_routes_json": 124,
+    "bus_count_worst_case_interview": 128,
+    "note": "Selisih 4 bus (kemungkinan cadangan teknis). routes.json dipakai sebagai sumber utama per-koridor — sesuai rules.md §5.6"
+  }
+}

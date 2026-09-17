@@ -1,0 +1,69 @@
+{
+  "scenario_id": "s5_mix_all_spklu_extra",
+  "description": "Skenario terbaik: Mix charging dengan 4 SPKLU + 1 bus tambahan per koridor. Bandingkan s3b (4 SPKLU, 0 extra bus) vs s5 untuk mengukur kontribusi bus tambahan pada kondisi multi-SPKLU. Bandingkan s4 (1 SPKLU, 1 extra bus) vs s5 untuk mengukur kontribusi lokasi SPKLU pada kondisi bus tambahan.",
+  "charging_mechanism": "mix",
+  "extra_bus_per_route": 1,
+  "spklu_assignment": "multi_by_route",
+  "spklu_assignment_map": {
+    "SPKLU-ADI": [
+      "L-1",
+      "14"
+    ],
+    "SPKLU-JOM": [
+      "5A",
+      "5B",
+      "8",
+      "9",
+      "10",
+      "13",
+      "15"
+    ],
+    "SPKLU-CON": [
+      "2A",
+      "2B",
+      "3A",
+      "4A",
+      "4B",
+      "11",
+      "12"
+    ],
+    "SPKLU-GIW": [
+      "1A",
+      "1B",
+      "3B",
+      "6"
+    ]
+  },
+  "spklu_details": {
+    "SPKLU-ADI": {
+      "name": "SPKLU Adisucipto",
+      "travel_min": 30,
+      "charge_min": 60
+    },
+    "SPKLU-JOM": {
+      "name": "SPKLU Terminal Jombor",
+      "travel_min": 15,
+      "charge_min": 60
+    },
+    "SPKLU-CON": {
+      "name": "SPKLU Terminal Condong Catur",
+      "travel_min": 15,
+      "charge_min": 60
+    },
+    "SPKLU-GIW": {
+      "name": "SPKLU Terminal Giwangan",
+      "travel_min": 15,
+      "charge_min": 60
+    }
+  },
+  "depot_config": {
+    "pool_gamping": {
+      "id": "DEPOT-GAM",
+      "charge_min": 240
+    },
+    "pool_banguntapan": {
+      "id": "DEPOT-BGT",
+      "charge_min": 240
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "scenario_id": "s1_baseline_opportunity",
+  "description": "Baseline: opportunity charging saja, SPKLU Adisucipto, tanpa bus tambahan.",
+  "charging_mechanism": "full_opportunity",
+  "extra_bus_per_route": 0,
+  "spklu_assignment": "single",
+  "single_spklu": {
+    "id": "SPKLU-ADI",
+    "name": "SPKLU Adisucipto",
+    "travel_min": 30,
+    "charge_min": 60
+  }
+}

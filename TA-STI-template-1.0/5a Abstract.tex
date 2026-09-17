@@ -1,0 +1,21 @@
+\chapter*{ABSTRACT}
+\addcontentsline{toc}{chapter}{ABSTRACT}
+
+\begin{center}
+
+    \textbf{Electric Bus Fleet Operational Simulation for EV Charging Station Infrastructure Planning under Full TransJogja Electrification} \\
+    \vspace{0.4cm}
+    by \\
+    \vspace{0.4cm}
+    Muhammad Hanif Al Faithoni\\
+    18221135\\
+\end{center}
+
+
+\begin{spacing}{1.0}
+Full electrification of TransJogja's 20 corridors calls for careful operational planning and investment, particularly regarding the placement and capacity of public EV charging stations (SPKLU) and the optimal battery charging mechanism. Given the high risk of direct field testing, this study designs a Discrete-Event Simulation of fleet operations to run all corridors simultaneously. The simulation engine is integrated with the Monte Carlo method ($N=100$ repetitions) using a log-normal distribution (15\% day-to-day and 5\% segment-to-segment \textit{Coefficient of Variation}) to capture traffic variability, along with a rational polynomial battery energy consumption model. Evaluation across 31 comprehensive scenarios yields three main findings. First, SPKLU capacity exhibits a sharp regime shift; for instance, reducing distributed infrastructure from 19 to 18 \textit{gun} raises the average number of degraded routes from 5.52 to 8.85 incidents per day. Second, adding physical infrastructure and dynamic scheduling algorithms solve different problems. Increasing physical capacity at the bottleneck to 26 \textit{gun} (S28) is most effective at reducing average headway (26.14 minutes) and passes 17 of 20 routes within a $\pm$10-minute arrival tolerance, but does not fully eliminate route degradation risk (0.01 routes/day). Conversely, a dynamic charging algorithm without added infrastructure (S31) successfully eliminates route degradation entirely, though at the cost of worse headway (33.10 minutes). Third, a combined scenario pairing 26-\textit{gun} infrastructure with the dynamic algorithm (S33) achieves absolute reliability, with zero degraded routes across a 14-day consecutive stress test, at a moderate headway trade-off (30.78 minutes). Since no scenario passes every route without relaxing the tolerance, these findings give policymakers a quantitative basis for adjusting service headway targets or investing beyond the equilibrium scenario identified in this thesis.
+
+\vspace{0.5cm}
+\noindent\textit{Keywords: electric buses, discrete-event simulation,
+EV charging infrastructure, TransJogja, Monte Carlo, dynamic charging.}
+\end{spacing}

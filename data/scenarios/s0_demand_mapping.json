@@ -1,0 +1,9 @@
+{
+    "scenario_id": "s0_demand_mapping",
+    "scenario_name": "s0_demand_mapping",
+    "charging_mechanism": "full_opportunity",
+    "spklu_assignment": "multi_by_route",
+    "spklu_assignment_map": {},
+    "spklu_details": {},
+    "demand_mapping_mode": true
+}

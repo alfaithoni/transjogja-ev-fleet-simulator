@@ -1,0 +1,9 @@
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+flask>=2.3
+simpy>=4.0
+
+# Opsional: hanya dibutuhkan untuk mengeksplorasi optimize/bayesian_optimizer.py
+# (tidak dipakai pada skenario final di Bab VI TA — lihat Batasan Masalah, Bab I)
+# optuna>=3.0

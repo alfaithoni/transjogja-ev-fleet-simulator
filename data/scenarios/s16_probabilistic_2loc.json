@@ -1,0 +1,46 @@
+{
+    "scenario_id": "s16_probabilistic_2loc",
+    "scenario_name": "2 Loc: Ngab, Con",
+    "charging_mechanism": "full_opportunity",
+    "spklu_assignment": "multi_by_route",
+    "spklu_assignment_map": {
+        "SPKLU-NGB": [
+            "1A",
+            "1B",
+            "3B",
+            "6",
+            "8",
+            "9",
+            "10",
+            "11",
+            "13",
+            "14",
+            "L-1",
+            "15"
+        ],
+        "SPKLU-CON": [
+            "2A",
+            "2B",
+            "3A",
+            "4A",
+            "4B",
+            "5A",
+            "5B",
+            "12"
+        ]
+    },
+    "spklu_details": {
+        "SPKLU-NGB": {
+            "name": "SPKLU-NGB",
+            "n_gun": 10,
+            "travel_min": 30,
+            "charge_min": 60
+        },
+        "SPKLU-CON": {
+            "name": "SPKLU Terminal Condong Catur",
+            "n_gun": 10,
+            "travel_min": 30,
+            "charge_min": 60
+        }
+    }
+}

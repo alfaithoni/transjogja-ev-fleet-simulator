@@ -1,0 +1,259 @@
+\cleardoublepage
+\chapter{ANALISIS MASALAH}
+\label{chap:analisis-masalah}
+
+Bab ini membahas analisis kondisi operasional TransJogja saat ini, kebutuhan
+yang harus dipenuhi simulasi untuk menjawab rumusan masalah pada Bab I, serta
+analisis alternatif solusi yang dipertimbangkan sebelum menentukan pendekatan
+akhir yang digunakan pada Bab IV dan Bab V.
+
+\section{Analisis Kondisi Saat Ini}
+
+Gambar~\ref{fig:kondisi-saat-ini} menunjukkan model konseptual kondisi
+operasional TransJogja saat ini beserta komponen dan interaksi
+antarkomponennya.
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[
+		node distance=1.3cm and 1.7cm,
+		box/.style={draw, rounded corners, minimum width=3.2cm, minimum height=1cm, align=center, font=\small},
+		busbox/.style={box, fill=blue!8},
+		infra/.style={box, fill=orange!12},
+		halte/.style={draw, circle, minimum size=0.5cm, fill=gray!15, font=\scriptsize},
+		arrow/.style={-Stealth, thick},
+		lbl/.style={font=\scriptsize\itshape}
+		]
+		\node[halte] (h1) {J};
+		\node[halte, right=1.6cm of h1] (h2) {M};
+		\node[halte, right=1.6cm of h2] (h3) {J};
+		\draw[arrow] (h1) -- (h2) node[midway, above, lbl] {8,22 km};
+		\draw[arrow] (h2) -- (h3) node[midway, above, lbl] {8,22 km};
+		\node[lbl, below=0.05cm of h1] {Term. Jombor};
+		\node[lbl, below=0.05cm of h2] {Malioboro};
+		\node[lbl, below=0.05cm of h3] {Term. Jombor};
+		\node[busbox, below=1.9cm of h1, xshift=0.3cm] (bus) {2 Bus Listrik\\Rute L-1};
+		\node[infra, right=2.6cm of bus] (spklu) {SPKLU\\Adisucipto\\(1 lokasi)};
+		\draw[arrow] (bus.east) -- node[above, lbl]{mengisi daya} (spklu.west);
+		\draw[arrow] (spklu.north) to[bend left=35] node[above, lbl, pos=0.5]{kembali beroperasi} (h2.south);
+		\node[box, fill=gray!5, below=1.6cm of bus, xshift=1.3cm, minimum width=6.8cm] (dishub) {Dishub DIY\\(menetapkan target headway per koridor)};
+		\draw[arrow] (dishub.north) -- (bus.south);
+		\begin{scope}[on background layer]
+			\node[draw, dashed, fit=(h1)(h2)(h3)(bus)(spklu)(dishub), inner sep=0.4cm] {};
+		\end{scope}
+	\end{tikzpicture}
+	\caption{Model konseptual kondisi operasional TransJogja saat ini}
+	\label{fig:kondisi-saat-ini}
+\end{figure}
+
+TransJogja saat ini mengoperasikan 2 unit bus listrik pada Rute L-1
+(Terminal Jombor, Malioboro, Terminal Jombor), dengan satu SPKLU di kawasan
+Adisucipto sebagai satu-satunya titik pengisian daya. Rute L-1 adalah
+satu-satunya data lapangan yang tersedia untuk kondisi bus listrik
+TransJogja: bus mengisi daya secara \textit{opportunity charging} (mengisi
+daya di sela rit, bukan hanya di depot), dengan rata-rata 2 sesi pengisian
+per hari dan total waktu tidak beroperasi (\textit{downtime}) sekitar 120
+menit per sesi, mencakup waktu tempuh menuju SPKLU maupun waktu pengisian
+itu sendiri.
+
+Kondisi ini berbeda dari rencana Dishub DIY untuk mengelektrifikasi seluruh
+20 koridor TransJogja (kira-kira 124 sampai 128 bus). Pada skala 2 bus dan
+1 rute, penempatan SPKLU tunggal di Adisucipto tidak menimbulkan persoalan
+berarti karena hanya 1 rute yang bergantung padanya. Pada skala penuh,
+setiap koridor punya jarak dan pola permintaan pengisian daya yang
+berbeda-beda, sehingga jumlah dan lokasi SPKLU yang memadai untuk 1 koridor
+belum tentu memadai untuk koridor lain. Dokumen perencanaan Dishub DIY saat
+ini menetapkan target headway per koridor, tetapi belum menyertakan analisis
+tentang bagaimana target itu tetap tercapai setelah elektrifikasi penuh.
+Kesenjangan inilah yang dianalisis lebih lanjut pada subbab berikut.
+
+\section{Analisis Kebutuhan}
+
+\subsection{Identifikasi Masalah Pengguna}
+
+Terdapat dua kelompok pemangku kepentingan utama yang kebutuhannya
+memengaruhi rancangan simulasi ini:
+\begin{enumerate}
+	\item \textbf{Dishub DIY/operator (PT AMI)} sebagai calon pengambil
+	keputusan investasi infrastruktur. Kebutuhan mereka adalah pembanding
+	kuantitatif antar-skenario lokasi, kapasitas, dan mekanisme pengisian
+	daya, disertai dampaknya terhadap headway operasional. Ini penting karena
+	rekomendasi kualitatif saja sulit dipertanggungjawabkan sebelum investasi
+	dilakukan.
+	\item \textbf{Penulis (sebagai peneliti/pengembang)} yang memerlukan model
+	dan mesin simulasi yang dapat divalidasi terhadap data lapangan yang
+	tersedia (baseline Rute L-1), agar hasil simulasi untuk 20 koridor
+	fully-electric dapat dipertanggungjawabkan meski belum ada data lapangan
+	langsung untuk skala tersebut.
+\end{enumerate}
+
+Dari kedua kebutuhan ini, masalah pengguna dapat dirumuskan sebagai:
+bagaimana menyediakan alat bantu simulasi yang (a) cukup valid untuk
+dipercaya sebagai dasar pengambilan keputusan, dan (b) cukup jelas hasilnya
+untuk dibaca dan dibandingkan oleh pihak yang tidak terlibat langsung dalam
+pengembangan model.
+
+\subsection{Kebutuhan Fungsional}
+
+Berdasarkan identifikasi masalah pengguna di atas, kebutuhan fungsional
+sistem simulasi adalah sebagai berikut:
+\begin{enumerate}
+	\item Sistem dapat memodelkan drain baterai non-linear untuk tiap bus
+	berdasarkan jarak antar-halte dan kecepatan tempuh per segmen rute.
+	\item Sistem dapat menjalankan simulasi operasi seluruh 20 koridor secara
+	simultan, termasuk penjadwalan rit tiap bus sepanjang jam operasional.
+	\item Sistem dapat memodelkan antrean pengisian daya di tiap SPKLU sebagai
+	\textit{resource} dengan kapasitas terbatas (jumlah SPKLU per lokasi).
+	\item Sistem dapat menjalankan skenario lokasi SPKLU yang berbeda-beda
+	(kondisi saat ini, rencana yang sudah ada, dan kandidat lokasi baru)
+	sebagai konfigurasi \textit{input} yang dapat dibandingkan.
+	\item Sistem dapat menjalankan skenario mekanisme pengisian daya yang
+	berbeda-beda (\textit{opportunity charging}, \textit{depot charging}, dan
+	kombinasi keduanya), termasuk opsi penambahan bus per koridor.
+	\item Sistem dapat menghitung dan membandingkan headway aktual hasil
+	simulasi terhadap target headway pada dokumen perencanaan Dishub DIY,
+	per koridor dan per skenario.
+	\item Sistem dapat menjalankan repetisi simulasi (Monte Carlo) dengan
+	variasi waktu tempuh acak antar-hari, untuk menangkap variasi kondisi
+	operasional harian yang tidak dapat ditangkap satu kali simulasi
+	deterministik.
+	\item Sistem menyediakan dasbor visual yang menampilkan peta skematik rute
+	dan animasi pergerakan bus per skenario, agar hasil dapat dibaca tanpa
+	perlu memeriksa data mentah.
+\end{enumerate}
+
+\subsection{Kebutuhan Nonfungsional}
+
+\begin{enumerate}
+	\item \textbf{Validitas:} model drain baterai dan mesin simulasi harus
+	dapat divalidasi secara kualitatif terhadap data operasional riil
+	Rute L-1 sebagai baseline, sebelum digunakan untuk skenario 20 koridor
+	yang belum memiliki data lapangan.
+	\item \textbf{Skalabilitas komputasi:} mesin simulasi harus dapat
+	dijalankan secara \textit{headless} (tanpa antarmuka) dalam mode batch
+	untuk puluhan skenario dan ratusan repetisi Monte Carlo per skenario,
+	tanpa memerlukan waktu komputasi yang tidak wajar untuk pengerjaan tugas
+	akhir.
+	\item \textbf{Keterpisahan (\textit{separation of concerns}):} logika
+	simulasi harus terpisah dari lapisan visualisasi, sehingga dasbor cukup
+	membaca hasil simulasi yang sudah tersimpan tanpa perlu menjalankan ulang
+	logika simulasi di sisi klien.
+	\item \textbf{Reprodusibilitas:} setiap repetisi Monte Carlo harus dapat
+	diulang dengan hasil yang identik (melalui \textit{random seed} yang
+	konsisten dan terdokumentasi), agar hasil simulasi dapat diperiksa ulang.
+	\item \textbf{Keterbacaan hasil:} dasbor visual harus dapat dikenali sebagai
+	representasi peta rute TransJogja oleh pembaca yang familier dengan rute
+	aslinya, agar hasil simulasi mudah dikomunikasikan ke pemangku
+	kepentingan non-teknis.
+\end{enumerate}
+
+\section{Analisis Pemilihan Solusi}
+
+\subsection{Alternatif Solusi}
+
+
+%TODO-CITE: subbab ini dapat diperkuat dengan sitasi literatur mengenai
+% model konsumsi energi kendaraan listrik dan/atau metode Discrete Event
+% Simulation, untuk menunjukkan bahwa alternatif yang dipertimbangkan
+% memang dikenal dalam studi terkait, bukan hanya pilihan ad-hoc.
+
+Beberapa pertanyaan desain memiliki lebih dari satu alternatif solusi yang
+dipertimbangkan sebelum solusi akhir ditentukan:
+
+\begin{enumerate}
+	\item \textbf{Model drain baterai.} Alternatif pertama adalah menyusun
+	formula heuristik sendiri (koefisien \textit{k1}, \textit{k2}) yang
+	dikalibrasi langsung terhadap baseline Rute L-1. Alternatif kedua adalah
+	mengadopsi model konsumsi energi kendaraan listrik dari literatur yang
+	sudah divalidasi pada kendaraan sejenis.
+	\item \textbf{Arsitektur mesin simulasi.} Alternatif pertama adalah simulasi
+	berbasis langkah waktu tetap (\textit{tick-based}), yaitu kondisi ketika status seluruh
+	bus diperbarui pada interval waktu yang sama. Alternatif kedua adalah
+	simulasi berbasis peristiwa diskrit (\textit{Discrete Event Simulation}),
+	yaitu pembaruan status yang hanya dilakukan saat terjadi peristiwa (mis. bus tiba di
+	halte, bus mulai/selesai mengisi daya).
+	\item \textbf{Penentuan lokasi kandidat SPKLU.} Alternatif pertama adalah
+	algoritma optimasi \textit{greenfield} yang secara otomatis mencari lokasi
+	optimal dari data mentah (mis. pendekatan metaheuristik atau
+	\textit{reinforcement learning}). Alternatif kedua adalah membandingkan
+	sejumlah skenario lokasi yang ditentukan sebagai \textit{input}
+	(\textit{scenario comparison}/\textit{grid search}), termasuk kandidat
+	yang disusun dari analisis data permintaan pengisian daya hasil simulasi
+	itu sendiri.
+	\item \textbf{Mekanisme pengisian daya yang disimulasikan.} Alternatif yang
+	dipertimbangkan mencakup \textit{opportunity charging} penuh, \textit{depot
+		charging} penuh, kombinasi keduanya (\textit{mix}), dan mekanisme
+	pengisian daya dinamis yang menyesuaikan target SoC berdasarkan kondisi
+	antrean atau waktu.
+	\item \textbf{Teknologi dasbor visual.} Alternatif pertama adalah dasbor
+	berbasis \textit{framework} \textit{frontend} modern (React) dengan
+	\textit{build toolchain} terpisah. Alternatif kedua adalah dasbor berbasis
+	HTML/JavaScript murni yang disajikan langsung oleh \textit{backend} tanpa
+	proses \textit{build} tambahan.
+\end{enumerate}
+
+\subsection{Analisis Penentuan Solusi}
+
+\textbf{Model drain baterai.} Formula heuristik \textit{k1}/\textit{k2} yang
+dikalibrasi langsung terhadap baseline Rute L-1 digunakan pada tahap awal
+pengerjaan karena kesesuaiannya yang baik dengan data lapangan yang tersedia
+(2 sesi pengisian per hari, sesuai kondisi riil). Namun, pendekatan ini
+memiliki kelemahan mendasar: parameter \textit{k1}/\textit{k2} dikalibrasi
+langsung dari satu baseline (Rute L-1) tanpa dasar fisik yang independen,
+sehingga validitasnya untuk kondisi 20 koridor lain (jarak, kecepatan, dan
+profil rute yang berbeda-beda) tidak terjamin. Solusi akhir yang dipilih
+adalah model konsumsi energi non-linear dari \textcite{mamarikas2025}
+(Persamaan 1 pada Bab IV), yang memiliki dasar fisik dan telah dikalibrasi
+pada kendaraan listrik kelas berat pada studi aslinya. Konsekuensinya, model
+ini menghasilkan konsumsi energi yang lebih tinggi dari kondisi riil bus
+TransJogja (bus kelas menengah), sehingga baseline Rute L-1 bergeser dari
+2 menjadi 3 sesi pengisian per hari pada hasil simulasi. Deviasi ini
+diterima secara sadar sebagai batasan tugas akhir (lihat Bab I, Batasan
+Masalah), karena mempertahankan integritas model literatur dinilai lebih
+dapat dipertanggungjawabkan dibanding menyesuaikan hasil dengan faktor
+skala buatan yang tidak berdasar data primer.
+
+\textbf{Arsitektur mesin simulasi.} Pendekatan \textit{tick-based} pada
+tahap awal pengembangan terbukti tidak efisien dan rentan terhadap
+kesalahan logika (di antaranya bus yang "berteleportasi" antar-halte dan
+penghitungan waktu kembali yang tidak akurat) ketika diterapkan pada 20
+koridor secara simultan dengan jumlah bus yang besar. Solusi akhir yang
+dipilih adalah arsitektur \textit{Discrete Event Simulation} berbasis
+antrean prioritas (\textit{heapq}), yang hanya memproses peristiwa yang
+benar-benar terjadi. Pendekatan ini lebih efisien secara komputasi untuk
+skenario dengan banyak entitas (bus, SPKLU) yang aktivitasnya tersebar
+tidak merata sepanjang waktu, dan menghilangkan kelas kesalahan yang
+muncul pada pendekatan \textit{tick-based} sebelumnya.
+
+\textbf{Penentuan lokasi kandidat SPKLU.} Algoritma optimasi otomatis
+tidak dipilih karena berada di luar batasan masalah yang disepakati sejak
+awal (lihat Bab I, Batasan Masalah). Tugas akhir ini berfokus pada
+perbandingan skenario, bukan pengembangan algoritma optimasi. Solusi yang
+dipilih adalah perbandingan skenario lokasi, dengan kandidat lokasi disusun
+dari dua sumber: kondisi saat ini/rencana yang sudah ada, dan analisis data
+permintaan pengisian daya yang diekstraksi dari hasil simulasi tahap
+sebelumnya (\textit{data-driven}). Pendekatan ini dipilih karena tetap
+memberi dasar kuantitatif untuk pemilihan lokasi tanpa memperluas cakupan
+tugas akhir ke pengembangan algoritma optimasi baru.
+
+\textbf{Mekanisme pengisian daya yang disimulasikan.} Keempat mekanisme
+(\textit{opportunity}, \textit{depot}, \textit{mix}, dan dinamis)
+diimplementasikan dan diuji, karena masing-masing menjawab pertanyaan
+evaluasi yang berbeda: \textit{depot charging} penuh diuji untuk
+mendemonstrasikan secara empiris mengapa \textit{opportunity charging}
+diperlukan (skenario \textit{depot charging} penuh menghasilkan kegagalan
+pada seluruh koridor), sementara mekanisme dinamis diuji untuk menjawab
+apakah algoritma penjadwalan pengisian daya yang lebih adaptif memberi
+manfaat tambahan di atas infrastruktur dasar yang direkomendasikan. Hasil
+pengujian tiap mekanisme dijelaskan pada Bab VI.
+
+\textbf{Teknologi dasbor visual.} Dasbor berbasis React sempat
+dipertimbangkan pada tahap perancangan awal, namun tidak dipilih karena
+menambah kerumitan \textit{build toolchain} yang tidak sebanding dengan
+kebutuhan dasbor ini (menampilkan hasil simulasi yang sudah tersimpan,
+bukan aplikasi interaktif kompleks). Solusi akhir yang dipilih adalah
+\textit{backend} Flask (Python) yang menyajikan data hasil simulasi (JSON),
+dikonsumsi oleh \textit{frontend} HTML/JavaScript murni dengan Chart.js
+untuk visualisasi grafik. Pendekatan ini konsisten dengan kebutuhan
+nonfungsional keterpisahan (lihat Analisis Kebutuhan) dan mempercepat
+iterasi pengembangan karena tidak memerlukan proses \textit{build} terpisah.

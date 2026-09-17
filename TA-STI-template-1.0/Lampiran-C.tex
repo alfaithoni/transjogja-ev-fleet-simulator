@@ -1,0 +1,65 @@
+\cleardoublepage
+\chapter{DAFTAR LENGKAP HASIL SKENARIO}
+
+Tabel C.1 berikut menyajikan rangkuman hasil untuk seluruh skenario yang disimulasikan 
+berdasarkan data pengujian stokastik ($N=100$ repetisi) maupun deterministik tunggal.
+Nilai \textit{Headway} disajikan dalam format (rata-rata $\pm$ deviasi standar).
+Rute terdegradasi merujuk pada jumlah rute yang mengalami kelumpuhan operasional.
+\textit{Batal Antre/hari} adalah rata-rata kejadian per hari saat bus gagal mengisi daya 
+karena waktu tunggu antrean melebihi batas toleransi yang diizinkan (30 menit dan melewati jam operasional).
+Catatan: Skenario tahap eksplorasi awal (S6.x untuk parameter konvergensi $N$, dan S7.x untuk kestabilan jumlah SPKLU) tidak ditampilkan pada tabel ini untuk keringkasan.
+
+\begin{center}
+\scriptsize
+\begin{longtable}{|l|p{2.5cm}|p{2.5cm}|r|r|r|}
+\caption{Daftar Lengkap Skenario dan Hasil Evaluasi Utama} \label{tab:lampiran-seluruh-skenario} \\
+\hline
+\textbf{ID} & \textbf{Detail Skenario} & \textbf{Spesifikasi Skenario} & \textbf{Headway (mnt)} & \textbf{Degradasi} & \textbf{Batal Antre/hari} \\
+\hline
+\endfirsthead
+
+\multicolumn{6}{c}%
+{{\bfseries Tabel C.1 -- Lanjutan dari halaman sebelumnya}} \\
+\hline
+\textbf{ID} & \textbf{Detail Skenario} & \textbf{Spesifikasi Skenario} & \textbf{Headway (mnt)} & \textbf{Degradasi} & \textbf{Batal Antre/hari} \\
+\hline
+\endhead
+
+\hline \multicolumn{6}{|r|}{{Berlanjut ke halaman berikutnya...}} \\ \hline
+\endfoot
+
+\hline
+\endlastfoot
+S1 & Baseline awal (Opportunity) -- Pengisian peluang pada SPKLU eksisting tanpa penambahan kapasitas. & 20 Rute, 1 SPKLU (Adisucipto), 2 gun, Statis (Opportunity Charging dasar) & - & 20,00 & 0,00 \\ \hline
+S2 & Full Depot Charging -- Bus hanya mengisi daya malam hari di pol/depot tanpa infrastruktur di rute. & 20 Rute, 4 SPKLU (Default Eksisting), 8 gun, Statis (Full Depot) & - & 20,00 & 0,00 \\ \hline
+S3 & Mix Charging -- Kombinasi 	extit{opportunity charging} di rute dan pengisian malam di pol. & 20 Rute, 1 SPKLU (Adisucipto), 2 gun, Statis (Mix -- Opportunity + Depot malam) & - & 20,00 & 0,00 \\ \hline
+S3B & Mix Charging 4 SPKLU (Tanpa Penambahan Bus) -- Pengisian malam hari dan pengisian 	extit{opportunity} terbatas. & 20 Rute, 4 SPKLU (Adisucipto, Jombor, Condong Catur, Giwangan), 8 gun, Statis (Mix -- Opportunity + Depot malam) & 50,65 $\pm$ 4,26 & 18,00 & 0,00 \\ \hline
+S4 & Mix Charging + Ekstra Bus -- Sama dengan Mix Charging dengan penambahan armada. & 20 Rute, 1 SPKLU (Adisucipto), 2 gun, Statis (Mix -- Opportunity + Depot malam) & - & 20,00 & 0,00 \\ \hline
+S5 & Mix Charging Semua SPKLU + Ekstra Bus -- Optimalisasi seluruh titik pengisian dengan bus tambahan. & 20 Rute, 4 SPKLU (Adisucipto, Jombor, Condong Catur, Giwangan), 8 gun, Statis (Mix -- Opportunity + Depot malam) & 37,80 $\pm$ 3,22 & 18,00 & 0,00 \\ \hline
+S10 & s10 dynamic n40 & 20 Rute, 4 SPKLU (Adisucipto, Jombor, Condong Catur, Giwangan), 8 gun, Dinamis V1 (Time-based Opportunity) & 23,82 $\pm$ 1,62 & 0,00 & 0,00 \\ \hline
+S13 & s13 dynamic v2 n40 & 20 Rute, 4 SPKLU (Adisucipto, Jombor, Condong Catur, Giwangan), 8 gun, Dinamis V2 (Queue-aware Opportunity) & 23,82 $\pm$ 1,62 & 0,00 & 0,00 \\ \hline
+S15 & Titik patah infrastruktur: 20 	extit{gun} terdistribusi. & 20 Rute, 1 SPKLU (SPKLU-NGB), 20 gun, Statis (Opportunity Charging dasar) & 32,16 $\pm$ 2,21 & 2,47 & 124,64 \\ \hline
+S16 & FINAL: Seeded, average-of-averages (N=100) & 20 Rute, 2 SPKLU (SPKLU-NGB, Condong Catur), 20 gun, Statis (Opportunity Charging dasar) & 35,55 $\pm$ 2,06 & 6,97 & 0,00 \\ \hline
+S17 & FINAL: Seeded, average-of-averages (N=100) -- Konfigurasi SPKLU proporsional, algoritma 	extit{opportunity charging} standar. & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 20 gun, Statis (Opportunity Charging dasar) & 40,84 $\pm$ 2,19 & 11,44 & 0,00 \\ \hline
+S17B & Baseline statis, tervalidasi -- Konfigurasi SPKLU proporsional, algoritma 	extit{opportunity charging} standar. & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 20 gun, Statis (Opportunity Charging dasar) & 34,93 $\pm$ 1,81 & 3,03 & 0,00 \\ \hline
+S18 & FINAL: Seeded, average-of-averages (N=100) & 20 Rute, 4 SPKLU (Adisucipto, Condong Catur, Giwangan, Jombor), 20 gun, Statis (Opportunity Charging dasar) & 39,05 $\pm$ 1,56 & 4,49 & 0,00 \\ \hline
+S19 & Titik patah infrastruktur: 8 	extit{gun} terdistribusi. & - & 38,69 $\pm$ 5,28 & 19,90 & 0,00 \\ \hline
+S20 & Titik patah infrastruktur ekstrim: hanya 4 	extit{gun} total. & - & - & 20,00 & 0,00 \\ \hline
+S21 & Titik patah infrastruktur: 16 	extit{gun} terdistribusi. & - & 44,78 $\pm$ 4,68 & 12,73 & 0,00 \\ \hline
+S22 & Titik patah infrastruktur: 12 	extit{gun} terdistribusi. & - & 70,88 $\pm$ 9,12 & 15,45 & 0,00 \\ \hline
+S23 & Titik patah infrastruktur: 18 	extit{gun} terdistribusi. & - & 36,71 $\pm$ 2,78 & 8,85 & 0,00 \\ \hline
+S24 & Titik patah infrastruktur: 19 	extit{gun} terdistribusi. & - & 33,22 $\pm$ 2,93 & 5,52 & 0,00 \\ \hline
+S25 & FINAL: Seeded, average-of-averages (N=100) Mix/Depot Integration & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 20 gun, Statis (Mix -- Opportunity + Depot malam) & 34,93 $\pm$ 1,81 & 3,03 & 0,00 \\ \hline
+S26 & Mix/Depot Integration dengan bus tambahan (Anomali degradasi akibat 	extit{bottleneck}). & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 20 gun, Statis (Mix -- Opportunity + Depot malam) & 34,31 $\pm$ 2,16 & 10,05 & 0,00 \\ \hline
+S27 & FINAL: Seeded, average-of-averages (N=100) Mix/Depot Integration & 20 Rute, 4 SPKLU (Default Eksisting), 8 gun, Statis (Full Depot) & - & 20,00 & 0,00 \\ \hline
+S28 & Optimalisasi Infrastruktur Fisik (26 	extit{gun}) -- Peningkatan kapasitas 	extit{gun} di titik 	extit{bottleneck} secara heuristik. & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 26 gun, Statis (Opportunity Charging dasar) & 26,14 $\pm$ 1,52 & 0,01 & 0,00 \\ \hline
+S29 & Pure Prop Infra (23 	extit{gun}) -- Peningkatan kapasitas murni secara proporsional. & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 23 gun, Statis (Opportunity Charging dasar) & 27,83 $\pm$ 1,60 & 4,37 & 0,00 \\ \hline
+S29B & Pure Prop Infra (23 	extit{gun}) -- Peningkatan kapasitas murni secara proporsional. & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 23 gun, Statis (Opportunity Charging dasar) & 29,25 $\pm$ 1,34 & 4,06 & 0,00 \\ \hline
+S30 & Buffer Menengah (25 	extit{gun}) -- Penambahan 	extit{buffer} kapasitas moderat. & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 25 gun, Statis (Opportunity Charging dasar) & 27,62 $\pm$ 1,57 & 1,01 & 0,00 \\ \hline
+S31 & Algoritma Dinamis V1 -- Modulasi penjadwalan berbasis jeda waktu tanpa perluasan infrastruktur. & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 20 gun, Dinamis V1 (Time-based Opportunity) & 33,10 $\pm$ 1,91 & 0,01 & 0,00 \\ \hline
+S32 & Algoritma Dinamis V2 -- Penjadwalan 	extit{queue-aware} (sadar antrean) yang menyebabkan osilasi. & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 20 gun, Dinamis V2 (Queue-aware Opportunity) & 30,52 $\pm$ 2,12 & 0,74 & 0,00 \\ \hline
+S33 & Kombinasi Algoritma V1 + Infrastruktur S28 (28 	extit{gun} ekuivalen) -- Eliminasi antrean penuh. & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 25 gun, Dinamis V1 (Time-based Opportunity) & 30,78 $\pm$ 1,98 & 0,00 & 0,00 \\ \hline
+S34 & Staggered Dispatch 30m -- Pelepasan armada dengan jeda waktu 30 menit. & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 21 gun, Statis (Opportunity Charging dasar) & 30,65 $\pm$ 1,53 & 3,00 & 0,00 \\ \hline
+S35 & Sweet Spot (23 	extit{gun} + Algoritma V1) -- Titik investasi minimum yang mencapai degradasi nol. & 20 Rute, 4 SPKLU (Adisucipto, SPKLU-NGB, Condong Catur, SPKLU-KRI), 23 gun, Dinamis V1 (Time-based Opportunity) & 31,16 $\pm$ 1,94 & 0,00 & 0,00 \\ \hline
+\end{longtable}
+\end{center}

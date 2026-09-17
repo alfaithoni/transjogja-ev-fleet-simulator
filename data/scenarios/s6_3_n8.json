@@ -1,0 +1,75 @@
+{
+  "scenario_id": "s6_3_n8",
+  "description": "Mix charging: opportunity charging dengan 4 SPKLU (ADI/JOM/CON/GIW, assignment statis per rute sesuai spklu_locations.json) + depot charging akhir shift. Tanpa bus tambahan. Skenario ini MENGISOLASI efek penambahan lokasi SPKLU: bandingkan s3 (1 SPKLU) vs s3b (4 SPKLU) untuk mengukur kontribusi lokasi SPKLU terhadap headway, tanpa efek konfounding dari extra bus.",
+  "charging_mechanism": "mix",
+  "extra_bus_per_route": 0,
+  "spklu_assignment": "multi_by_route",
+  "spklu_assignment_map": {
+    "SPKLU-ADI": [
+      "L-1",
+      "14"
+    ],
+    "SPKLU-JOM": [
+      "5A",
+      "5B",
+      "8",
+      "9",
+      "10",
+      "13",
+      "15"
+    ],
+    "SPKLU-CON": [
+      "2A",
+      "2B",
+      "3A",
+      "4A",
+      "4B",
+      "11",
+      "12"
+    ],
+    "SPKLU-GIW": [
+      "1A",
+      "1B",
+      "3B",
+      "6"
+    ]
+  },
+  "spklu_details": {
+    "SPKLU-ADI": {
+      "name": "SPKLU Adisucipto",
+      "travel_min": 30,
+      "charge_min": 60
+    },
+    "SPKLU-JOM": {
+      "name": "SPKLU Terminal Jombor",
+      "travel_min": 15,
+      "charge_min": 60
+    },
+    "SPKLU-CON": {
+      "name": "SPKLU Terminal Condong Catur",
+      "travel_min": 15,
+      "charge_min": 60
+    },
+    "SPKLU-GIW": {
+      "name": "SPKLU Terminal Giwangan",
+      "travel_min": 15,
+      "charge_min": 60
+    }
+  },
+  "depot_config": {
+    "pool_gamping": {
+      "id": "DEPOT-GAM",
+      "charge_min": 240
+    },
+    "pool_banguntapan": {
+      "id": "DEPOT-BGT",
+      "charge_min": 240
+    }
+  },
+  "spklu_n_gun_override": {
+    "SPKLU-ADI": 8,
+    "SPKLU-JOM": 8,
+    "SPKLU-CON": 8,
+    "SPKLU-GIW": 8
+  }
+}

@@ -1,0 +1,68 @@
+{
+    "scenario_id": "s17b_probabilistic_4loc_prop",
+    "scenario_name": "4 Loc: Data Driven (Proportional)",
+    "charging_mechanism": "full_opportunity",
+    "spklu_assignment": "multi_by_route",
+    "spklu_assignment_map": {
+        "SPKLU-ADI": [
+            "1A",
+            "14"
+        ],
+        "SPKLU-NGB": [
+            "1B",
+            "3B",
+            "6",
+            "9",
+            "10",
+            "11",
+            "13",
+            "15"
+        ],
+        "SPKLU-CON": [
+            "2A",
+            "2B",
+            "3A",
+            "4B",
+            "5B",
+            "12"
+        ],
+        "SPKLU-KRI": [
+            "4A",
+            "5A",
+            "8",
+            "L-1"
+        ]
+    },
+    "spklu_details": {
+        "SPKLU-ADI": {
+            "name": "SPKLU Adisucipto",
+            "n_gun": 2,
+            "travel_min": 60,
+            "charge_min": 60
+        },
+        "SPKLU-NGB": {
+            "name": "SPKLU-NGB",
+            "n_gun": 8,
+            "travel_min": 30,
+            "charge_min": 60
+        },
+        "SPKLU-CON": {
+            "name": "SPKLU Terminal Condong Catur",
+            "n_gun": 7,
+            "travel_min": 30,
+            "charge_min": 60
+        },
+        "SPKLU-KRI": {
+            "name": "SPKLU-KRI",
+            "n_gun": 3,
+            "travel_min": 30,
+            "charge_min": 60
+        }
+    },
+    "dynamic_charging": true,
+    "dynamic_charging_params": {
+        "peak_target_soc_pct": 80.0,
+        "offpeak_target_soc_pct": 100.0,
+        "charge_rate_kw": 97.209
+    }
+}

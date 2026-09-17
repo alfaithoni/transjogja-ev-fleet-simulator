@@ -1,0 +1,131 @@
+\cleardoublepage
+\chapter{PENUTUP}
+\label{chap:penutup}
+
+\section{Kesimpulan}
+
+Berdasarkan hasil perancangan, implementasi, dan evaluasi pada Bab IV
+hingga Bab VI, tugas akhir ini menyimpulkan hal-hal berikut, disusun
+sesuai urutan rumusan masalah dan tujuan pada Bab I:
+
+\begin{enumerate}
+	\item Model drain baterai non-linear bus listrik TransJogja berhasil
+	dibangun berdasarkan Persamaan 1 \textcite{mamarikas2025}, dan
+	divalidasi secara kualitatif terhadap baseline Rute L-1. Validasi
+	menunjukkan kebutuhan pengisian daya bergeser dari 2 sesi per hari
+	(kondisi riil) menjadi 3 sesi per hari (hasil simulasi), sebuah
+	deviasi yang diterima secara sadar sebagai konsekuensi mempertahankan
+	integritas model literatur, sebagaimana dijelaskan pada Bab IV dan
+	Bab V.
+	\item Mesin simulasi operasi armada berbasis peristiwa diskrit berhasil
+	dibangun dan mampu menjalankan seluruh 20 koridor TransJogja secara
+	simultan, termasuk mekanisme antrean di SPKLU dengan kapasitas
+	terbatas, sebagaimana dijelaskan pada Bab V.
+	\item Perbandingan skenario lokasi SPKLU (S15: 1 lokasi, S16: 2 lokasi,
+	S17b: 4 lokasi, dengan total kapasitas gun yang setara) menunjukkan
+	bahwa menambah jumlah lokasi saja tidak menjamin perbaikan headway --
+	S16 justru lebih buruk dari S15 akibat pemecahan kapasitas gun di
+	lokasi yang kurang tepat. Cara kapasitas didistribusikan antar lokasi
+	ternyata lebih menentukan daripada jumlah lokasinya sendiri: pada
+	jumlah lokasi dan total kapasitas yang sama, distribusi proporsional
+	terhadap beban rute riil (skenario S17b) memberikan hasil yang jauh
+	lebih baik daripada distribusi yang merata tanpa mempertimbangkan
+	beban (skenario S17).
+	\item Perbandingan skenario kapasitas SPKLU menunjukkan titik patah
+	(\textit{regime shift}) yang tajam pada rentang kapasitas tertentu
+	(Bab VI), bukan penurunan performa yang bertahap. Skenario dengan
+	penambahan kapasitas 12\% di atas alokasi proporsional dasar (S28)
+	memberikan tingkat degradasi rute mendekati nol.
+	\item Perbandingan skenario mekanisme pengisian daya menunjukkan bahwa
+	strategi penambahan infrastruktur fisik dan strategi algoritma
+	penjadwalan cerdas menjawab persoalan yang berbeda: infrastruktur
+	memperbaiki kepatuhan terhadap target headway, sedangkan algoritma
+	memperbaiki keselamatan armada dengan biaya lebih rendah.
+	Untuk evaluasi kepatuhan headway operasional harian, \textbf{S28}
+	(26 gun + konfigurasi proporsional, tanpa algoritma dinamis) adalah
+	skenario dengan performa terbaik yang telah diuji secara langsung.
+	Untuk ketahanan operasional jangka panjang multi-hari, \textbf{S33}
+	(infrastruktur S28 + algoritma V1) adalah satu-satunya skenario yang
+	terbukti tangguh selama 14 hari beruntun dengan nol rute terdegradasi,
+	meskipun dengan sedikit trade-off headway harian. Eksplorasi titik
+	investasi minimum (skenario S35, 23 gun + algoritma V1) menemukan
+	\textit{sweet spot} yang menghasilkan degradasi nol dengan kapasitas
+	infrastruktur lebih rendah, namun skenario ini bersifat verifikasi
+	tambahan di luar cakupan inti tugas akhir (Bab I, Batasan Masalah)
+	dan memerlukan pengujian ketahanan multi-hari tersendiri sebelum dapat
+	direkomendasikan secara operasional. Terkait kebutuhan penambahan
+	armada, temuan skenario S26 menunjukkan bahwa menambah bus tanpa
+	menambah kapasitas SPKLU secara setara justru kontraproduktif --
+	degradasi rute meningkat dari 3,35 menjadi 10,60 rute per hari --
+	sehingga penambahan armada baru direkomendasikan setelah kapasitas
+	infrastruktur memadai, bukan sebagai solusi mandiri.
+	\item Dasbor visual berhasil dibangun dan mampu menampilkan peta
+	skematik rute serta animasi pergerakan bus per skenario, sebagai alat
+	bantu komunikasi hasil kepada pemangku kepentingan, sebagaimana
+	dijelaskan pada Bab V.
+\end{enumerate}
+
+Secara keseluruhan, dari seluruh skenario yang diuji, dengan kriteria ketat
+(deviasi 0\%) tidak ada satu skenario pun yang meloloskan mayoritas dari 20
+koridor terhadap target headway Dishub DIY; skenario terbaik hanya meloloskan
+4 dari 20 rute (20\%). Namun, dengan toleransi operasional yang lebih realistis
+($\pm$10 menit dari target), S28 meloloskan 17 dari 20 rute, menjadikannya
+Pareto-dominan dibandingkan seluruh skenario alternatif yang diuji. Temuan ini
+menunjukkan bahwa elektrifikasi penuh TransJogja dengan target headway yang
+berlaku saat ini memerlukan kombinasi investasi infrastruktur dan strategi
+operasional yang cermat, dan membuka pertanyaan lebih lanjut mengenai realisme
+target headway tersebut untuk armada yang sepenuhnya elektrik (Bab VI).
+
+
+\section{Saran}
+
+Berdasarkan batasan masalah (Bab I) dan temuan pada Bab VI, beberapa
+saran diajukan untuk pengembangan lebih lanjut:
+
+\begin{enumerate}
+	\item \textbf{Validasi lapangan pada skala lebih besar.} Validasi model
+	drain baterai pada tugas akhir ini hanya menggunakan baseline Rute L-1
+	(2 bus). Pengumpulan data operasional dari lebih banyak rute, seiring
+	perluasan elektrifikasi TransJogja berjalan, akan memungkinkan
+	validasi model yang lebih kuat secara statistik.
+	\item \textbf{Optimasi lokasi SPKLU berbasis algoritma.} Tugas akhir ini
+	membandingkan skenario lokasi yang ditentukan sebagai \textit{input}
+	(Bab I, Batasan Masalah). Penelitian lanjutan dapat mengeksplorasi
+	algoritma optimasi lokasi otomatis (misalnya metaheuristik atau
+	\textit{reinforcement learning}) untuk mencari konfigurasi lokasi dan
+	kapasitas yang lebih optimal secara sistematis, dibandingkan
+	pendekatan perbandingan skenario yang digunakan pada tugas akhir ini.
+	\item \textbf{Optimasi gabungan infrastruktur dan algoritma.} Skenario
+	S35 pada tugas akhir ini menguji algoritma dinamis di atas
+	infrastruktur proporsional yang sudah ditentukan secara sekuensial (23 gun), bukan
+	mengoptimasi keduanya secara bersamaan sejak awal. Penelitian lanjutan
+	dapat mengeksplorasi apakah konfigurasi infrastruktur yang berbeda
+	memberikan hasil yang lebih baik ketika diuji bersama
+	algoritma pengisian daya dinamis sejak tahap perancangan.
+	\item \textbf{Perbaikan algoritma \textit{queue-aware}.} Algoritma V2
+	pada tugas akhir ini menunjukkan fenomena osilasi sistemik akibat
+	respons serentak antar-bus terhadap informasi antrean bersama (Bab
+	VI). Penelitian lanjutan dapat mengeksplorasi mekanisme yang mencegah
+	respons serentak ini, misalnya melalui pengacakan waktu respons atau
+	koordinasi terpusat antar-bus.
+	\item \textbf{Simulasi multi-hari dengan status baterai berkelanjutan.}
+	Tugas akhir ini menggunakan simulasi harian yang berdiri sendiri
+	(\textit{single-day/stateless}), dengan satu pengujian tambahan 14
+	hari sebagai verifikasi ketahanan di luar cakupan inti (Bab VI).
+	Penelitian lanjutan dapat mengembangkan simulasi multi-hari penuh
+	sebagai bagian dari cakupan inti, termasuk pemodelan kebijakan
+	pengisian daya di \textit{pool} pada malam hari secara lebih rinci.
+	\item \textbf{Pemodelan variasi beban penumpang dan kondisi cuaca.}
+	Tugas akhir ini tidak memodelkan pengaruh beban penumpang maupun
+	cuaca terhadap konsumsi energi (Bab I, Batasan Masalah). Penelitian
+	lanjutan dapat mengintegrasikan variabel-variabel ini ke dalam model
+	drain baterai untuk meningkatkan akurasi estimasi konsumsi energi.
+	\item \textbf{Diskusi realisme target headway dengan Dishub DIY.}
+	Mengingat tidak ada skenario yang meloloskan mayoritas rute terhadap
+	target headway yang berlaku saat ini (Bab VI), disarankan agar hasil
+	tugas akhir ini didiskusikan dengan Dishub DIY untuk mengevaluasi
+	apakah target tersebut perlu disesuaikan khusus untuk armada yang
+	sepenuhnya elektrik, atau apakah investasi infrastruktur dan strategi
+	operasional perlu ditingkatkan lebih lanjut dari rekomendasi pada
+	tugas akhir ini.
+\end{enumerate}

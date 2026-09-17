@@ -1,0 +1,17 @@
+{
+  "scenario_id": "s2_full_depot",
+  "description": "Full depot charging saja: bus TIDAK charging di tengah rute. Charging hanya terjadi 1x di pool, di akhir shift (setelah menit ke-900). SoC<=20% di tengah rit -> STRANDED, bus berhenti sisa hari. Hasil breach masif adalah HASIL YANG DIPREDIKSI untuk mendemonstrasikan kenapa full_depot tidak viable sendirian (lihat design.md \u00c2\u00a72.2).",
+  "charging_mechanism": "full_depot",
+  "extra_bus_per_route": 0,
+  "spklu_assignment": "none",
+  "depot_config": {
+    "pool_gamping": {
+      "id": "DEPOT-GAM",
+      "charge_min": 240
+    },
+    "pool_banguntapan": {
+      "id": "DEPOT-BGT",
+      "charge_min": 240
+    }
+  }
+}

@@ -1,0 +1,4238 @@
+[
+  {
+    "route_id": "1A",
+    "path_label": "Terminal Prambanan-Halte Malioboro 3-Terminal Prambanan",
+    "pool": "banguntapan",
+    "bus_count": 12,
+    "bus_origin_detail": "7 bus dari terminal prambanan, 5 bus dari halte malioboro 3",
+    "halte_count_declared": 44,
+    "stop_count_parsed": 49,
+    "headway_gmaps_min": 15,
+    "headway_dishub_min": 11,
+    "route_length_km": 40.01,
+    "stops": [
+      {
+        "name": "Terminal Prambanan",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "TPB Edotel Kalasan 2",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "RS Bhayangkara",
+        "dist_from_prev_m": 1900.0
+      },
+      {
+        "name": "Portable Pasar Kalasan",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Cupuwatu",
+        "dist_from_prev_m": 1900.0
+      },
+      {
+        "name": "Halte Jl. Solo KR 2",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte TJ Bandara Adisucipto",
+        "dist_from_prev_m": 1900.0
+      },
+      {
+        "name": "Halte Hyundai",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "Halte Jl. Solo (Jayakarta)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Halte Janti Selatan (Bawah Jembatan)",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Halte Ambarukmo",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Halte Gedung Wanita",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Halte LPP",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Halte Superindo Urip Sumoharjo",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte RS Bethesda",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Sudirman Bumiputera",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Mangkubumi 1",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Mangkubumi 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Eks Menara Kopi (Utara)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Eks Menara Kopi (Selatan)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Malioboro 1",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Malioboro 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Malioboro 3",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Taman Pintar",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Suryotomo",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Progo",
+        "dist_from_prev_m": 160.0
+      },
+      {
+        "name": "Jl. Mataram Hotel Akur",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Portable Teras Malioboro 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Eks Menara Kopi (Utara)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte TJ YKPN",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "TPB Demangan",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Halte TJ Solo (SMA Debritto)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Ambarukmo Plaza 2",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Halte Janti Selatan (Bawah Jembatan)",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Halte Janti Utara",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "TPB Manna Kampus",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Transmart Maguwo",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Kantor Wilayah DJPb",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte Jl. Solo Maguwo",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Halte TJ Bandara Adisucipto",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "TPB Makan Sorogenen",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB Jl.Solo KR 1",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "BPD Kalasan",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "TPB Jl. Solo Kalasan",
+        "dist_from_prev_m": 1800.0
+      },
+      {
+        "name": "TPB RS. Bhayangkara",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB Edotel Kalasan 1",
+        "dist_from_prev_m": 1700.0
+      },
+      {
+        "name": "Terminal Prambanan",
+        "dist_from_prev_m": 900.0
+      }
+    ],
+    "headway_gmaps_min_raw": 15,
+    "headway_dishub_min_raw": 11,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "1B",
+    "path_label": "Halte Ngabean - Bandara Adisucipto-Halte Ngabean",
+    "pool": "banguntapan",
+    "bus_count": 7,
+    "bus_origin_detail": "7 bus dari bandara adisucipto",
+    "halte_count_declared": 43,
+    "stop_count_parsed": 45,
+    "headway_gmaps_min": 15,
+    "headway_dishub_min": 16,
+    "route_length_km": 29.33,
+    "stops": [
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "KHA Dahlan (Utara)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Taman Pintar",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Pakualaman",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Taman Makam Pahlawan (Utara)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Makam Gajah (Utara)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "SGM Kusumanegara (Utara)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Gedung Juang 45",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "JEC",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Blok O",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Halte Janti Utara",
+        "dist_from_prev_m": 1700.0
+      },
+      {
+        "name": "TPB Manna Kampus",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Transmart Maguwo",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Kantor Wilayah DJPb",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte Jl.Solo Maguwo",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Halte TJ Bandara Adisucipto",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Halte Hyundai",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Halte Jl. Solo (Jayakarta)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Halte Janti Utara",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Halte Mall Sahid J-Walk",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "TPB Tambak Bayan 1",
+        "dist_from_prev_m": 250.0
+      },
+      {
+        "name": "TPB Ruko Babarsari",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Kledokan",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Pasar Angkasa (Timur)",
+        "dist_from_prev_m": 1700.0
+      },
+      {
+        "name": "RS Hardjolukito",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Wonocatur",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "BKPM",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Gembira Loka",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "SGM Kusumanegara (Selatan)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Makam Gajah (Selatan)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Taman Makam Pahlawan (Selatan)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Pasar Sentul (Selatan)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Museum Biologi",
+        "dist_from_prev_m": 290.0
+      },
+      {
+        "name": "Suryotomo",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Progo",
+        "dist_from_prev_m": 160.0
+      },
+      {
+        "name": "Jl. Mataram Hotel Akur",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Portable Teras Malioboro 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Abu Bakar Ali",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Abadi Hotel Jogja",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Stasiun yogyakarta",
+        "dist_from_prev_m": 170.0
+      },
+      {
+        "name": "Jlagran",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Letjen Suprapto",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "SDN Gedongtengen",
+        "dist_from_prev_m": 210.0
+      },
+      {
+        "name": "KS Tubun",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 550.0
+      }
+    ],
+    "headway_gmaps_min_raw": 15,
+    "headway_dishub_min_raw": 16,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "2A",
+    "path_label": "Terminal Condong Catur-Halte Malioboro 3-Terminal Condong Catur",
+    "pool": "banguntapan",
+    "bus_count": 6,
+    "bus_origin_detail": "2 bus dari terminal concat, 4 bus dari halte malioboro 3",
+    "halte_count_declared": 52,
+    "stop_count_parsed": 54,
+    "headway_gmaps_min": 20,
+    "headway_dishub_min": 21,
+    "route_length_km": 34.59,
+    "stops": [
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "TPB RRU Manggung",
+        "dist_from_prev_m": 1300.0
+      },
+      {
+        "name": "Monjali (Selatan)",
+        "dist_from_prev_m": 2200.0
+      },
+      {
+        "name": "Terminal Jombor",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Monjali (Utara)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "PDAM Monjali",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "SPBU Monjali (Timur)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Karangjati (Timur)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Batas Kota Jl. Monjali (Timur)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "AM Sangaji (Timur)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Pasar Kranggan Timur",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Mangkubumi 1",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Mangkubumi 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Eks Menara Kopi (Utara)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Eks Menara Kopi (Selatan)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Malioboro 1",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Malioboro 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Malioboro 3",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Taman Pintar",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Jogjatronik",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB Katamso 1 (Purawisata)",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "SDN Kintelan",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte Kol.Sugiono (Pujokusuman)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Eks STIE Kerjasama",
+        "dist_from_prev_m": 1400.0
+      },
+      {
+        "name": "Halte RSI Hidayatullah",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "TPB Gambiran 2 Jl. Vereteran Kota",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Jl. Perintis Kemerdekaan",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Halte Ngeksigondo Diklat PU",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "TPB SMP 9 Kota",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Halte Gedong Kuning",
+        "dist_from_prev_m": 1800.0
+      },
+      {
+        "name": "TPB Pilar 1 Gedong Kuning Kota",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "TPB Banguntapan 1 Gedong Kuning",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Gembira Loka",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "SGM Kusumanegara (Selatan)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Makam Gajah (Selatan)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "KPPN (Jl. Cendana)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB GOR Among Rogo",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Halte Kenari 1",
+        "dist_from_prev_m": 290.0
+      },
+      {
+        "name": "SMP Kanisius Gayam (Barat)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Eks Bioskop Mataram",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "UKDW",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte RS Bethesda",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte TJ Cik Di Tiro 2",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB SMPN 1 Yogyakarta",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Halte TJ Colombo (Kosudgama)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "TPB Jl. Colombo (UNY)",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Plaza UNY",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Ombudsman",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Santren",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Prayan (Barat)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "SPBU Condongcatur (Barat)",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 450.0
+      }
+    ],
+    "headway_gmaps_min_raw": 20,
+    "headway_dishub_min_raw": 21,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "2B",
+    "path_label": "Terminal Condong Catur-Halte Ngabean-Terminal Condong Catur",
+    "pool": "banguntapan",
+    "bus_count": 8,
+    "bus_origin_detail": "8 bus dari Terminal Concat",
+    "halte_count_declared": 54,
+    "stop_count_parsed": 55,
+    "headway_gmaps_min": 16,
+    "headway_dishub_min": 16,
+    "route_length_km": 34.75,
+    "stops": [
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "SPBU Condongcatur (Timur)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Prayan (Timur)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Makam Santrean",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Susteran Novisiat",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Sanata Dharma",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Jl. Colombo (Samirono)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Jl. Colombo (Panti Rapih)",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "TPB Panti Rapih",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Halte Cik Di Tiro 1",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Bulog",
+        "dist_from_prev_m": 290.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Lempuyangan Gudang (Utara)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Stasiun Lempuyangan",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "TPB Jembatan Lempuyangan",
+        "dist_from_prev_m": 200.0
+      },
+      {
+        "name": "SMP Kanisius Gayam (Timur)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Halte TJ Kenari 2",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB Among Rogo Kota",
+        "dist_from_prev_m": 280.0
+      },
+      {
+        "name": "Makam Gajah (Utara)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "SGM Kusumanegara (Utara)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Gedung Juang 45",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Gedong Kuning Banguntapan",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB Poltekkes BSI",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB Kehutanan Gedongkuning",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB SMP 9 Basen",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Halte Ngeksigondo Basen",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Jl. Perintis Kemerdekaan (Selatan)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "TPB Gambiran 1",
+        "dist_from_prev_m": 260.0
+      },
+      {
+        "name": "TPB Jl. Veteran",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte PSKY",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "TPB Pasar Sepeda Tunjungsari",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Halte Sugiono 2",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "TPB Purawisata",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Halte Katamso 2",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Senopati",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "KHA Dahlan (Selatan)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "TPB Pasar Serangan",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Cokroaminoto SMA 1",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte SMPN11",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Eks Perpusda",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Halte SMPN14",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Hotel Utara",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Eks Borobudur Plaza",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "SMKN 3",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "AM Sangaji (Barat)",
+        "dist_from_prev_m": 220.0
+      },
+      {
+        "name": "Batas Kota Jl. Monjali (Barat)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Karangjati (Barat)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "SPBU Monjali (Barat)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "PDAM Monjali (Barat)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Monjali (Selatan)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Terminal Jombor",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Monjali (Utara)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Halte TJ RRU Kentungan",
+        "dist_from_prev_m": 2000.0
+      },
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 1500.0
+      }
+    ],
+    "headway_gmaps_min_raw": 16,
+    "headway_dishub_min_raw": 16,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "3A",
+    "path_label": "Terminal Condong Catur-Terminal Giwangan-Terminal Condong Catur",
+    "pool": "gamping",
+    "bus_count": 11,
+    "bus_origin_detail": "4 bus dari Terminal Concat, 7 bus dari Terminal Giwangan",
+    "halte_count_declared": 52,
+    "stop_count_parsed": 52,
+    "headway_gmaps_min": 15,
+    "headway_dishub_min": 12,
+    "route_length_km": 37.44,
+    "stops": [
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "TPB RRU Magngung",
+        "dist_from_prev_m": 1300.0
+      },
+      {
+        "name": "Hokben Jakal (Timur)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB McD Jakal",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Biologi UGM",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte RS Sardjito (Timur)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "FKG UGM (Utara)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte GIK UGM",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB Panti Rapih",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Halte Cik Di Tiro 1",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Bulog",
+        "dist_from_prev_m": 290.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Eks Menara Kopi (Selatan)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Malioboro 1",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Malioboro 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Malioboro 3",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "KHA Dahlan (Selatan)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Portable Tamansari",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "TPB MT Haryono 1 (Jokteng Kulon)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "TPB Jl. Mayjen Sutoyo (Plengkung Gading)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Halte Kol. Sugiono 1 (Pujokusuman)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "TPB Lowanu",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB UNU Yogyakarta",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "TPB Widya Wiwaha 1",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "TPB Sorogenen (Wirosaban)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "TPB Tegal Turi 1",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB Gudang SGM 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "TPB Pasar Giwangan 2",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Terminal Giwangan",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "TPB Pasar Giwangan 1",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "TPB Gudang SGM",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Tegal Gendu 1",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB Lapangan Karang",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "TPB SMA 5",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Halte Gedong Kuning",
+        "dist_from_prev_m": 1900.0
+      },
+      {
+        "name": "TPB Pilar 1 Gedong Kuning Kota",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "TPB Banguntapan 1 Gedong Kuning",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "JEC",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Blok O",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Halte Janti Utara",
+        "dist_from_prev_m": 1700.0
+      },
+      {
+        "name": "TPB Manna Kampus",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Transmart Maguwo",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Kantor Wilayah DJPb",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte Jl. Solo Maguwo",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Halte TJ Bandara Adisucipto",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Kantor Kesehatan Pelabuhan Yogya",
+        "dist_from_prev_m": 1600.0
+      },
+      {
+        "name": "TJ RRU Disnaker",
+        "dist_from_prev_m": 1400.0
+      },
+      {
+        "name": "Halte RRU Instiper 2",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "TPB Polsek Depok Timur",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Halte UPN Veteran",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Pakuwon Mall (Selatan)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 600.0
+      }
+    ],
+    "headway_gmaps_min_raw": 15,
+    "headway_dishub_min_raw": 12,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "3B",
+    "path_label": "Terminal Giwangan-Terminal Condong Catur-Terminal Giwangan",
+    "pool": "gamping",
+    "bus_count": 9,
+    "bus_origin_detail": "7 bus dari Terminal Giwangan, 2 bus Terminal Concat",
+    "halte_count_declared": 56,
+    "stop_count_parsed": 57,
+    "headway_gmaps_min": 15,
+    "headway_dishub_min": 12,
+    "route_length_km": 36.9,
+    "stops": [
+      {
+        "name": "Terminal Giwangan",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "TPB Pasar Giwangan 1",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB Gudang SGM",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "TPB Tegal Turi 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Nitikan",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB Widya Wiwaha 2",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB PA Muhammadiyah",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte Sugiono 2",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Portable Jl. Mayjen Sutoyo (Jokteng Wetan)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Portable Jl. Mayjen Sutoyo (Pasar Gading)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte MT Haryono 2 (SMAN 7)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Portable Tejokusuman (Tamansari)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "KHA Dahlan (Utara)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Bhayangkara",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Pasar Pathuk",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Sosrowijayan",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Stasiun Yogyakarta",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Jlagran",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Eks Perpusda",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Halte SMPN 14",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Halte Pasar Kranggan",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Halte Sudirman (Santika)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte TJ Cik Di Tiro 2",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB SMPN1 Yogyakarta",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Vokasi UGM",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "FKG UGM (Selatan)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte RS Sardjito (Barat)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "MM UGM",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB Hotel Vidi Jakal",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Hokben Jakal (Barat)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte TJ RRU Kentungan",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "Pakuwon Mall (Utara)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "JIH",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte Stikes Guna Bangsa",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "TPB Polsek Depok Timur",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "TPB RRU Instiper 1",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "TPB SMK Tajem Ringroad Utara",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Halte TJ RRU (Binamarga)",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Halte Jl. Solo Maguwo",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Halte TJ Bandara Adisucipto",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Halte Hyundai",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Halte Jl. Solo (Jayakarta)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Pasar Angkasa (Timur)",
+        "dist_from_prev_m": 1900.0
+      },
+      {
+        "name": "RS Hardjolukito",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Wonocatur",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "BKPM",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Gedong Kuning Banguntapan",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB Poltekkes BSI",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB Kehutanan Gedongkuning",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB Pegadaian",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "TPB Lap. Karang Kotagede",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Halte TJ Tegal Gendu 2",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "TPB Gudang SGM 2",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "TPB Pasar Giwangan 2",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Terminal Giwangan",
+        "dist_from_prev_m": 400.0
+      }
+    ],
+    "headway_gmaps_min_raw": 15,
+    "headway_dishub_min_raw": 12,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "4A",
+    "path_label": "Terminal Giwangan-RSUP Sardjito-Terminal Giwangan",
+    "pool": "gamping",
+    "bus_count": 4,
+    "bus_origin_detail": "3 bus dari Terminal Giwangan, 1 bus dari RS Sardjito (Barat)",
+    "halte_count_declared": 46,
+    "stop_count_parsed": 46,
+    "headway_gmaps_min": 30,
+    "headway_dishub_min": 25,
+    "route_length_km": 27.5,
+    "stops": [
+      {
+        "name": "Terminal Giwangan",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "TPB Pasar Giwangan 1",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB Gudang SGM",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Muhammadiyah 3",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB Jl. Pramuka",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "TPB Pasar Sepeda Tunjungsari",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Nyutran Tamansiswa",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Wirogunan (Barat)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Pasar Sentul (Selatan)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Museum Biologi",
+        "dist_from_prev_m": 290.0
+      },
+      {
+        "name": "Hayam Wuruk (barat)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB Pasar Lempuyangan",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Stasiun Lempuyangan",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 1300.0
+      },
+      {
+        "name": "UKDW",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte RS Bethesda",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte TJ Cik Di Tiro 2",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB SMPN 1 Yogyakarta",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Vokasi UGM",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "FKG UGM (Selatan)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte RS Sardjito (Barat)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "MM UGM",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB Hotel Vidi Jakal (Barat)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Halte TJ RRU Kentungan",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "SPBU Condongcatur (Timur)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Prayan (Timur)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Susteran Novisiat",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Makam Santrean",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte Sanata Dharma",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Pasar Demangan",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "TPB Demangan",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte TJ Solo (SMA Debritto)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "UIN Sunan Kalijaga (Barat)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "APMD (Timur)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Timoho (Timur)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "SMK N 5 (Utara)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "SGM Kusumanegara (Selatan)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "UTY Glagahsari (Timur)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Makam Prajurit (Timur)",
+        "dist_from_prev_m": 220.0
+      },
+      {
+        "name": "Halte PSKY",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Polsek Umbulharjo",
+        "dist_from_prev_m": 290.0
+      },
+      {
+        "name": "Halte TJ Universitas Ahmad Dahlan",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "TPB Gudang SGM 2",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB Pasar Giwangan 2",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Terminal Giwangan",
+        "dist_from_prev_m": 400.0
+      }
+    ],
+    "headway_gmaps_min_raw": 30,
+    "headway_dishub_min_raw": 25,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "4B",
+    "path_label": "Terminal Giwangan-UGM-Terminal Giwangan",
+    "pool": "gamping",
+    "bus_count": 4,
+    "bus_origin_detail": "2 bus dari Terminal Giwangan, 2 bus dari Biologi UGM",
+    "halte_count_declared": 42,
+    "stop_count_parsed": 42,
+    "headway_gmaps_min": 30,
+    "headway_dishub_min": 25,
+    "route_length_km": 25.34,
+    "stops": [
+      {
+        "name": "TPB Pasar Giwangan",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "TPB Gudang SGM",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Muhammadiyah 3",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Halte TJ Universitas Ahmad Dahlan",
+        "dist_from_prev_m": 250.0
+      },
+      {
+        "name": "TPB Jl. Pramuka",
+        "dist_from_prev_m": 260.0
+      },
+      {
+        "name": "Pandeyan (Barat)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "UTY Glagahsari (Barat)",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "SGM Kusumanegara (Utara)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "SMK N 5 (Selatan)",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Timoho (Barat)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "APMD (Barat)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "UIN Sunan Kaljaga (Timur)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Halte Gedung Wanita",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "RRI Gejayan",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Plaza UNY",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Ombudsman",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Santren",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Prayan (Barat)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "SPBU Condongcatur (Barat)",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB RRU Manggung",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "Hokben Jakal (Timur)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB McD Jakal",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Biologi UGM",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte RS Sardjito (Timur)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "FKG UGM (Utara)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte GIK UGM",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "MAN 1 Yogyakarta",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte PDIN C Simanjuntak",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Halte Bulog",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Lempuyangan Gudang (Utara)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Hayam Wuruk (Timur)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Pakualaman",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Wirogunan (Timur)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "STSRD Visi Tamansiswa",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Eks STIE Kerjasama",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Polsek Umbulharjo",
+        "dist_from_prev_m": 250.0
+      },
+      {
+        "name": "Halte TJ Universitas Ahmad Dahlan",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "TPB Gudang SGM 2",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB Pasar Giwangan 2",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Terminal Giwangan",
+        "dist_from_prev_m": 280.0
+      }
+    ],
+    "headway_gmaps_min_raw": 30,
+    "headway_dishub_min_raw": 25,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "5A",
+    "path_label": "Terminal Jombor-Ambarukmo-Terminal Jombor",
+    "pool": "gamping",
+    "bus_count": 4,
+    "bus_origin_detail": "2 dari Terminal Jombor, 2 dari Ambarukmo Plaza 2",
+    "halte_count_declared": 35,
+    "stop_count_parsed": 36,
+    "headway_gmaps_min": 30,
+    "headway_dishub_min": 25,
+    "route_length_km": 26.53,
+    "stops": [
+      {
+        "name": "Terminal Jombor",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "Indogrosir",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Jogja City Mall (Timur)",
+        "dist_from_prev_m": 250.0
+      },
+      {
+        "name": "Atakrib Jl. Magelang",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "TPB TVRI (Timur)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Karangwaru (Timur)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Eks Borobudur Plaza",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "SMK N 3",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Fisipol UGM (Barat)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB Panti Rapih",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte Cik Di Tiro 1",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Bulog",
+        "dist_from_prev_m": 290.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte TJ YKPN",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "TPB Demangan",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Halte TJ Solo (SMA Debritto)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Ambarukmo Plaza 2",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Halte Janti Selatan (Bawah Jembatan)",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Halte Janti Utara",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Halte Mall Sahid J-Walk",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "TPB Tambak Bayan 1",
+        "dist_from_prev_m": 240.0
+      },
+      {
+        "name": "TPB Ruko Babarsari",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "STIE YKPN (Barat)",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Halte UPN Veteran",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Pakuwon Mall (Selatan)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "TPB RRU Manggung",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "Hokben Jakal (Timur)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB McD Jakal",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "FKG UGM (Selatan)",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Halte RS Sardjito (Barat)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Teknik UGM (Selatan)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "SPBU Monjali (Barat)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "PDAM Monjali (Barat)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Monjali (Selatan)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Terminal Jombor",
+        "dist_from_prev_m": 1100.0
+      }
+    ],
+    "headway_gmaps_min_raw": 30,
+    "headway_dishub_min_raw": 25,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "5B",
+    "path_label": "Terminal Jombor-Bandara Adisucipto-Terminal Jombor",
+    "pool": "gamping",
+    "bus_count": 5,
+    "bus_origin_detail": "3 bus dari Terminal Jombor, 2 dari Bandara Adi Sucipto",
+    "halte_count_declared": 43,
+    "stop_count_parsed": 43,
+    "headway_gmaps_min": 30,
+    "headway_dishub_min": 25,
+    "route_length_km": 32.97,
+    "stops": [
+      {
+        "name": "Terminal Jombor",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "Monjali (Utara)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "PDAM Monjali",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "SPBU Monjali (Timur)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Teknik UGM (Utara)",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Halte RS Sardjito (Timur)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "FKG UGM (Utara)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "TPB Hotel Vidi Jakal",
+        "dist_from_prev_m": 1300.0
+      },
+      {
+        "name": "Hokben Jakal (Barat)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte TJ RRU Kentungan",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "Pakuwon Mall (Utara)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "JIH",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Halte Stikes Guna Bangsa",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "STIE YKPN (Timur)",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "SMP N 4 Depok",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Dishub DIY",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB Manna Kampus",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Transmart Maguwo",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Kantor Wilayah DJPb",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte Jl. Solo Maguwo",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Halte TJ Bandara Adisucipto",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Halte Hyundai",
+        "dist_from_prev_m": 1600.0
+      },
+      {
+        "name": "Halte Jl. Solo (Jayakarta)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Halte Janti Selatan (Bawah Jembatan)",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Halte Ambarukmo",
+        "dist_from_prev_m": 1400.0
+      },
+      {
+        "name": "Halte Gedung Wanita",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Halte LPP",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Halte Superindo Urip Sumuharjo",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte RS Bethesda",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Bulog",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "TPB Suroto 1",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Halte TJ Cik Di Tiro 2",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "TPB SMPN 1 Yogyakarta",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Fisipol UGM (Timur)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "SMP N 6",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Kricak",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Karangwaru (Barat)",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "TVRI (Barat)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Daytrans Jl. Magelang",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Jogja City Mall (Barat)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "MMTC Yogya",
+        "dist_from_prev_m": 270.0
+      },
+      {
+        "name": "Terminal Jombor",
+        "dist_from_prev_m": 450.0
+      }
+    ],
+    "headway_gmaps_min_raw": 30,
+    "headway_dishub_min_raw": 25,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "6",
+    "path_label": "Halte Gamping (Ambarketawang)-Halte Malioboro 3 -Halte Gamping (Ambarketawang)",
+    "pool": "gamping",
+    "bus_count": 5,
+    "bus_origin_detail": "5 dari Halte Malioboro 3",
+    "halte_count_declared": 40,
+    "stop_count_parsed": 42,
+    "headway_gmaps_min": 16,
+    "headway_dishub_min": 20,
+    "route_length_km": 26.27,
+    "stops": [
+      {
+        "name": "Park and Ride Gamping",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "PKU Gamping",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Pasar Gamping (Utara)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Portabel BSI",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB UMY 2",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "TPB BRI UMY",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB Universitas Alma Alta",
+        "dist_from_prev_m": 260.0
+      },
+      {
+        "name": "Jadan 2",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "TPB Kasihan",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "TPB SImpang Diklat DIY",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "TPB Gedung Madu Candhya 2",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "SMAN 1 Kasihan (Barat)",
+        "dist_from_prev_m": 1400.0
+      },
+      {
+        "name": "TPB SMK Seni 2",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Pasar Legi Yogyakarta",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Mualimin (Utara)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Portabel Tejokusuman (Tamansari)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "KHA Dahlan (Utara)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Taman Pintar",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Suryotomo",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Progo",
+        "dist_from_prev_m": 160.0
+      },
+      {
+        "name": "Jl, Mataram Hotel Akur",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Portable Teras Malioboro 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Malioboro 1",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Malioboro 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Malioboro 3",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "KHA Dahlan (Selatan)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Mualimin (Selatan)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "TPB Pasar Legi",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "TPB SMK Seni 1",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "SMAN 1 Kasihan (Timur)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB Gedung Madu Candhya 1",
+        "dist_from_prev_m": 1400.0
+      },
+      {
+        "name": "TPB Ponpes Hamatul Quran",
+        "dist_from_prev_m": 1300.0
+      },
+      {
+        "name": "TPB Lap. Kasihan",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Jadan 1",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB Apotek Muji Sehat",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "TPB UMY 1",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "TPB AMIK BSI",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Pasar Gamping (Selatan)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "BPD Gamping (Selatan)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Park and Ride Gamping",
+        "dist_from_prev_m": 450.0
+      }
+    ],
+    "headway_gmaps_min_raw": 16,
+    "headway_dishub_min_raw": 20,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "8",
+    "path_label": "Terminal Jombor-Halte Ngabean-Terminal Jombor",
+    "pool": "gamping",
+    "bus_count": 6,
+    "bus_origin_detail": "4 dari Terminal Jombor, 2 dari Terminal Ngabean",
+    "halte_count_declared": 48,
+    "stop_count_parsed": 49,
+    "headway_gmaps_min": 30,
+    "headway_dishub_min": 15,
+    "route_length_km": 31.37,
+    "stops": [
+      {
+        "name": "Terminal Jombor",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "Portable UTY Ringroad Utara 2",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Portable Dusun Ngawen",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "Portable Westlake 2",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "RS Queen Latifa",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "Perumahan Nogotirto",
+        "dist_from_prev_m": 94.0
+      },
+      {
+        "name": "Portable Simpang Demak Ijo",
+        "dist_from_prev_m": 1600.0
+      },
+      {
+        "name": "Simpang Godean Nogotirto",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Kantor Pos Demak Ijo",
+        "dist_from_prev_m": 180.0
+      },
+      {
+        "name": "SDN 1 Demak Ijo",
+        "dist_from_prev_m": 91.0
+      },
+      {
+        "name": "Pasar Tlogorejo",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Portable McD Godean",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Portable Soragan 1",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Badan Kepegawaian DI Yogyakarta",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Pasar Pingit (Utara)",
+        "dist_from_prev_m": 280.0
+      },
+      {
+        "name": "Halte Pasar Kranggan",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Mangkubumi 1",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Mangkubumi 2",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Eks Menara Kopi (Utara)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Eks Menara Kopi (Selatan)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Malioboro 1",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Malioboro 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Malioboro 3",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "KHA Dahlan (Selatan)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "KHA Dahlan (Utara)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Bhayangkara",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Pasar Pethuk",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Sosrowijayan",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Stasiun Yogyakarta",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Jlagran",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Eks Perpusda",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Halte SMP N 14",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Pasar Pingit (Selatan)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "BKD (Selatan)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Portable Soragan 2",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Portable Dentes (Ruko Godean)",
+        "dist_from_prev_m": 1400.0
+      },
+      {
+        "name": "Pasar Tlogorejo 2",
+        "dist_from_prev_m": 1900.0
+      },
+      {
+        "name": "SDN 1 Demak Ijo 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Kantor Pos Demak Ijo 2",
+        "dist_from_prev_m": 99.0
+      },
+      {
+        "name": "Halte Simpang nogotirto",
+        "dist_from_prev_m": 180.0
+      },
+      {
+        "name": "Kompi Senapan-C (Selatan)",
+        "dist_from_prev_m": 150.0
+      },
+      {
+        "name": "Portable Total Security (SP Demak Ijo)",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "SMPN 3 Gamping",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "TPB UNISA",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Portable Westlake 1",
+        "dist_from_prev_m": 2300.0
+      },
+      {
+        "name": "Portable UTY Ringroad Utara 1",
+        "dist_from_prev_m": 2100.0
+      },
+      {
+        "name": "Terminal Jombor",
+        "dist_from_prev_m": 900.0
+      }
+    ],
+    "headway_gmaps_min_raw": 30,
+    "headway_dishub_min_raw": 15,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "9",
+    "path_label": "Terminal Giwangan-Terminal Jombor-Terminal Giwangan",
+    "pool": "gamping",
+    "bus_count": 6,
+    "bus_origin_detail": "5 dari Terminal Giwangan, 1 dari Terminal Jombor",
+    "halte_count_declared": 48,
+    "stop_count_parsed": 42,
+    "headway_gmaps_min": 30,
+    "headway_dishub_min": 20,
+    "route_length_km": 31.54,
+    "stops": [
+      {
+        "name": "Terminal Giwangan",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "TPB UAD Ringroad Selatan 2",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "TPB Simpang Wojo 1",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Salakan Druwo",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Jogokariyan",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Prtable Jl. Mayjen Sutoyo (Jokteng Wetan)",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Portable Jl. Mayjen Sutoyo (Pasar Gading)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte MT Haryono 2 (SMA N 7)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Portable Tejokusuman (Tamansari)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB Pasar Serangan",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Halte Cokroaminoto SMA 1",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte SMPN11",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Eks Perpusda",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Halte SMP N 14",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Hotel Utara",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Kricak",
+        "dist_from_prev_m": 120.0
+      },
+      {
+        "name": "Karangwaru (Barat)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TVRI (Barat)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Daytrans Jl. Magelang",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Jogja City Mall (Barat)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "MMTC Yogya",
+        "dist_from_prev_m": 270.0
+      },
+      {
+        "name": "Terminal Jombor",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Indogrosir",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Jogja City Mall (Timur)",
+        "dist_from_prev_m": 250.0
+      },
+      {
+        "name": "Atakrib Jl. Magelang",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "TPB TVRI (Timur)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Karangwaru (Timur)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Hotel Utara (Timur)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Halte Samsat",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Halte Saudagaran",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Halte SMA 1 Yogyakarta",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB RE Martadinata",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Portable Tamansari",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "TPB MT Haryono 1 (Jokteng Kulon)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "TPB Jl. Mayjen Sutoyo (Plengkung Gading)",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Halte Hotel Noola",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Portable Jogokaryan Kimia Farma 1",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Portable Druwo",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "TPB UAD Ringroad Selatan 1",
+        "dist_from_prev_m": 2200.0
+      },
+      {
+        "name": "Terminal Giwangan",
+        "dist_from_prev_m": 1100.0
+      }
+    ],
+    "headway_gmaps_min_raw": 30,
+    "headway_dishub_min_raw": 20,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "10",
+    "path_label": "Kusumanegara-Park Gamping-Kusumanegara",
+    "pool": "gamping",
+    "bus_count": 6,
+    "bus_origin_detail": "6 bus dari SGM Kusumanegara (Selatan)",
+    "halte_count_declared": 43,
+    "stop_count_parsed": 47,
+    "headway_gmaps_min": 20,
+    "headway_dishub_min": 20,
+    "route_length_km": 35.3,
+    "stops": [
+      {
+        "name": "Park and Ride Gamping",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "PKU Gamping",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Pasar Gamping (Utara)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Palem Gurih",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB Ruko Bayeman 2",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "TPB Museum Bahari 2",
+        "dist_from_prev_m": 1300.0
+      },
+      {
+        "name": "SMP Muhammadiyah 3",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "GKJ Wirobrajan (Timur)",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Mualimin (Utara)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Portable Tejokusuman (Tamansari)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "KHA Dahlan (Utara)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Taman Pintar",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Suryotomo",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Progo",
+        "dist_from_prev_m": 160.0
+      },
+      {
+        "name": "Jl. Mataram Hotel Akur",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Portable Teras Malioboro 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Eks Menara Kopi (Utara)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Lempuyangan Gudang (Utara)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Stasiun Lempuyangan",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Tarumartani (Utara)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Mako Lanal Yogyakarta",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Timoho (Timur)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "SMK N 5 (Utara)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "SGM Kusumanegara (Selatan)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Timoho (Barat)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "TPB TNI AL 1",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB Tarumartani",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "TPB Jembatan Lempuyangan",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "SMP Kanisius Gayam (Timur)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Jl. Mataram Hotel Akur",
+        "dist_from_prev_m": 1400.0
+      },
+      {
+        "name": "Portable Teras Malioboro 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Malioboro 1",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Malioboro 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Malioboro 3",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "KHA Dahlan (Selatan)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 7000.0
+      },
+      {
+        "name": "Mualimin (Selatan)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "SMA Muhammadiyah 3",
+        "dist_from_prev_m": 290.0
+      },
+      {
+        "name": "TPB Wirobrajan 1",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "TPB MUseum Bahari 1",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "TPB Ruko Bayeman 1",
+        "dist_from_prev_m": 1400.0
+      },
+      {
+        "name": "TPB Palem Gurih",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Pasar Gamping (Selatan)",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "BPD Gamping (Selatan)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Park and Ride Gamping",
+        "dist_from_prev_m": 450.0
+      }
+    ],
+    "headway_gmaps_min_raw": 20,
+    "headway_dishub_min_raw": 20,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "11",
+    "path_label": "Terminal Giwangan-RS Panti Rapih-Terminal Giwangan",
+    "pool": "gamping",
+    "bus_count": 5,
+    "bus_origin_detail": "4 bus dari Terminal Giwangan, 1 bus dari RS Panti Rapih",
+    "halte_count_declared": 39,
+    "stop_count_parsed": 41,
+    "headway_gmaps_min": 40,
+    "headway_dishub_min": 25,
+    "route_length_km": 28.49,
+    "stops": [
+      {
+        "name": "Terminal Giwangan",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "TPB UAD Ringroad Selatan 2",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "Randubelang (Barat)",
+        "dist_from_prev_m": 1600.0
+      },
+      {
+        "name": "TPB Pasar Telo 1",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Jogokariyan",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB Hotel Pramesthi",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "TPB Ruba Graha 1",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Suryodiningratan (Barat)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte MT Haryono 2 (SMA N 7)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Portable Tejokusuman (Tamansari)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "TPB Pasar Serangan",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Halte Cokroaminoto SMA 1",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte SMPN11",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Eks Perpusda",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Halte SMP N 14",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Halte Pasar Kranggan",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Halte Sudirman (Santika)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte TJ Cik Di Tiro 2",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB SMPN 1 Yogyakarta",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "TPB Panti Rapih",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte Cik Di Tiro 1",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Bulog",
+        "dist_from_prev_m": 290.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte TJ Kotabaru",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Halte Sudirman Bumiputera",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Halte TJ Diponegoro",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Halte Samsat",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte Saudagaran",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Halte SMA 1 Yogyakarta",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TPB RE Martadinata",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Portable Tamansari",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "TPB MT Haryono 1 (Jokteng Kulon)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Suryodiningratan (Timur)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "TPB Ruba Graha 2",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Portable Jogokaryan Kimia Farma 1",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "TPB Pasar Telo 2",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Randubelang (Timur)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB UAD Ringroad Selatan 1",
+        "dist_from_prev_m": 1600.0
+      },
+      {
+        "name": "Terminal Giwangan",
+        "dist_from_prev_m": 1100.0
+      }
+    ],
+    "headway_gmaps_min_raw": 40,
+    "headway_dishub_min_raw": 25,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "12",
+    "path_label": "Terminal Concat-Terminal Pakem-Terminal Concat",
+    "pool": "banguntapan",
+    "bus_count": 7,
+    "bus_origin_detail": "3 bus dari Terminal Concat, 4 bus dari Terminal Pakem",
+    "halte_count_declared": 60,
+    "stop_count_parsed": 63,
+    "headway_gmaps_min": 20,
+    "headway_gmaps_min_raw": 20,
+    "headway_dishub_min": 20,
+    "headway_dishub_min_raw": null,
+    "headway_dishub_is_estimated": true,
+    "route_length_km": 38.05,
+    "stops": [
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "SPBU Condongcatur (Timur)",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Prayan (Timur)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Susteran Novisiat",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Makam Santrean",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte Sanata Dharma",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Jl. Colombo (Samirono)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Jl. Colombo (Panti Rapih)",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Vokasi UGM",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "FKG UGM (Selatan)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte RS Sardjito (Barat)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "MM UGM",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB Hotel Vidi Jakal",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Hokben Jakal (Barat)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Superindo Kaliurang",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Pasar Kolombo",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Terminal Bangunan",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Simpang Palem Raya (Timur)",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Kantor Camat Ngaglik",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Puskesmas Ngaglik 1",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "SMP Negeri 2 Ngaglik",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Warung Sego Penyetan Banyuwangi",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Wedangan Kampoeng",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Simpang Besi Jangkang",
+        "dist_from_prev_m": 430.0
+      },
+      {
+        "name": "Pusat Rehabilitasi YAKKUM",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Boulevard UII",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "UII (Barat Jalan)",
+        "dist_from_prev_m": 190.0
+      },
+      {
+        "name": "Simpang Dogolan",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Raminten Boutique & Cafe",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Dusun Kledokan (Soto Brakot)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "RS Panti Nugroho",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Terminal Pakem",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "SMPN 4 Pakem",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Dusun Kledokan (Soto Brakot) 2",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Raminten Boutique & Cafe (Halte 2)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Simpang Dogolan 2",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Boulevard UII",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "UII (Timur Jalan)",
+        "dist_from_prev_m": 200.0
+      },
+      {
+        "name": "Pusat Rehabilitasi YAKKUM (Halte 2)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Simpang Besi Jangkan 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Wedangan Kampoeng (Timur)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "SPBU Kaliurang",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "SMP Negeri 2 Ngaglik (Timur)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Puskesmas Ngaglik 1 (Halte 2)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "TK Bias Kaliurang",
+        "dist_from_prev_m": 280.0
+      },
+      {
+        "name": "Simpang Palem Raya (Timur)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "PLN Gardu Induk Kentungan",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Pasar Kolobo (Timur)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Superindo Kaliurang (Halte 2)",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Hokben Jakal (Timur)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "TPB McD Jakal",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Biologi UGM",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte RS Sardjito  (Timur)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "FKG UGM (Utara)",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte GIK UGM",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte TJ Colombo (Kosudgama)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "TPB Jl. Colombo (UNY)",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Plaza UNY",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Ombudsman",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Santren",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Prayan (Barat)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "SPBU Condongcatur (Barat)",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Terminal Condong Catur",
+        "dist_from_prev_m": 450.0
+      }
+    ]
+  },
+  {
+    "route_id": "13",
+    "path_label": "Halte Ngabean-Halte Stadion TGP-Halte Ngabean",
+    "pool": "banguntapan",
+    "bus_count": 4,
+    "bus_origin_detail": "3 bus dari Halte Ngabean, 1 bus dari Halte Stadion TGP",
+    "halte_count_declared": 56,
+    "stop_count_parsed": 56,
+    "headway_gmaps_min": 30,
+    "headway_dishub_min": 37,
+    "route_length_km": 26.23,
+    "stops": [
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "TPB Pasar Serangan",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Cokroaminoto SMA 1",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte SMPN11",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Portable Soragan 2",
+        "dist_from_prev_m": 1600.0
+      },
+      {
+        "name": "Portable Dentes (Ruko Godean)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Pasar Tlogorejo 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "SDN 1 Demak Ijo 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Kantor Pos Demak Ijo 2",
+        "dist_from_prev_m": 99.0
+      },
+      {
+        "name": "Halte Simpang Nogotirto",
+        "dist_from_prev_m": 190.0
+      },
+      {
+        "name": "Kompi Senapan-C (Selatan)",
+        "dist_from_prev_m": 140.0
+      },
+      {
+        "name": "Barat Simpang Bantulan 2",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Simpang Munggur Sidomoyo",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Simpang Gesikan 2",
+        "dist_from_prev_m": 190.0
+      },
+      {
+        "name": "Indomaret Klajuran",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Neutron Yogyakarta Godean",
+        "dist_from_prev_m": 150.0
+      },
+      {
+        "name": "Simpang Polsek Godean 2",
+        "dist_from_prev_m": 170.0
+      },
+      {
+        "name": "Koramil Godean 2",
+        "dist_from_prev_m": 240.0
+      },
+      {
+        "name": "Simpang Mandungan (Iwak Kalen) 2",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Kantor Kecamatan Godean",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Pusat Kuliner Belut Godean",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "TPB Pasar Induk Godean",
+        "dist_from_prev_m": 290.0
+      },
+      {
+        "name": "TPB SMPN 1 Godean",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Halte Stadion TGP",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB SMKN 2 Godean",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "TPB Pasar Induk Godean 1",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "TPB Pasar Belut Godean 1",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Kantor Kecamatan Godean (Halte 2)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Simpang Mandungan (Iwak Kalen)",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Koramil Godean",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Simpang Polsek Godean",
+        "dist_from_prev_m": 250.0
+      },
+      {
+        "name": "Neutron Yogyakarta Godean (Halte 2)",
+        "dist_from_prev_m": 140.0
+      },
+      {
+        "name": "Indomaret Klajuran",
+        "dist_from_prev_m": 170.0
+      },
+      {
+        "name": "Simpang Gesikan",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Simpang Munggur",
+        "dist_from_prev_m": 220.0
+      },
+      {
+        "name": "Timur Simpang Bantulan",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Kantor Desa Sidoarum",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Barat Jembatan Moyudan (Toko Searah)",
+        "dist_from_prev_m": 280.0
+      },
+      {
+        "name": "Simpang Godean Nogotirto",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Kantor Pos Demak Ijo",
+        "dist_from_prev_m": 180.0
+      },
+      {
+        "name": "SDN 1 Demak Ijo",
+        "dist_from_prev_m": 91.0
+      },
+      {
+        "name": "Pasar Tlogorejo",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Portable McD Godean",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Portable Soragan 1",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Badan Kepegawaian DI Yogyakarta",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Pasar Pingit (Utara)",
+        "dist_from_prev_m": 280.0
+      },
+      {
+        "name": "Halte Pasar Kranggan",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Halte Sudirman (Santika)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte Bulog",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Eks Menara Kopi (Selatan)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Malioboro 1",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Malioboro 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Malioboro 3",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "KHA Dahlan (Selatan)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 650.0
+      }
+    ],
+    "headway_gmaps_min_raw": 30,
+    "headway_dishub_min_raw": 37,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "14",
+    "path_label": "Halte TJ Bandara Adisucipto-Terminal Pakem-Halte TJ Bandara Adisucipto",
+    "pool": "banguntapan",
+    "bus_count": 3,
+    "bus_origin_detail": "2 bus dari Bandara Adisucipto, 1 dan Terminal Pakem",
+    "halte_count_declared": 56,
+    "stop_count_parsed": 75,
+    "headway_gmaps_min": 60,
+    "headway_dishub_min": 32,
+    "route_length_km": 41.3,
+    "stops": [
+      {
+        "name": "Halte TJ Bandara Adisucipto",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "Kantor Kesehatan Pelabuhan Yogya",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "TJ RRU Disnaker",
+        "dist_from_prev_m": 1400.0
+      },
+      {
+        "name": "SMKN 1 Depok",
+        "dist_from_prev_m": 2000.0
+      },
+      {
+        "name": "SD N 1 Depok",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Kantor Urusan Agama Depok",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "MAN 2 Sleman",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Kampus Unriyo",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "SMA Budi Mulia Dua",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Indomaret Pokoh Sambiroto",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Kantor Desa Wedomartani",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Simpang Babadan",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Simpang Selomartani",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Simpang Kabunan",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Halte Raya Kabunan",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "RS Kemasan",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Dusun Kenthi",
+        "dist_from_prev_m": 240.0
+      },
+      {
+        "name": "Simpang Pasar Jangkang",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Puskesmas Ngemplak 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Tugu Batas Desa Yapah",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Timur Jembatan Yapah",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "SMA Negeri 2 Ngaglik",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Simpang Losari (Cozy)",
+        "dist_from_prev_m": 220.0
+      },
+      {
+        "name": "SPBU Mindi",
+        "dist_from_prev_m": 220.0
+      },
+      {
+        "name": "Lapangan Klidon",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "SDN Selomulyo",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "RSU Gramedika",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "SImpang Besi Jangkang",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Pusat Rehabilitasi YAKKUM",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Boulevard UII",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "UII (Barat Jalan)",
+        "dist_from_prev_m": 190.0
+      },
+      {
+        "name": "Simpang Dogolan",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Raminten Boutique & Cafe",
+        "dist_from_prev_m": 900.0
+      },
+      {
+        "name": "Dusun Kledokan (Soto Brakot)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "RS Panti Nugroho",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Terminal Pakem",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "SD N Percobaan 3 Pakem",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "SMPN 4 Pakem",
+        "dist_from_prev_m": 90.0
+      },
+      {
+        "name": "Dusun Kledokan (Soto Brakot) 2",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Raminten Boutique & Cafe (Halte 2)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Simpang Dogolan 2",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Boulevard UII",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "UII (Timur Jalan)",
+        "dist_from_prev_m": 200.0
+      },
+      {
+        "name": "Pusat Rehabilitasi YAKKUM (Halte 2)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Simpang Besi Jangkang 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "RSU Gramedika 2",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "SD Negeri Selomulyo (Halte 2)",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Kantor Kal. Sukoharjo",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Lapangan Klidon 2",
+        "dist_from_prev_m": 150.0
+      },
+      {
+        "name": "SPBU Mindi 2",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Simpang Losari (Cozy)",
+        "dist_from_prev_m": 210.0
+      },
+      {
+        "name": "SMA Negeri 2 Ngaglik (Halte 2)",
+        "dist_from_prev_m": 220.0
+      },
+      {
+        "name": "Timur Jembatan Yapah 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Tugu Batas Desa Yapah 2",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Puskesmas Ngemplak 2 (Halte 2)",
+        "dist_from_prev_m": 230.0
+      },
+      {
+        "name": "Simpang Pasar Jangkang (Halte 2)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Dusun Kenthi 2",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "RS Kemasan (Halte 2)",
+        "dist_from_prev_m": 280.0
+      },
+      {
+        "name": "Halte Raya Kabunan",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Simpang Kabunan (Halte 2)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Simpang Selomartani 2",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Simpang Babadan 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Kantor Desa Wedomartani (Halte 2)",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Indomaret Pokoh 2 Sambiroto 2",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "SMA Budi Mulia Dua (halte 2)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Kampus Uniryo 2",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "MAN 2 Sleman (halte 2)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Kantor Urusan Agama Depok (halte 2)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Pasar Stan",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "SMKN 1 Depok (Halte 2)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Disnakertrans DI YOgyakarta",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Selokan Mataram Maguwo",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte TJ RRU (Binamarga)",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Halte Jl. Solo Maguwo",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Halte TJ Bandara Adisucipto",
+        "dist_from_prev_m": 1200.0
+      }
+    ],
+    "headway_gmaps_min_raw": 60,
+    "headway_dishub_min_raw": 32,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "L-1",
+    "path_label": "Terminal Jombor-Halte Malioboro 3-Terminal Jombor",
+    "pool": "gamping",
+    "bus_count": 2,
+    "bus_origin_detail": "2 bus dari Terminal Jombor",
+    "halte_count_declared": 30,
+    "stop_count_parsed": 31,
+    "headway_gmaps_min": 20,
+    "headway_dishub_min": 45,
+    "route_length_km": 16.44,
+    "stops": [
+      {
+        "name": "Terminal Jombor",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "Indogrosir",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Jogja City Mall (Timur)",
+        "dist_from_prev_m": 250.0
+      },
+      {
+        "name": "Atakrib Jl. Magelang",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "TPB TVRI (Timur)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Karangwaru (Timur)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Hotel Utara (Timur)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Halte Pasar Kranggan",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "Mangkubumi 1",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Mangkubumi 2",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Eks Menara Kopi (Utara)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Halte Kridosono",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Eks Menara Kopi (Selatan)",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Malioboro 1",
+        "dist_from_prev_m": 600.0
+      },
+      {
+        "name": "Malioboro 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Malioboro 3",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Bhayangkara",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Pasar Pathuk",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Sosrowijayan",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Stasiun Yogyakarta",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Jlagran",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Eks Perpusda",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Halte SMP N 14",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Hotel Utara",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Kricak",
+        "dist_from_prev_m": 120.0
+      },
+      {
+        "name": "Karangwaru (Barat)",
+        "dist_from_prev_m": 850.0
+      },
+      {
+        "name": "TVRI (Barat)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Daytrans Jl. Magelang",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Jogja City Mall (Barat)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "MMTC Yogya",
+        "dist_from_prev_m": 270.0
+      },
+      {
+        "name": "Terminal Jombor",
+        "dist_from_prev_m": 450.0
+      }
+    ],
+    "headway_gmaps_min_raw": 20,
+    "headway_dishub_min_raw": 45,
+    "headway_dishub_is_estimated": true
+  },
+  {
+    "route_id": "15",
+    "path_label": "Halte Malioboro 3-Terminal Palbapang (B)-Halte Malioboro 3",
+    "pool": "gamping",
+    "bus_count": 10,
+    "bus_origin_detail": "6 bus dari Halte Malioboro 3, 4 bus dari Terminal Palbapang (B)",
+    "halte_count_declared": 45,
+    "stop_count_parsed": 47,
+    "headway_gmaps_min": 12,
+    "headway_dishub_min": 10,
+    "route_length_km": 32.31,
+    "stops": [
+      {
+        "name": "Halte Maliboro 3",
+        "dist_from_prev_m": 0
+      },
+      {
+        "name": "KHA Dahlan (Selatan)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Portable Tamansari",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Halte Gereja Pugeran",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Dukuh (Timur)",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Park and Ride Dongkelan (Pasty)",
+        "dist_from_prev_m": 550.0
+      },
+      {
+        "name": "Simpang Dongkelan",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Pasar Niten",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Simpang Kasongan",
+        "dist_from_prev_m": 1500.0
+      },
+      {
+        "name": "Kantor Badan Kesatuan Bangsa & Politik",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Kantor Kelurahan Pendowoharjo",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Halte SMP N 2 Bantul",
+        "dist_from_prev_m": 1300.0
+      },
+      {
+        "name": "Kantor kapanewon Bantul",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Pasar Bantul",
+        "dist_from_prev_m": 200.0
+      },
+      {
+        "name": "Eks. Stasiun KA Bantul",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Tugu Adipura bantul (Polres Bantul)",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "Simpang Gose (Halte 1)",
+        "dist_from_prev_m": 270.0
+      },
+      {
+        "name": "SD Unggulan Aisyiyah 2",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "SMA N 1 Bantul I",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Terminal Palbapang (B)",
+        "dist_from_prev_m": 2200.0
+      },
+      {
+        "name": "Halte SMA N 1 Bantul 2",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "SD Unggulan Aisyiyah 1",
+        "dist_from_prev_m": 290.0
+      },
+      {
+        "name": "Simpang Gose (Halte 2)",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Halte Tugu Adipura Bantul (Halte 2)",
+        "dist_from_prev_m": 350.0
+      },
+      {
+        "name": "Pasar Bantul (Halte 2)",
+        "dist_from_prev_m": 650.0
+      },
+      {
+        "name": "Halte BRI Cabang Bantul",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Halte Karanggede",
+        "dist_from_prev_m": 950.0
+      },
+      {
+        "name": "Kantor Kelurahan Pendowoharjo",
+        "dist_from_prev_m": 1300.0
+      },
+      {
+        "name": "Kantor Badan Kesatuan Bangsa & Politik",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "Simpang Kasongan (Halte 2)",
+        "dist_from_prev_m": 1200.0
+      },
+      {
+        "name": "Pasar Niten (halte 2)",
+        "dist_from_prev_m": 1100.0
+      },
+      {
+        "name": "Simpang Dongkelan (Halte 2)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "TPB Pasty",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Dukuh (barat)",
+        "dist_from_prev_m": 800.0
+      },
+      {
+        "name": "FIP UNY",
+        "dist_from_prev_m": 240.0
+      },
+      {
+        "name": "Portable Tejokusuman (Tamansari)",
+        "dist_from_prev_m": 1000.0
+      },
+      {
+        "name": "Halte Ngabean",
+        "dist_from_prev_m": 450.0
+      },
+      {
+        "name": "KHA Dahlan (Utara)",
+        "dist_from_prev_m": 700.0
+      },
+      {
+        "name": "Taman Pintar",
+        "dist_from_prev_m": 750.0
+      },
+      {
+        "name": "Suryotomo",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Progo",
+        "dist_from_prev_m": 160.0
+      },
+      {
+        "name": "Jl. Mataram Hotel Akur",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Portable Teras Malioboro 2",
+        "dist_from_prev_m": 300.0
+      },
+      {
+        "name": "Malioboro 1",
+        "dist_from_prev_m": 400.0
+      },
+      {
+        "name": "Malioboro 2",
+        "dist_from_prev_m": 500.0
+      },
+      {
+        "name": "Malioboro 3",
+        "dist_from_prev_m": 500.0
+      }
+    ],
+    "headway_gmaps_min_raw": 12,
+    "headway_dishub_min_raw": 10,
+    "headway_dishub_is_estimated": true
+  }
+]

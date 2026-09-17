@@ -1,0 +1,739 @@
+{
+  "1A": {
+    "SPKLU-ADI": [
+      {
+        "stop_index": 6,
+        "dist_from_start_m": 7650.0,
+        "time_from_start_min": 26,
+        "dist_to_end_m": 32360.0,
+        "time_to_end_min": 115
+      },
+      {
+        "stop_index": 41,
+        "dist_from_start_m": 32410.0,
+        "time_from_start_min": 115,
+        "dist_to_end_m": 7600.0,
+        "time_to_end_min": 26
+      }
+    ],
+    "SPKLU-NGB": null,
+    "SPKLU-CON": null,
+    "SPKLU-KRI": [
+      {
+        "stop_index": 19,
+        "dist_from_start_m": 18300.0,
+        "time_from_start_min": 63,
+        "dist_to_end_m": 21710.0,
+        "time_to_end_min": 78
+      },
+      {
+        "stop_index": 30,
+        "dist_from_start_m": 23710.0,
+        "time_from_start_min": 85,
+        "dist_to_end_m": 16300.0,
+        "time_to_end_min": 56
+      }
+    ],
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": null
+  },
+  "1B": {
+    "SPKLU-ADI": [
+      {
+        "stop_index": 15,
+        "dist_from_start_m": 11850.0,
+        "time_from_start_min": 44,
+        "dist_to_end_m": 17480.0,
+        "time_to_end_min": 64
+      }
+    ],
+    "SPKLU-NGB": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 29330.0,
+        "time_to_end_min": 108
+      },
+      {
+        "stop_index": 44,
+        "dist_from_start_m": 29330.0,
+        "time_from_start_min": 108,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ],
+    "SPKLU-CON": null,
+    "SPKLU-KRI": null,
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": null
+  },
+  "2A": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": null,
+    "SPKLU-CON": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 34590.0,
+        "time_to_end_min": 127
+      },
+      {
+        "stop_index": 53,
+        "dist_from_start_m": 34590.0,
+        "time_from_start_min": 127,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ],
+    "SPKLU-KRI": [
+      {
+        "stop_index": 14,
+        "dist_from_start_m": 11500.0,
+        "time_from_start_min": 40,
+        "dist_to_end_m": 23090.0,
+        "time_to_end_min": 87
+      },
+      {
+        "stop_index": 41,
+        "dist_from_start_m": 28440.0,
+        "time_from_start_min": 102,
+        "dist_to_end_m": 6150.0,
+        "time_to_end_min": 25
+      }
+    ],
+    "SPKLU-JOM": [
+      {
+        "stop_index": 3,
+        "dist_from_start_m": 4500.0,
+        "time_from_start_min": 14,
+        "dist_to_end_m": 30090.0,
+        "time_to_end_min": 113
+      }
+    ],
+    "SPKLU-GIW": null
+  },
+  "2B": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": [
+      {
+        "stop_index": 36,
+        "dist_from_start_m": 21280.0,
+        "time_from_start_min": 83,
+        "dist_to_end_m": 13470.0,
+        "time_to_end_min": 50
+      }
+    ],
+    "SPKLU-CON": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 34750.0,
+        "time_to_end_min": 133
+      },
+      {
+        "stop_index": 54,
+        "dist_from_start_m": 34750.0,
+        "time_from_start_min": 133,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ],
+    "SPKLU-KRI": [
+      {
+        "stop_index": 11,
+        "dist_from_start_m": 6440.0,
+        "time_from_start_min": 26,
+        "dist_to_end_m": 28310.0,
+        "time_to_end_min": 107
+      }
+    ],
+    "SPKLU-JOM": [
+      {
+        "stop_index": 51,
+        "dist_from_start_m": 30250.0,
+        "time_from_start_min": 119,
+        "dist_to_end_m": 4500.0,
+        "time_to_end_min": 14
+      }
+    ],
+    "SPKLU-GIW": null
+  },
+  "3A": {
+    "SPKLU-ADI": [
+      {
+        "stop_index": 45,
+        "dist_from_start_m": 30440.0,
+        "time_from_start_min": 113,
+        "dist_to_end_m": 7600.0,
+        "time_to_end_min": 25
+      }
+    ],
+    "SPKLU-NGB": [
+      {
+        "stop_index": 17,
+        "dist_from_start_m": 10390.0,
+        "time_from_start_min": 38,
+        "dist_to_end_m": 27650.0,
+        "time_to_end_min": 100
+      }
+    ],
+    "SPKLU-CON": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 38040.0,
+        "time_to_end_min": 138
+      },
+      {
+        "stop_index": 52,
+        "dist_from_start_m": 38040.0,
+        "time_from_start_min": 138,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ],
+    "SPKLU-KRI": [
+      {
+        "stop_index": 11,
+        "dist_from_start_m": 6690.0,
+        "time_from_start_min": 24,
+        "dist_to_end_m": 31350.0,
+        "time_to_end_min": 114
+      }
+    ],
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": [
+      {
+        "stop_index": 29,
+        "dist_from_start_m": 17240.0,
+        "time_from_start_min": 66,
+        "dist_to_end_m": 20800.0,
+        "time_to_end_min": 72
+      }
+    ]
+  },
+  "3B": {
+    "SPKLU-ADI": [
+      {
+        "stop_index": 41,
+        "dist_from_start_m": 25600.0,
+        "time_from_start_min": 99,
+        "dist_to_end_m": 11300.0,
+        "time_to_end_min": 40
+      }
+    ],
+    "SPKLU-NGB": [
+      {
+        "stop_index": 12,
+        "dist_from_start_m": 7000.0,
+        "time_from_start_min": 28,
+        "dist_to_end_m": 29900.0,
+        "time_to_end_min": 111
+      }
+    ],
+    "SPKLU-CON": [
+      {
+        "stop_index": 32,
+        "dist_from_start_m": 18100.0,
+        "time_from_start_min": 71,
+        "dist_to_end_m": 18800.0,
+        "time_to_end_min": 68
+      }
+    ],
+    "SPKLU-KRI": null,
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 36900.0,
+        "time_to_end_min": 139
+      },
+      {
+        "stop_index": 56,
+        "dist_from_start_m": 36900.0,
+        "time_from_start_min": 139,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ]
+  },
+  "4A": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": null,
+    "SPKLU-CON": [
+      {
+        "stop_index": 24,
+        "dist_from_start_m": 15940.0,
+        "time_from_start_min": 58,
+        "dist_to_end_m": 11560.0,
+        "time_to_end_min": 43
+      }
+    ],
+    "SPKLU-KRI": [
+      {
+        "stop_index": 13,
+        "dist_from_start_m": 8590.0,
+        "time_from_start_min": 31,
+        "dist_to_end_m": 18910.0,
+        "time_to_end_min": 70
+      }
+    ],
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 27500.0,
+        "time_to_end_min": 101
+      },
+      {
+        "stop_index": 45,
+        "dist_from_start_m": 27500.0,
+        "time_from_start_min": 101,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ]
+  },
+  "4B": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": null,
+    "SPKLU-CON": [
+      {
+        "stop_index": 19,
+        "dist_from_start_m": 11010.0,
+        "time_from_start_min": 42,
+        "dist_to_end_m": 14330.0,
+        "time_to_end_min": 52
+      }
+    ],
+    "SPKLU-KRI": [
+      {
+        "stop_index": 30,
+        "dist_from_start_m": 17960.0,
+        "time_from_start_min": 68,
+        "dist_to_end_m": 7380.0,
+        "time_to_end_min": 26
+      }
+    ],
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": [
+      {
+        "stop_index": 41,
+        "dist_from_start_m": 25340.0,
+        "time_from_start_min": 94,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ]
+  },
+  "5A": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": null,
+    "SPKLU-CON": [
+      {
+        "stop_index": 25,
+        "dist_from_start_m": 17980.0,
+        "time_from_start_min": 63,
+        "dist_to_end_m": 8550.0,
+        "time_to_end_min": 30
+      }
+    ],
+    "SPKLU-KRI": [
+      {
+        "stop_index": 12,
+        "dist_from_start_m": 7090.0,
+        "time_from_start_min": 27,
+        "dist_to_end_m": 19440.0,
+        "time_to_end_min": 66
+      }
+    ],
+    "SPKLU-JOM": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 26530.0,
+        "time_to_end_min": 93
+      },
+      {
+        "stop_index": 35,
+        "dist_from_start_m": 26530.0,
+        "time_from_start_min": 93,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ],
+    "SPKLU-GIW": null
+  },
+  "5B": {
+    "SPKLU-ADI": [
+      {
+        "stop_index": 21,
+        "dist_from_start_m": 16950.0,
+        "time_from_start_min": 60,
+        "dist_to_end_m": 17020.0,
+        "time_to_end_min": 63
+      }
+    ],
+    "SPKLU-NGB": null,
+    "SPKLU-CON": [
+      {
+        "stop_index": 10,
+        "dist_from_start_m": 8400.0,
+        "time_from_start_min": 28,
+        "dist_to_end_m": 25570.0,
+        "time_to_end_min": 95
+      }
+    ],
+    "SPKLU-KRI": [
+      {
+        "stop_index": 31,
+        "dist_from_start_m": 25900.0,
+        "time_from_start_min": 92,
+        "dist_to_end_m": 8070.0,
+        "time_to_end_min": 31
+      }
+    ],
+    "SPKLU-JOM": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 33970.0,
+        "time_to_end_min": 123
+      },
+      {
+        "stop_index": 43,
+        "dist_from_start_m": 33970.0,
+        "time_from_start_min": 123,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ],
+    "SPKLU-GIW": null
+  },
+  "6": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": [
+      {
+        "stop_index": 16,
+        "dist_from_start_m": 10360.0,
+        "time_from_start_min": 39,
+        "dist_to_end_m": 15910.0,
+        "time_to_end_min": 62
+      },
+      {
+        "stop_index": 27,
+        "dist_from_start_m": 16070.0,
+        "time_from_start_min": 63,
+        "dist_to_end_m": 10200.0,
+        "time_to_end_min": 38
+      }
+    ],
+    "SPKLU-CON": null,
+    "SPKLU-KRI": null,
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": null
+  },
+  "8": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": [
+      {
+        "stop_index": 25,
+        "dist_from_start_m": 16045.0,
+        "time_from_start_min": 61,
+        "dist_to_end_m": 15329.0,
+        "time_to_end_min": 57
+      }
+    ],
+    "SPKLU-CON": null,
+    "SPKLU-KRI": [
+      {
+        "stop_index": 19,
+        "dist_from_start_m": 12295.0,
+        "time_from_start_min": 46,
+        "dist_to_end_m": 19079.0,
+        "time_to_end_min": 72
+      }
+    ],
+    "SPKLU-JOM": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 31374.0,
+        "time_to_end_min": 118
+      },
+      {
+        "stop_index": 48,
+        "dist_from_start_m": 31374.0,
+        "time_from_start_min": 118,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ],
+    "SPKLU-GIW": null
+  },
+  "9": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": [
+      {
+        "stop_index": 9,
+        "dist_from_start_m": 8200.0,
+        "time_from_start_min": 29,
+        "dist_to_end_m": 23340.0,
+        "time_to_end_min": 86
+      },
+      {
+        "stop_index": 33,
+        "dist_from_start_m": 23190.0,
+        "time_from_start_min": 86,
+        "dist_to_end_m": 8350.0,
+        "time_to_end_min": 29
+      }
+    ],
+    "SPKLU-CON": null,
+    "SPKLU-KRI": null,
+    "SPKLU-JOM": [
+      {
+        "stop_index": 22,
+        "dist_from_start_m": 15640.0,
+        "time_from_start_min": 58,
+        "dist_to_end_m": 15900.0,
+        "time_to_end_min": 57
+      }
+    ],
+    "SPKLU-GIW": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 31540.0,
+        "time_to_end_min": 115
+      },
+      {
+        "stop_index": 41,
+        "dist_from_start_m": 31540.0,
+        "time_from_start_min": 115,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ]
+  },
+  "10": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": [
+      {
+        "stop_index": 10,
+        "dist_from_start_m": 6450.0,
+        "time_from_start_min": 25,
+        "dist_to_end_m": 28850.0,
+        "time_to_end_min": 105
+      },
+      {
+        "stop_index": 37,
+        "dist_from_start_m": 29060.0,
+        "time_from_start_min": 107,
+        "dist_to_end_m": 6240.0,
+        "time_to_end_min": 23
+      }
+    ],
+    "SPKLU-CON": null,
+    "SPKLU-KRI": [
+      {
+        "stop_index": 18,
+        "dist_from_start_m": 10560.0,
+        "time_from_start_min": 42,
+        "dist_to_end_m": 24740.0,
+        "time_to_end_min": 88
+      }
+    ],
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": null
+  },
+  "11": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": [
+      {
+        "stop_index": 10,
+        "dist_from_start_m": 8050.0,
+        "time_from_start_min": 30,
+        "dist_to_end_m": 20440.0,
+        "time_to_end_min": 77
+      },
+      {
+        "stop_index": 31,
+        "dist_from_start_m": 20890.0,
+        "time_from_start_min": 80,
+        "dist_to_end_m": 7600.0,
+        "time_to_end_min": 27
+      }
+    ],
+    "SPKLU-CON": null,
+    "SPKLU-KRI": [
+      {
+        "stop_index": 23,
+        "dist_from_start_m": 15240.0,
+        "time_from_start_min": 58,
+        "dist_to_end_m": 13250.0,
+        "time_to_end_min": 49
+      }
+    ],
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 28490.0,
+        "time_to_end_min": 107
+      },
+      {
+        "stop_index": 40,
+        "dist_from_start_m": 28490.0,
+        "time_from_start_min": 107,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ]
+  },
+  "12": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": null,
+    "SPKLU-CON": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 38050.0,
+        "time_to_end_min": 141
+      },
+      {
+        "stop_index": 62,
+        "dist_from_start_m": 38050.0,
+        "time_from_start_min": 141,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ],
+    "SPKLU-KRI": null,
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": null
+  },
+  "13": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 26230.0,
+        "time_to_end_min": 104
+      },
+      {
+        "stop_index": 55,
+        "dist_from_start_m": 26230.0,
+        "time_from_start_min": 104,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ],
+    "SPKLU-CON": null,
+    "SPKLU-KRI": [
+      {
+        "stop_index": 49,
+        "dist_from_start_m": 22530.0,
+        "time_from_start_min": 90,
+        "dist_to_end_m": 3700.0,
+        "time_to_end_min": 14
+      }
+    ],
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": null
+  },
+  "14": {
+    "SPKLU-ADI": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 41300.0,
+        "time_to_end_min": 162
+      },
+      {
+        "stop_index": 74,
+        "dist_from_start_m": 41300.0,
+        "time_from_start_min": 162,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ],
+    "SPKLU-NGB": null,
+    "SPKLU-CON": null,
+    "SPKLU-KRI": null,
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": null
+  },
+  "L-1": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": null,
+    "SPKLU-CON": null,
+    "SPKLU-KRI": [
+      {
+        "stop_index": 11,
+        "dist_from_start_m": 6850.0,
+        "time_from_start_min": 26,
+        "dist_to_end_m": 9590.0,
+        "time_to_end_min": 39
+      }
+    ],
+    "SPKLU-JOM": [
+      {
+        "stop_index": 0,
+        "dist_from_start_m": 0,
+        "time_from_start_min": 0,
+        "dist_to_end_m": 16440.0,
+        "time_to_end_min": 65
+      },
+      {
+        "stop_index": 30,
+        "dist_from_start_m": 16440.0,
+        "time_from_start_min": 65,
+        "dist_to_end_m": 0,
+        "time_to_end_min": 0
+      }
+    ],
+    "SPKLU-GIW": null
+  },
+  "15": {
+    "SPKLU-ADI": null,
+    "SPKLU-NGB": [
+      {
+        "stop_index": 2,
+        "dist_from_start_m": 1400.0,
+        "time_from_start_min": 6,
+        "dist_to_end_m": 30910.0,
+        "time_to_end_min": 114
+      },
+      {
+        "stop_index": 37,
+        "dist_from_start_m": 28000.0,
+        "time_from_start_min": 102,
+        "dist_to_end_m": 4310.0,
+        "time_to_end_min": 18
+      }
+    ],
+    "SPKLU-CON": null,
+    "SPKLU-KRI": null,
+    "SPKLU-JOM": null,
+    "SPKLU-GIW": null
+  }
+}

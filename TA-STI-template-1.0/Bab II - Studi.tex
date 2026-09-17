@@ -1,0 +1,391 @@
+\cleardoublepage % memastikan bab baru dimulai di halaman ganjil (kanan)
+\chapter{STUDI LITERATUR}
+\label{chap:studi-literatur}
+
+Bab ini merupakan hasil tahap \textit{Empathize} dari kerangka \textit{Design
+	Thinking} yang dipakai pada tugas akhir ini (lihat Subbab 1.5). Pembahasan
+disusun dari yang paling umum ke yang paling spesifik terhadap persoalan
+tugas akhir ini: tren elektrifikasi kendaraan secara luas (Subbab
+\ref{sec:elektrifikasi-kendaraan}), tantangan operasional bus listrik
+(Subbab \ref{sec:bus-listrik}), model konsumsi energi baterainya (Subbab
+\ref{sec:baterai-bus-listrik}), lalu perencanaan infrastruktur pengisian daya
+sebagai persoalan optimasi maupun simulasi (Subbab
+\ref{sec:perencanaan-infrastruktur}), dan ditutup dengan posisi tugas akhir
+ini terhadap peta riset yang ada (Subbab \ref{sec:posisi-penelitian}).
+
+\section{Elektrifikasi Kendaraan: Konteks dan Tren}
+\label{sec:elektrifikasi-kendaraan}
+
+Peralihan dari kendaraan berbahan bakar fosil ke kendaraan listrik terus
+berlangsung cepat. \textit{Global EV Outlook 2026} yang diterbitkan
+International Energy Agency (IEA) mencatat penjualan mobil listrik dunia
+tumbuh 20\% pada 2025, melampaui 20 juta unit dan menyentuh seperempat dari
+seluruh penjualan mobil baru secara global \parencite{iea2026}. Di kawasan
+Asia Tenggara, penjualan mobil listrik meningkat lebih dari dua kali lipat
+dibanding tahun sebelumnya; Indonesia menjadi salah satu penggeraknya, dengan
+penjualan mobil listrik mencapai 15\% dari total penjualan mobil baru pada
+2025 dan tumbuh hampir 90\% secara tahunan pada kuartal pertama 2026,
+didorong turunnya premium harga mobil listrik dibanding kendaraan konvensional
+dari lebih 50\% pada 2024 menjadi sekitar 40\% pada 2025 \parencite{iea2026}.
+
+%TODO-CITE: jika ada data/laporan resmi Kemenhub atau Dishub DIY soal
+% roadmap elektrifikasi transportasi publik Indonesia secara spesifik,
+% tambahkan sitasinya di sini untuk memperkuat konteks lokal (bukan cuma
+% data global IEA).
+Tren ini merambat ke sektor transportasi publik. Penjualan bus listrik
+global tumbuh 12\% pada 2025, dengan jangkauan rata-rata model bus listrik
+yang tersedia di pasar kini mencapai sekitar 360 km sekali pengisian penuh
+-- naik 15\% dibanding 2020, dan sudah cukup untuk menutupi kebutuhan
+operasional harian bus kota yang umumnya menempuh 150--300 km per hari
+\parencite{iea2026}. Perkembangan ini turut ditopang oleh perluasan
+infrastruktur \textit{depot charging} sebagai salah satu penopang utama
+kelayakan operasional dan skalabilitas armada bus listrik \parencite{iea2026}.
+
+Namun peralihan pada level armada -- bukan kendaraan individual -- membawa
+persoalan perencanaan tersendiri yang tidak muncul pada kendaraan pribadi.
+\textcite{perumal2022} memetakan proses
+perencanaan bus listrik ke dalam tiga tingkatan yang berurutan: strategis
+(investasi armada dan infrastruktur pengisian daya, termasuk penempatan
+lokasinya), taktis (penjadwalan kendaraan terhadap trip yang sudah
+ditetapkan), dan operasional (penjadwalan pengisian daya harian). Pada
+tingkat strategis, mereka mencatat setidaknya empat teknologi pengisian daya
+yang lazim dipakai -- \textit{plug-in} lambat di depot, \textit{plug-in}
+cepat atau pantograf di terminal/halte, jalur kontak/induksi nirkabel
+selama bus berjalan, dan pertukaran baterai (\textit{battery swapping}) --
+yang masing-masing punya karakteristik biaya pemasangan dan daya pengisian
+yang sangat berbeda. Pemetaan tingkatan perencanaan inilah yang menjadi
+acuan tugas akhir ini dalam membatasi cakupan pembahasan pada tingkat
+strategis (lokasi dan kapasitas SPKLU) dan operasional (mekanisme
+pengisian daya), sebagaimana dijelaskan pada subbab berikut. SPKLU yang
+dimaksud di sini adalah Stasiun Pengisian Kendaraan Listrik Umum, yaitu
+infrastruktur yang menyediakan satu atau lebih \textit{gun} (konektor
+pengisian) tempat bus mengisi ulang baterainya.
+
+\section{Bus Listrik: Karakteristik Operasional dan Tantangannya}
+\label{sec:bus-listrik}
+
+Berbeda dari mobil listrik pribadi yang jadwal pengisian dayanya fleksibel,
+bus listrik beroperasi dalam jadwal rit yang ketat sepanjang hari dan tetap
+harus melayani penumpang selama pengisian daya berlangsung -- kecuali
+ditarik sementara dari layanan. Perencanaan armada bus listrik karenanya
+memerlukan pertimbangan yang tidak berlaku untuk kendaraan pribadi:
+jangkauan yang cukup untuk menyelesaikan rit dalam sehari, serta waktu dan
+lokasi pengisian daya bus tanpa mengganggu jadwal.
+
+Dua pendekatan pengisian daya umum digunakan: \textit{depot charging}
+(pengisian di garasi, biasanya di luar jam operasional) dan
+\textit{opportunity charging} (pengisian singkat di sela jam operasional,
+misalnya saat bus berhenti di ujung rute). \textcite{jefferiesgohlich2020} mencatat bahwa penggantian bus diesel dengan
+bus listrik satu-banding-satu, tanpa penyesuaian jadwal rit, kerap tidak
+dapat diterapkan pada praktiknya -- keterbatasan jangkauan dan waktu
+pengisian daya memaksa perubahan pada jumlah armada maupun pola rit yang
+sudah berjalan.
+
+Persoalan penempatan infrastruktur pengisian daya menjadi lebih rumit ketika
+elektrifikasi diterapkan pada skala jaringan, bukan satu rute tunggal.
+\textcite{rogge2018} menunjukkan bahwa ukuran armada dan
+kebutuhan kapasitas infrastruktur saling memengaruhi -- menambah unit
+\textit{charging} di satu lokasi bisa mengurangi kebutuhan penambahan
+armada, dan sebaliknya -- sehingga keduanya perlu dipertimbangkan bersamaan.
+\textcite{he2023} membawa keterkaitan ini satu langkah
+lebih jauh dengan menggabungkan tiga keputusan sekaligus -- lokasi
+infrastruktur, penjadwalan kendaraan, dan manajemen pengisian daya -- ke
+dalam satu kerangka optimasi, dan menunjukkan pada studi kasus Salt Lake
+City bahwa penggabungan ketiganya menurunkan total biaya kepemilikan
+dibandingkan skema yang mempertahankan pola rute bus diesel apa adanya.
+
+Studi yang paling dekat dengan konteks tugas akhir ini datang dari
+\textcite{sebastiani2016}, yang mengevaluasi
+operasi bus listrik pada sistem \textit{Bus Rapid Transit} (BRT) dunia nyata
+melalui simulasi optimasi. Karakteristik BRT -- rute tetap, target
+\textit{headway} yang eksplisit (yaitu jeda waktu antara keberangkatan
+atau kedatangan dua bus berurutan pada koridor yang sama), volume
+penumpang tinggi -- membuat konsekuensi kegagalan
+pengisian daya (bus kehabisan daya, mengantre, atau memotong rit) berdampak
+langsung pada keteraturan layanan yang terukur, persis yang menjadi
+perhatian utama tugas akhir ini terhadap TransJogja.
+
+\section{Model Konsumsi Energi Baterai Bus Listrik}
+\label{sec:baterai-bus-listrik}
+
+Menjawab persoalan pada Subbab \ref{sec:bus-listrik} membutuhkan model yang
+bisa memperkirakan seberapa banyak energi baterai terpakai sepanjang rute,
+karena dari situlah kebutuhan pengisian daya diturunkan. Pemodelan konsumsi
+energi kendaraan listrik pada literatur transportasi umumnya terbagi ke
+tiga tingkat detail: mikroskopik, mesoskopik, dan makroskopik, yang berbeda
+pada seberapa rinci data masukan yang dibutuhkan.
+
+Pada ujung yang paling rinci, \textcite{basma2020} membangun
+model fisis mendetail (menggunakan perangkat lunak Dymola) yang
+mensimulasikan bukan hanya sistem penggerak bus, tapi juga beban termal
+kabin dan sistem pendingin udara secara terpisah -- pendekatan ini akurat,
+tetapi membutuhkan data operasional yang sangat rinci (profil kecepatan
+detik-per-detik, kondisi cuaca, beban penumpang) yang jarang tersedia
+lengkap di luar kondisi eksperimen. \textcite{chen2021} mengambil pendekatan berbeda pada tingkat detail yang
+serupa: alih-alih model fisis, mereka melatih model pembelajaran mesin
+(\textit{Long Short-Term Memory} dan Artificial Neural Network) dari data
+pemantauan bus listrik riil di Chattanooga, Amerika Serikat, dan mencapai
+galat prediksi di bawah 5\%. Kedua pendekatan ini menegaskan bahwa
+akurasi tinggi pada level mikroskopik selalu berbanding lurus dengan
+kebutuhan data yang sangat rinci -- baik lewat model fisis maupun model
+data-driven.
+
+Pada ujung yang lebih sederhana, model makroskopik hanya memakai kecepatan
+rata-rata (bahkan kerap diasumsikan konstan) sebagai masukan utama pada
+tiap segmen jalan. \textcite{montanino2025} menunjukkan bahwa
+asumsi kecepatan konstan ini justru menjadi sumber bias yang signifikan --
+secara analitis dan lewat eksperimen simulasi Monte Carlo berskala besar
+-- yaitu menjalankan simulasi yang sama berulang kali dengan nilai acak
+berbeda tiap perulangan, lalu mengagregasi hasilnya untuk mengestimasi
+perilaku sistem di bawah ketidakpastian \parencite{law2015} --
+mereka membuktikan konsumsi energi kendaraan listrik meningkat seiring
+variansi akselerasi, sehingga model yang mengabaikan dinamika lalu lintas
+(percepatan dan perlambatan) secara sistematis meremehkan konsumsi energi
+riil. Mereka mengusulkan variansi kecepatan -- yang bisa diturunkan dari
+kepadatan dan arus lalu lintas terukur -- sebagai proksi yang lebih baik
+dibandingkan kecepatan rata-rata semata. \textcite{mamarikas2025}
+mengusulkan pendekatan mesoskopik sebagai jalan
+tengah antara model makroskopik yang terlalu sederhana dan model
+mikroskopik yang terlalu rinci: memanfaatkan variabel lalu lintas pada
+level detail menengah (jumlah dan durasi kejadian berhenti sepanjang rute)
+untuk memperkirakan konsumsi energi bus listrik, tanpa membutuhkan profil
+kecepatan super-detail seperti model mikroskopik, dan menunjukkan galat
+prediksi yang mendekati model mikroskopik (di bawah 5\% pada data lalu
+lintas kota) jauh lebih baik dibandingkan model makroskopik konvensional
+(galat hingga 20\% pada kondisi tertentu). Pendekatan mesoskopik ini relevan
+untuk tugas akhir ini karena data yang tersedia untuk 20 koridor TransJogja
+adalah data rute (jarak antar-halte, target headway), bukan profil
+kecepatan detik-per-detik tiap bus maupun data pemantauan historis yang
+dibutuhkan pendekatan \textit{machine learning} -- sehingga model tingkat
+mesoskopik menjadi pilihan yang paling sesuai dengan ketersediaan data.
+
+Satu faktor yang tidak tercakup pada model mesoskopik di atas namun terbukti
+berpengaruh besar pada literatur lain adalah topografi rute. \textcite{alogaili2020} mengintegrasikan model elevasi digital (\textit{Digital
+	Elevation Model}) dengan model dinamika kendaraan pada studi kasus jaringan
+BRT Rapid KL di Kuala Lumpur -- konteks yang cukup dekat dengan TransJogja,
+karena sama-sama sistem BRT dengan rute tetap -- dan menemukan elevasi jalan
+sebagai salah satu faktor utama yang membedakan konsumsi energi antar-rute.
+Studi yang sama juga mengevaluasi \textit{opportunity charging} dan
+\textit{overnight/depot charging} sebagai dua protokol yang dibandingkan,
+sejalan dengan mekanisme yang menjadi fokus tugas akhir ini (lihat Subbab
+\ref{sec:perencanaan-infrastruktur}).
+
+Tugas akhir ini tidak memodelkan elevasi secara eksplisit -- data topografi
+untuk 20 koridor TransJogja tidak tersedia dalam bentuk yang dapat
+diintegrasikan pada rentang waktu penelitian ini -- dan hal ini
+didokumentasikan sebagai batasan (lihat Batasan Masalah, Bab I), bukan
+diabaikan begitu saja. Temuan Al-Ogaili dkk. di atas justru menjadi alasan
+untuk mencatat keterbatasan ini secara eksplisit, alih-alih menganggapnya
+tidak berpengaruh.
+
+\section{Perencanaan Infrastruktur Pengisian Daya}
+\label{sec:perencanaan-infrastruktur}
+
+Dengan model konsumsi energi tersedia, pertanyaan berikutnya adalah
+bagaimana menguji berbagai konfigurasi lokasi, kapasitas, dan mekanisme
+pengisian daya sebelum benar-benar dibangun di lapangan. Dua pendekatan
+besar muncul pada literatur untuk menjawab pertanyaan ini: optimasi
+matematis dan simulasi.
+
+\subsection{Pendekatan Optimasi Matematis}
+
+Sebagian besar studi perencanaan infrastruktur bus listrik memakai
+formulasi \textit{Mixed-Integer Linear Programming} (MILP) atau variannya
+untuk menentukan lokasi \textit{charger}, ukuran armada, dan jadwal
+pengisian daya secara sekaligus. \textcite{zhou2024}, dalam
+tinjauan sistematis atas lebih dari 100 studi perencanaan fasilitas
+\textit{charging} bus listrik, mencatat bahwa mayoritas studi memakai model
+optimasi deterministik (MILP, \textit{mixed-integer nonlinear programming},
+atau variannya) -- dari belasan studi representatif yang mereka bandingkan,
+hanya satu-dua yang secara eksplisit memakai formulasi stokastik untuk
+menangani ketidakpastian waktu tempuh atau degradasi baterai. Model
+\textit{deterministik} memakai satu nilai tetap (mis. rata-rata) untuk
+tiap parameter masukan, sehingga hasilnya selalu sama pada tiap
+perulangan, sedangkan model \textit{stokastik} memperlakukan parameter
+yang tidak pasti sebagai variabel acak berdistribusi tertentu, sehingga
+perlu diulang berkali-kali untuk mendapat gambaran distribusi hasil alih-alih
+nilai tunggal. Temuan ini
+konsisten dengan pengamatan \textcite{guschinsky2021}, yang
+secara terus terang menyatakan dalam model optimasi armada dan
+infrastruktur \textit{fast-charging} mereka bahwa sebagian besar parameter
+masukan bersifat tidak pasti pada kondisi riil, namun nilai deterministiknya
+(nominal, rata-rata statistik, atau skenario terburuk) tetap dipakai sebagai
+penyederhanaan karena kompleksitas model yang sudah tinggi.
+
+\textcite{rizopoulos2025} merumuskan persoalan
+ini sebagai model \textit{bi-objective MILP}, dan menemukan trade-off
+mendasar antara meminimalkan waktu perjalanan tanpa penumpang
+(\textit{deadhead time}) dan biaya pemasangan \textit{charger} pada studi
+kasus Manhattan dan Limassol. \textcite{liu2021}
+memperluas pertimbangan pada aspek kelistrikan -- mencocokkan daya
+pengisian dengan kemampuan penerimaan baterai serta pengaruh musim (suhu
+udara) terhadap performa baterai -- pada studi kasus 17 rute bus di
+Beijing. \textcite{manzolli2022} mendekati
+sisi lain persoalan yang sama -- interaksi baterai bus dengan jaringan
+listrik (\textit{Vehicle-to-Grid}/V2G) -- dan menunjukkan skema ini bisa
+ekonomis pada kondisi tertentu, meski validasinya baru diuji pada armada
+kecil (11 unit bus di Coimbra, Portugal).
+
+Satu studi yang metodologinya paling dekat dengan pendekatan tugas akhir
+ini datang dari \textcite{rios2014}, yang mengusulkan model tiga
+tahap untuk menghitung profil beban listrik dari sebuah stasiun pengisian
+daya: tahap pertama memakai simulasi Monte Carlo untuk memodelkan
+konsumsi energi harian tiap bus berdasarkan karakteristik rute, tahap kedua
+memakai \textit{Discrete Event Simulation} untuk memodelkan antrean bus
+pada charger yang jumlahnya terbatas, dan tahap ketiga menghitung profil
+beban dari kedua hasil tersebut. Kombinasi Monte Carlo dan DES ini sejalan
+dengan pendekatan yang diadopsi pada tugas akhir ini (lihat Bab IV) --
+bedanya, Rios dkk. memakai kombinasi ini untuk menghitung kebutuhan
+kapasitas kelistrikan jaringan (di Bogotá, Kolombia), sedangkan tugas akhir
+ini memakainya untuk mengevaluasi dampak terhadap keteraturan jadwal
+(headway) pada sistem BRT.
+
+\subsection{Pendekatan Simulasi}
+
+Pendekatan kedua memakai simulasi untuk menguji konfigurasi tanpa
+menyelesaikannya sebagai persoalan optimasi matematis. \textit{Discrete
+	Event Simulation} (DES) -- yang memajukan waktu dari satu kejadian ke
+kejadian berikutnya, alih-alih dalam langkah waktu tetap -- banyak dipakai
+karena kejadian yang relevan pada sistem bus listrik (kedatangan di SPKLU,
+mulai dan selesainya sesi pengisian daya, keberangkatan rit) terjadi pada
+waktu yang tidak beraturan. \textcite{jefferiesgohlich2020}
+membangun perangkat simulasi berbasis DES untuk menentukan kebutuhan
+armada, infrastruktur, dan energi pada jaringan bus riil, dengan
+\textit{depot} dan \textit{opportunity charging} sebagai dua opsi yang
+dibandingkan. \textcite{sebastiani2016} memakai pendekatan
+serupa untuk mengevaluasi operasi bus listrik pada jaringan BRT,
+mengonfirmasi bahwa DES cukup fleksibel untuk merepresentasikan antrean dan
+kontensi sumber daya pada SPKLU yang dipakai bersama banyak rute -- persis
+persoalan yang dihadapi TransJogja jika elektrifikasi diperluas ke seluruh
+20 koridor sekaligus (lihat Bab III).
+
+\textcite{casella2024} menunjukkan variasi
+lain dari pendekatan DES: alih-alih memakai DES murni sebagai alat evaluasi
+skenario, mereka membangun model optimasi penjadwalan pengisian daya
+berbasis kejadian diskrit, dengan dua elemen yang relevan bagi tugas akhir
+ini -- representasi profil pengisian daya baterai yang non-linear
+(bukan asumsi linier sederhana), dan pengenalan \textit{"intermediate
+	events"} yang memungkinkan sistem tidak selalu memaksa ada bus yang
+sedang mengisi daya pada tiap rentang waktu, sehingga jadwal pengisian daya
+punya keleluasaan waktu yang lebih realistis. Kedua elemen ini konsisten
+dengan pertimbangan yang diambil pada perancangan model drain baterai
+tugas akhir ini (lihat Bab IV), meski tugas akhir ini tidak mengadopsi
+kerangka optimasinya secara langsung.
+
+Satu keterbatasan yang umum ditemui pada studi simulasi di atas: kondisi
+operasional yang diasumsikan bersifat deterministik atau berbasis
+rata-rata, padahal waktu tempuh antar-halte pada praktiknya bervariasi dari
+hari ke hari akibat kepadatan lalu lintas, cuaca, dan faktor lain yang
+tidak sepenuhnya bisa diprediksi. \textcite{avishan2023} menunjukkan besarnya konsekuensi dari mengabaikan
+variasi ini: pada penjadwalan armada bus listrik yang mengasumsikan waktu
+tempuh tetap, hingga 48\% rit yang dijadwalkan berpotensi terlambat atau
+batal begitu waktu tempuh sesungguhnya bervariasi -- angka yang jauh dari
+dapat diabaikan. \textcite{jiang2021} menemukan pola
+serupa pada penjadwalan bus listrik di Shenzhen, dan mengatasinya lewat
+optimasi \textit{robust} yang divalidasi lewat simulasi Monte Carlo,
+meski hasilnya menunjukkan ada \textit{trade-off}: keandalan jadwal yang
+lebih tinggi terhadap ketidakpastian umumnya menaikkan biaya operasional.
+
+Variasi waktu tempuh ini berpotensi memengaruhi kapan persisnya bus
+membutuhkan pengisian daya, dan karenanya memengaruhi seberapa parah
+kontensi yang terjadi di SPKLU pada hari-hari tertentu. \textcite{debruin2023} mengambil
+pendekatan yang dekat dengan tugas akhir ini untuk menangani persoalan
+serupa: alih-alih menambah kelonggaran waktu (\textit{slack}) pada jadwal
+secara statis -- yang menurut mereka tidak cukup menangkap variansi
+distribusi waktu tempuh maupun ketergantungan antar-rit -- mereka memakai
+\textit{Discrete Event Simulation} untuk secara langsung mengevaluasi
+ketahanan (\textit{robustness}) suatu jadwal terhadap waktu tempuh yang
+stokastik. Lapisan simulasi stokastik Monte Carlo -- menjalankan simulasi
+berulang kali dengan variasi acak pada parameter waktu tempuh, lalu
+mengamati distribusi hasilnya -- menjadi pelengkap yang relevan atas
+keterbatasan pendekatan deterministik di atas, dan menjadi dasar pendekatan
+yang diadopsi pada tugas akhir ini (lihat Bab IV). Tugas akhir ini secara konsisten mengadopsi pendekatan simulasi \textit{stokastik}
+berbasis Monte Carlo -- bukan deterministik -- karena parameter waktu tempuh
+antar-halte diperlakukan sebagai variabel acak (lihat Subbab
+\ref{sec:perencanaan-infrastruktur} dan Bab IV), sehingga seluruh hasil pada
+tugas akhir ini dilaporkan sebagai rata-rata dan simpangan baku dari banyak
+kali perulangan, bukan nilai tunggal.
+
+\section{Posisi Tugas Akhir Ini terhadap Peta Riset yang Ada}
+\label{sec:posisi-penelitian}
+
+Tabel \ref{tab:peta-riset} merangkum tiga arus riset yang tergambar dari
+subbab-subbab di atas, beserta keterbatasan yang konsisten muncul pada
+masing-masing.
+
+\begin{table}[h]
+	\centering
+	\caption{Tiga arus riset perencanaan bus listrik dan keterbatasannya}
+	\label{tab:peta-riset}
+	\begin{tabular}{p{3.5cm}p{4.5cm}p{4.5cm}}
+		\toprule
+		\textbf{Arus Riset} & \textbf{Capaian} & \textbf{Keterbatasan yang Konsisten Muncul} \\
+		\midrule
+		Optimasi infrastruktur \& penjadwalan (MILP/MINLP) &
+		Matang secara metodologis untuk menentukan lokasi, ukuran armada, dan
+		jadwal secara simultan \parencite{he2023,rizopoulos2025,guschinsky2021,liu2021} &
+		\textcite{zhou2024} mencatat, dari tinjauan sistematis
+		lebih dari 100 studi, mayoritas memakai formulasi deterministik;
+		\textcite{guschinsky2021} secara terbuka mengakui
+		penyederhanaan ini dalam model mereka sendiri \\
+		\addlinespace
+		Manajemen baterai \& interaksi jaringan (V2G) &
+		Terbukti ekonomis pada kondisi tertentu \parencite{manzolli2022} &
+		Validasi baru pada armada berskala kecil, belum pada armada kota
+		penuh \\
+		\addlinespace
+		Simulasi (DES) untuk perencanaan infrastruktur &
+		Mampu merepresentasikan antrean dan kontensi sumber daya pada sistem
+		nyata, termasuk BRT \parencite{jefferiesgohlich2020,sebastiani2016,rios2014,casella2024} &
+		Umumnya masih memakai kondisi operasional deterministik/rata-rata;
+		pengecualian pada studi penjadwalan yang secara eksplisit menangani
+		ketidakpastian \parencite{avishan2023,jiang2021,debruin2023}, meski
+		studi tersebut berfokus pada penjadwalan kendaraan (\textit{vehicle
+			scheduling}), bukan perbandingan skenario lokasi/kapasitas
+		infrastruktur \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Perbandingan pada Tabel \ref{tab:peta-riset} menunjukkan bahwa perhatian
+terhadap ketidakpastian operasional sesungguhnya sudah muncul pada
+literatur -- terutama pada studi penjadwalan kendaraan (\textit{vehicle
+	scheduling}) yang secara eksplisit memodelkan waktu tempuh sebagai variabel
+acak \parencite{avishan2023,jiang2021,debruin2023}, bahkan salah satunya
+\parencite{avishan2023} menunjukkan dampak yang cukup besar (hingga 48\% rit
+terdampak) bila ketidakpastian ini diabaikan. Namun perhatian yang sama
+belum banyak terlihat pada studi perbandingan lokasi dan kapasitas
+infrastruktur SPKLU -- arus riset ini (baris pertama Tabel
+\ref{tab:peta-riset}) secara konsisten tetap memakai parameter deterministik,
+sebagaimana dicatat baik oleh \textcite{zhou2024} pada tinjauan
+sistematisnya maupun diakui langsung oleh \textcite{guschinsky2021}
+dalam model mereka sendiri.
+
+Tugas akhir ini tidak diposisikan sebagai kontribusi pada arus optimasi
+matematis (bukan MILP/MINLP, bukan pula manajemen baterai atau V2G --
+keduanya di luar Batasan Masalah pada Bab I). Posisinya berada pada arus
+ketiga: simulasi berbasis DES, dengan lapisan stokastik Monte Carlo yang
+menjawab keterbatasan "kondisi operasional deterministik" -- bukan pada
+persoalan penjadwalan kendaraan seperti studi-studi yang sudah menangani
+ketidakpastian di atas, melainkan pada persoalan perbandingan lokasi dan
+kapasitas infrastruktur SPKLU, yang berdasarkan penelusuran literatur pada
+bab ini belum banyak diuji dengan cara yang sama. Preseden metodologis yang paling dekat adalah \textcite{rios2014}, yang memakai kombinasi
+serupa (Monte Carlo untuk konsumsi energi harian, DES untuk antrean SPKLU)
+-- namun untuk tujuan menghitung profil beban jaringan listrik, bukan
+mengevaluasi keteraturan jadwal (headway) seperti tugas akhir ini.
+
+Tugas akhir ini juga tidak mengklaim menyelesaikan seluruh keterbatasan
+yang ada pada literatur -- kombinasi lokasi/kapasitas SPKLU pada tugas
+akhir ini tetap diuji lewat perbandingan skenario (bukan dioptimasi
+otomatis lewat MILP), sebagaimana disebutkan pada Batasan Masalah. Namun
+pada aspek representasi variasi harian untuk persoalan perencanaan
+infrastruktur secara spesifik, tugas akhir ini melangkah lebih jauh
+dibandingkan pendekatan deterministik yang selama ini umum dipakai pada
+arus riset tersebut.
+
+Dari sisi konteks, studi kasus pada literatur yang ditinjau di atas
+sebagian besar berasal dari Eropa, Amerika Serikat, Tiongkok, dan sebagian
+Asia Tenggara (Malaysia); sistem BRT di Indonesia -- termasuk TransJogja --
+belum banyak menjadi objek kajian serupa. Tugas akhir ini turut mengisi
+celah kontekstual tersebut, meski hal ini bersifat kontribusi
+empiris/kontekstual, bukan kebaruan metodologis.

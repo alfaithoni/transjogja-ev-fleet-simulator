@@ -1,0 +1,145 @@
+{
+  "spklu_locations": {
+    "SPKLU-ADI": {
+      "name": "SPKLU Adisucipto",
+      "travel_min": 60,
+      "charge_min": 60,
+      "type": "opportunity",
+      "charge_rate_kw": 97.209,
+      "_charge_rate_note": "Dikalibrasi: battery_capacity_kwh_default(138.87) * 0.70 / 1 jam = 97.209 kW. Membuat 30%->100% tepat 60 menit, konsisten dengan baseline wawancara."
+    },
+    "SPKLU-JOM": {
+      "name": "SPKLU Terminal Jombor",
+      "travel_min": 30,
+      "charge_min": 60,
+      "type": "opportunity"
+    },
+    "SPKLU-CON": {
+      "name": "SPKLU Terminal Condong Catur",
+      "travel_min": 30,
+      "charge_min": 60,
+      "type": "opportunity",
+      "_anchor_note": "Berdasarkan rules.md, lokasi SPKLU ini dikaitkan dengan halte \"Terminal Condong Catur\", BUKAN \"SPBU Condongcatur (Barat/Timur)\"."
+    },
+    "SPKLU-GIW": {
+      "name": "SPKLU Terminal Giwangan",
+      "travel_min": 30,
+      "charge_min": 60,
+      "type": "opportunity"
+    },
+    "SPKLU-NGB": {
+      "name": "SPKLU Ngabean",
+      "travel_min": 15,
+      "charge_min": 60,
+      "type": "opportunity"
+    },
+    "SPKLU-KRI": {
+      "name": "SPKLU Kridosono",
+      "travel_min": 15,
+      "charge_min": 60,
+      "type": "opportunity"
+    }
+  },
+  "depot_locations": {
+    "DEPOT-GAM": {
+      "name": "Pool Gamping",
+      "charge_min": 240,
+      "type": "depot"
+    },
+    "DEPOT-BGT": {
+      "name": "Pool Banguntapan",
+      "charge_min": 240,
+      "type": "depot"
+    }
+  },
+  "route_assignment": {
+    "notes": "Mapping statis rute -> pool/SPKLU berdasarkan rules.md \u00c2\u00a73-4. Pool Gamping: 13 koridor. Pool Banguntapan: 7 koridor.",
+    "pool_gamping_routes": [
+      "3A",
+      "3B",
+      "4A",
+      "4B",
+      "5A",
+      "5B",
+      "6",
+      "8",
+      "9",
+      "10",
+      "11",
+      "L-1",
+      "15"
+    ],
+    "pool_banguntapan_routes": [
+      "1A",
+      "1B",
+      "2A",
+      "2B",
+      "12",
+      "13",
+      "14"
+    ],
+    "spklu_assignment_4locations": {
+      "notes": "ARCHIVED: Untuk skenario 4 SPKLU: setiap rute di-assign ke SPKLU terdekat dari pool-nya (statis, berdasarkan terminal asal di rules.md \u00c2\u00a73). (Merujuk ke spklu_assignment_4locations_final untuk mapping final)",
+      "SPKLU-ADI": [
+        "L-1",
+        "14"
+      ],
+      "SPKLU-JOM": [
+        "5A",
+        "5B",
+        "8",
+        "9",
+        "10",
+        "13",
+        "15"
+      ],
+      "SPKLU-CON": [
+        "2A",
+        "2B",
+        "3A",
+        "4A",
+        "4B",
+        "11",
+        "12"
+      ],
+      "SPKLU-GIW": [
+        "1A",
+        "1B",
+        "3B",
+        "6"
+      ],
+      "status": "archived_superseded"
+    },
+    "spklu_assignment_4locations_final": {
+      "notes": "Mapping final ke 4 lokasi SPKLU (ADI, NGB, CON, KRI) berdasarkan skenario s17b_probabilistic_4loc_prop.",
+      "SPKLU-ADI": [
+        "1A",
+        "14"
+      ],
+      "SPKLU-NGB": [
+        "1B",
+        "3B",
+        "6",
+        "9",
+        "10",
+        "11",
+        "13",
+        "15"
+      ],
+      "SPKLU-CON": [
+        "2A",
+        "2B",
+        "3A",
+        "4B",
+        "5B",
+        "12"
+      ],
+      "SPKLU-KRI": [
+        "4A",
+        "5A",
+        "8",
+        "L-1"
+      ]
+    }
+  }
+}

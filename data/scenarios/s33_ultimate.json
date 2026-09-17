@@ -1,0 +1,90 @@
+{
+    "scenario_id": "s33_ultimate",
+    "scenario_name": "S33 Ultimate: S28 Infra + Dynamic V1",
+    "charging_mechanism": "full_opportunity",
+    "spklu_assignment": "multi_by_route",
+    "spklu_assignment_map": {
+        "SPKLU-ADI": [
+            "1A",
+            "14"
+        ],
+        "SPKLU-NGB": [
+            "1B",
+            "3B",
+            "6",
+            "9",
+            "10",
+            "11",
+            "13",
+            "15"
+        ],
+        "SPKLU-CON": [
+            "2A",
+            "2B",
+            "3A",
+            "4B",
+            "5B",
+            "12"
+        ],
+        "SPKLU-KRI": [
+            "4A",
+            "5A",
+            "8",
+            "L-1"
+        ]
+    },
+    "spklu_details": {
+        "SPKLU-ADI": {
+            "name": "SPKLU Adisucipto",
+            "n_gun": 3,
+            "travel_min": 60,
+            "charge_min": 60
+        },
+        "SPKLU-NGB": {
+            "name": "SPKLU-NGB",
+            "n_gun": 10,
+            "travel_min": 30,
+            "charge_min": 60
+        },
+        "SPKLU-CON": {
+            "name": "SPKLU Terminal Condong Catur",
+            "n_gun": 9,
+            "travel_min": 30,
+            "charge_min": 60
+        },
+        "SPKLU-KRI": {
+            "name": "SPKLU-KRI",
+            "n_gun": 3,
+            "travel_min": 30,
+            "charge_min": 60
+        }
+    },
+    "bus_details": {
+        "1A": {"base_count": 5, "extra": 1},
+        "1B": {"base_count": 5, "extra": 1},
+        "2A": {"base_count": 5, "extra": 1},
+        "2B": {"base_count": 5, "extra": 1},
+        "3A": {"base_count": 5, "extra": 1},
+        "3B": {"base_count": 5, "extra": 1},
+        "4A": {"base_count": 3, "extra": 1},
+        "4B": {"base_count": 3, "extra": 1},
+        "5A": {"base_count": 2, "extra": 1},
+        "5B": {"base_count": 2, "extra": 1},
+        "6": {"base_count": 3, "extra": 1},
+        "8": {"base_count": 4, "extra": 1},
+        "9": {"base_count": 3, "extra": 1},
+        "10": {"base_count": 3, "extra": 1},
+        "11": {"base_count": 2, "extra": 1},
+        "12": {"base_count": 2, "extra": 1},
+        "13": {"base_count": 2, "extra": 1},
+        "14": {"base_count": 2, "extra": 1},
+        "15": {"base_count": 2, "extra": 1},
+        "L-1": {"base_count": 2, "extra": 1}
+    },
+    "dynamic_charging": true,
+    "dynamic_charging_params": {
+        "peak_target_soc_pct": 80.0,
+        "offpeak_target_soc_pct": 100.0,
+        "charge_rate_kw": 97.209
+    }
+}
