@@ -1,0 +1,232 @@
+\cleardoublepage % memastikan bab baru dimulai di halaman ganjil (kanan)
+\chapter{STUDI LITERATUR}
+\label{chap:studi-literatur}
+\section{Tentang Studi Literatur}
+Studi literatur biasanya berisi tentang tinjauan pustaka, landasan teori, dan penelitian-penelitian terdahulu yang relevan dengan topik tugas akhir yang dikerjakan.
+Dalam subbab ini, penulis diharapkan dapat menjelaskan:
+\begin{enumerate}
+  \item Landasan teori yang diperoleh dari literatur yang akan digunakan untuk menyelesaikan persoalan TA;
+  \item Pengetahuan tentang kasus yang akan dikaji; dan
+  \item Penelitian atau solusi terkait untuk mengetahui posisi persoalan dan berbagai solusi yang memungkinkan untuk diterapkan berdasarkan hasil studi literatur ini.
+\end{enumerate}
+Jadi, studi literatur ini bukan sekadar rangkuman dari berbagai sumber referensi, tetapi harus diolah dan disajikan secara sistematis sehingga dapat memberikan gambaran yang jelas tentang landasan teori dan penelitian-penelitian terdahulu yang relevan dengan topik tugas akhir.
+
+Penulisan studi literatur yang baik dimulai dari penjelasan tentang kasus yang akan dikaji, kemudian diikuti dengan penjelasan tentang teori-teori yang relevan, dan diakhiri dengan tinjauan terhadap penelitian-penelitian terdahulu yang berkaitan dengan topik tugas akhir.
+Misalnya, jika topik tugas akhir adalah tentang masalah klasifikasi biji kopi berdasarkan citra kopi, 
+penulis dapat memulai dengan menjelaskan terlebih dahulu tentang karakteristik biji kopi, masalah dalam melakukan klasifikasi biji kopi, 
+kemudian menjelaskan tentang berbagai metode berbasis komputer yang dapat digunakan untuk mengklasifikasikan biji kopi berdasarkan citranya, 
+metode terbaik yang memungkinkan untuk diterapkan, teori-teori dasar tentang metode tersebut, dan diakhiri dengan tinjauan terhadap penelitian-penelitian terdahulu yang menggunakan metode untuk klasifikasi citra.
+
+Dalam studi literatur, biasanya banyak penjelasan tentang teori-teori yang disertai dengan rumus atau persamaan matematika, gambar, tabel, algoritma, pseudocode, atau kode program.
+Oleh karena itu, pada subbab berikut akan dijelaskan beberapa hal teknis terkait format penulisan dokumen tugas akhir.
+
+\section{Format Penulisan Gambar, Tabel, Rumus, dan Kode Program}
+Berikut adalah beberapa contoh penulisan gambar, tabel, rumus, dan kode program yang sesuai dengan format penulisan tugas akhir.
+\subsection{Penulisan Gambar}
+Contoh gambar dapat dilihat pada Gambar \ref{fig:jaringan} dan Gambar \ref{fig:jaringan2}.
+Secara vertikal, gambar biasanya diletakkan di bagian atas halaman (\textit{top}) atau di bagian bawah halaman (\textit{bottom}).
+Gambar tidak harus diletakkan tepat di tempat gambar tersebut disebutkan pertama kali dalam teks,
+tetapi dapat diletakkan di halaman berikutnya jika tidak muat di halaman yang sama. Pada contoh ini, kedua gambar diletakkan di bagian atas halaman 
+menggunakan opsi \texttt{[t]} pada lingkungan \texttt{figure}, namun pada halaman yang berbeda, meskipun disebutkan di halaman yang sama akibat ruang yang terbatas. 
+
+Penyebutan judul gambar dalam teks menggunakan perintah \texttt{ref}, misalnya Gambar \texttt{\\ref\{fig:jaringan\}}.
+Gunakan huruf kapital pada kata "Gambar" saat menyebutkan gambar dalam teks.
+
+\begin{figure}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
+  \caption{Contoh peletakan gambar di bagian atas halaman} 
+	\label{fig:jaringan}
+    	\includegraphics[width=0.7\textwidth]{images/gambar1.png}
+\end{figure}
+
+Gambar, grafik, atau ilustrasi harus memiliki keterangan atau judul (\textit{caption}) yang menjelaskan isi gambar tersebut. 
+Secara horisontal, gambar dan judulnya diposisikan di tengah. Nomor gambar tidak diakhiri tanda baca.
+Judul gambar diletakkan di bawah gambar dan ditulis dengan huruf kecil kecuali huruf pertama pada kalimat judul. 
+Kalimat judul yang panjang dapat ditulis dalam beberapa baris seperti pada Gambar \ref{fig:jaringan2}.
+
+Ukuran gambar yang ditampilkan dapat diatur dengan mengubah nilai \textit{width} dalam sintaks \textit{includegraphics}. 
+Gambar \ref{fig:jaringan} memiliki lebar 70\% dari lebar teks, sedangkan Gambar \ref{fig:jaringan2} memiliki lebar 90\% dari lebar teks.
+ 
+
+\begin{figure}[t] 
+  \caption{Contoh peletakan gambar dengan judul yang panjang sehingga ditulis dalam beberapa baris} 
+	\label{fig:jaringan2}
+    	\includegraphics[width=0.9\textwidth]{images/gambar1.png}
+\end{figure}
+
+Pastikan gambar yang digunakan memiliki resolusi yang cukup tinggi agar tidak pecah atau buram saat dicetak. 
+Gambar umumnya tidak tajam dan tulisan tidak jelas atau kabur jika gambar tersebut:
+\begin{enumerate}[a.]
+  \item diperoleh dari hasil cropping pada suatu halaman buku atau situs web;
+  \item hasil pembesaran gambar yang gambar aslinya sebenarnya berukuran kecil; atau
+  \item disimpan dalam resolusi kecil
+\end{enumerate}
+Ketidakjelasan gambar ini dapat dilihat pada garis-garis diagram yang tidak tegas dan tulisan-tulisan dalam gambar yang tampak kabur dan kurang jelas terbaca.
+
+Untuk mendapatkan gambar yang tidak kabur (\textit{blur}), langkah-langkah berikut dapat digunakan:
+\begin{enumerate}[(a)]
+\item Hindari \textit{screenshot}. Gambar yang didapat di suatu pustaka atau referensi sebaiknya digambar ulang (tidak perlu sama persis), misalnya menggunakan PowerPoint, Canva, Figma, draw.io, atau yang lainnya.
+\item Jika diagram atau ilustrasi digambar menggunakan draw.io, saat gambar disimpan ke format PNG atau JPG (\textit{export as}), lakukan \textit{zoom} ke minimal 300\% (\textit{the default value is} 100\%). 
+\item Jika diagram digambar dengan menggunakan \texttt{PowerPoint} atau aplikasi yang mengolah gambar vektor lainnya, gambar dapat langsung disimpan asalkan resolusinya tinggi.
+\end{enumerate}
+
+\subsection{Penulisan Tabel}
+Format penulisan tabel hampir sama dengan format penulisan gambar. Bedanya adalah judul tabel diletakkan di atas tabel, bukan di bawah tabel seperti pada gambar.
+Ada tabel yang bisa dimuat dalam satu halaman (tabel pendek) dan ada tabel panjang yang yang tidak muat dalam satu halaman. Kedua jenis tabel tersebut disusun dengan cara yang berbeda.
+Jika tabel sangat panjang, gunakan paket \textit{longtable} untuk membuat tabel yang dapat terpotong ke halaman berikutnya.
+Namun, jika tabel dapat dimuat dalam satu halaman, gunakan lingkungan \textit{table} biasa, tidak menggunakan \textit{longtable}.
+Usahakan tabel dapat ditulis dalam satu halaman, tidak terpotong ke halaman berikutnya, jika memungkinkan.
+
+\subsubsection{Penulisan Tabel Pendek}
+Contoh tabel pendek dapat dilihat pada Tabel \ref{tab:tabel1}, \ref{tab:tabel2}, dan \ref{tab:tabel3}. 
+Pada kedua table ini, tabel dan judulnya diposisikan di tengah secara horisontal dan 
+judul tabel diletakkan di atas tabel. Secara vertikal, tabel sebaiknya diletakkan di bagian atas atau bawah halaman.
+
+Penyebutan judul tabel dalam teks menggunakan perintah \texttt{ref}, misalnya Tabel \ref{tab:tabel1}.
+Gunakan huruf kapital pada kata "Tabel" saat menyebutkan tabel dalam teks.
+
+Tabel \ref{tab:tabel1} menggunakan paket \textit{tabularx} untuk mengatur lebar kolom secara fleksibel. 
+Selain itu, tabel ini juga menggunakan \textit{threeparttable} untuk menambahkan catatan kaki pada tabel 
+dan opsi \texttt{X} agar lebar kolom fleksibel menyesuaikan lebar tabel.
+Catatan kaki pada tabel ini menggunakan perintah \texttt{tablenotes} yang disediakan oleh paket \textit{threeparttable}.
+Catatan kaki pada tabel ini menggunakan perintah \texttt{\textbackslash footnotemark} dan \texttt{\textbackslash footnotetext} untuk menambahkan catatan kaki pada tabel.
+
+Tabel \ref{tab:tabel2} menggunakan format standar \texttt{| l | c | r |}. 
+Tabel \ref{tab:tabel3} menggunakan lebar kolom tetap (\textit{fixed width}) menggunakan \texttt{p\{width\}}.
+
+\begin{table} 
+  \centering
+    \begin{threeparttable}[t] % threeparttable agar bisa menambahkan catatan kaki pada tabel
+    \caption{Contoh tabel yang menggunakan \texttt{tabularx} untuk mengatur lebar kolom secara fleksibel. 
+    Selain itu, tabel ini juga menggunakan \texttt{threeparttable} untuk menambahkan catatan kaki pada tabel 
+    dan opsi \texttt{X} agar lebar kolom fleksibel menyesuaikan lebar tabel.}
+    \label{tab:tabel1}
+    \begin{tabularx}{0.6\textwidth}{| c | X| l | r @{}|} % @{} removes extra space at edges, X makes the column flexible width
+	    \hline
+	    No & Nama 	& Satuan 		& Harga \\
+	    \hline
+	    1 & Buku 	& Exemplar	& 25000 \\
+	    2 & Komputer	& Unit		& 2500000 \\
+	    3 & Pensil	& Buah		& 118900 \\
+	    \hline
+	  \end{tabularx} 
+    \begin{tablenotes}
+      \footnotesize
+      \item \footnotemark[1]Tabel harga berdasarkan data tahun 2023.
+      \item \footnotemark[2]Sumber: \url{https://www.example.com}
+    \end{tablenotes}
+  \end{threeparttable}
+\end{table}
+
+
+
+
+\begin{table}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
+  \caption{Tabel yang menggunakan format standar \texttt{| l | c | r |}}
+  \label{tab:tabel2}
+	\begin{tabular}{ | l | c | r | }
+	\hline
+	Nama 	& Satuan 		& Harga \\
+	\hline
+	Buku 	& Exemplar	& 25000 \\
+	Komputer	& Unit		& 2500000 \\
+	Pensil	& Buah		& 118900 \\
+	\hline
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
+  \centering
+  \caption{Tabel yang lebar kolomnya dibuat tetap}
+  \label{tbl:tabel3}
+	\begin{tabular}{  p{0.2\textwidth} | p{0.2\textwidth} | p{0.2\textwidth}  }
+	\hline
+	\textbf{Nama} 	& \textbf{Satuan} 		& \textbf{Harga} \\
+	\hline
+	Buku 	& Exemplar	& 25000 \\
+	\emph{Komputer}	& Unit		& 2500000 \\
+	Pensil	& Buah		& 118900 \\
+	\hline
+	\end{tabular}
+\end{table}
+
+% -- Example of importing table from external file --
+\subsubsection{Mengimpor Tabel dari Berkas Eksternal}
+
+Untuk kerapian penulisan, tabel tidak harus ditulis di dokumen utama. Sebagai contoh, Tabel \ref{tab:tabel4} diimpor dari berkas eksternal \texttt{table/tabel1.tex} menggunakan perintah \texttt{input}. 
+Dengan demikian, jika tabel tersebut perlu diubah, cukup mengubah pada berkas eksternal tersebut tanpa perlu mengubah pada berkas dokumen utama ini.
+
+\input tables/tabel1.tex
+
+
+% -- Example of long table --
+\subsubsection{Tabel yang Sangat Panjang}
+Jika tabel terlalu panjang sehingga tidak muat dalam satu halaman, gunakan paket 
+\textit{longtable} untuk membuat tabel yang dapat terpotong ke halaman berikutnya, 
+seperti pada Tabel \ref{tab:long}. 
+
+\input tables/longtable1.tex
+
+\subsection{Penulisan Rumus atau Persamaan Matematika Menggunakan {\LaTeX} dan Penomorannya}
+Contoh rumus matematika dapat ditulis seperti pada Persamaan \ref{eq:contoh1} di bawah ini. 
+Penomoran persamaan diletakkan di sebelah kanan, dan rumus ditulis dalam mode \textit{display math}.
+\begin{equation}
+E = mc^2
+\label{eq:contoh1}
+\end{equation}
+\eqcaption{Persamaan Pertama}
+
+Contoh lain penulisan rumus matematika yang lebih kompleks dapat ditulis seperti pada Persamaan \ref{eq:rumus2}.
+Perlu diperhatikan bahwa jika rumus terdiri dari beberapa baris, nomor persamaan hanya diletakkan pada baris terakhir, bukan pada setiap baris.
+\begin{align}
+f(x) &= ax^2 + bx + c \notag \\ % tidak menampilkan nomor pada baris ini
+f'(x) &= \frac{d}{dx}(ax^2 + bx + c) \notag \\ % tidak menampilkan nomor pada baris ini
+      &= 2ax + b 
+      \label{eq:rumus2} % nomor hanya muncul pada baris terakhir
+\end{align}
+\eqcaption{Persamaan Kedua}
+
+Jika rumus terlalu panjang untuk ditulis dalam satu baris, gunakan lingkungan \textit{multline} seperti pada Persamaan \ref{eq:rumus3} di bawah ini.
+\begin{multline} 
+y = a_0 + a_1x + a_2x^2 + a_3x^3 + a_4x^4 + a_5x^5 + a_6x^6 + a_7x^7 \\
+    + a_8x^8 + a_9x^9 + a_{10}x^{10} \label{eq:rumus3}
+\end{multline}
+\eqcaption{Persamaan Ketiga}
+
+Jika ada penurunan rumus yang terdiri dari beberapa baris, namun tidak memerlukan penomoran pada setiap baris dan tidak masuk di daftar persamaan, gunakan lingkungan \textit{align*}, misalnya:
+
+\begin{align*} 
+S &= \sum_{i=1}^{n} i^2 \\
+  &= 1^2 + 2^2 + 3^2 + \cdots + n^2 \\
+  &= \frac{n(n + 1)(2n + 1)}{6}
+\intertext{Contoh lainnya adalah rumus untuk mencari nilai rata-rata fungsi $f(x)$ pada interval $[p, q]$:}
+\bar{f} &= \frac{1}{q - p} \int_{p}^{q} f(x) \, dx \\
+        &= \frac{1}{q - p} \int_{p}^{q} (ax^2 + bx + c) \, dx \\
+        &= \frac{1}{q - p} \left[ \frac{a}{3}x^3 + \frac{b}{2}x^2 + cx \right]_p^q \\
+        &= \frac{a(q^3 - p^3)}{3(q - p)} + \frac{b(q^2 - p^2)}{2(q - p)} + c \label{eq:rumus4}
+\end{align*}
+
+
+
+
+\subsection{Penulisan Kode Program, \textit{Script} atau \textit{Pseudocode}}
+Contoh penulisan kode program, \textit{script}, atau \textit{pseudocode} dapat dilihat seperti pada \textit{listing} \ref{lst:binary_iter}. 
+Gunakan paket \textit{listings} untuk menulis \textit{source code} dalam bahasa pemrograman tertentu. 
+Kode seperti ini disebut dengan istilah \textit{listing}. 
+Kode program, \textit{script}, atau \textit{pseudocode} yang relatif pendek dapat ditulis di dalam
+dokumen utama. Namun, jika kode programnya sangat panjang, sebaiknya ditulis di berkas terpisah dan diletakkan di lampiran.
+
+\subsection{Penulisan Algoritma}
+Contoh penulisan algoritma dapat dilihat pada Algoritma \ref{alg:binary-search}. Ada beberapa paket yang dapat digunakan untuk menulis algoritma,
+misalnya \textit{algorithm2e}, \textit{algorithmic}, dan \textit{algpseudocode}. 
+Pada contoh ini digunakan paket \textit{algorithmic} untuk menulis algoritma. Setiap paket memiliki sintaks yang berbeda-beda.
+Oleh karena itu, pelajari dokumentasi paket yang digunakan untuk menulis algoritma.
+
+
+\input{listings/binary-search-python.tex}
+
+
+\input{algorithms/binary-search-alg.tex}
+
+
+

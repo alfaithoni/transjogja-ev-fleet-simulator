@@ -305,7 +305,7 @@ demand is.
 
 We then varied total capacity at a single site to locate the boundary
 between a system that works and one that collapses
-(Table~\ref{tab:regime}).
+(Table~\ref{tab:regime} and Fig.~\ref{fig:regime}).
 
 \begin{table}[htbp]
 \caption{Capacity Sweep at a Single Station}
@@ -328,6 +328,16 @@ S20 & 4 & --- & 20.00 \\
 \end{center}
 \end{table}
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{fig1_regime_shift.pdf}
+\caption{Degraded routes per day as a function of connector count at a
+single station. The dashed line marks the regime boundary between 19
+and 18 connectors, where removing one connector nearly doubles daily
+route degradation (5.52 to 8.85).}
+\label{fig:regime}
+\end{figure}
+
 Degradation does not rise smoothly as capacity falls. Between 19 and 18
 connectors it jumps from 5.52 to 8.85 routes per day, and the composition
 of the queue changes with it: above that point the queue is dominated by
@@ -345,7 +355,8 @@ of service.
 
 \subsection{Hardware and Scheduling Optimize Different Metrics}
 
-Table~\ref{tab:main} compares the two intervention families against the
+Table~\ref{tab:main} and Fig.~\ref{fig:tradeoff}--\ref{fig:headway}
+compare the two intervention families against the
 proportional four-site baseline. The infrastructure family adds
 connectors above the baseline allocation; the algorithm family keeps
 baseline hardware and changes when buses decide to charge. V1 is
@@ -371,6 +382,28 @@ S33 (S28 + V1) & $30.78 \pm 1.98$ & $\mathbf{0.00}$ & 0/20 \\
 \label{tab:main}
 \end{center}
 \end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{fig2_tradeoff.pdf}
+\caption{Trade-off between mean realised headway and degraded routes per
+day for each scenario. Infrastructure scenarios (blue squares) improve
+headway; algorithm scenarios (red triangles) reduce degradation. Only
+the combined S33 (purple diamond) achieves zero degradation.}
+\label{fig:tradeoff}
+\end{figure}
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig3_headway_comparison.pdf}
+\caption{Mean realised headway (with $\pm 1\sigma$ error bars) and
+degraded-route rate for each intervention scenario. The red dotted line
+marks the tightest agency target (20 min). Degraded-route values are
+annotated above each bar. Infrastructure scenarios (blue) achieve the
+best headway; algorithm scenarios (red) achieve the lowest degradation;
+the combined scenario S33 (purple) achieves zero degradation.}
+\label{fig:headway}
+\end{figure*}
 
 Adding hardware buys headway. Raising capacity 12\% above the
 proportional baseline (S28) cuts mean headway from 34.93 to 26.14

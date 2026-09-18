@@ -20,13 +20,13 @@ Peralihan dari kendaraan berbahan bakar fosil ke kendaraan listrik terus
 berlangsung cepat. \textit{Global EV Outlook 2026} yang diterbitkan
 International Energy Agency (IEA) mencatat penjualan mobil listrik dunia
 tumbuh 20\% pada 2025, melampaui 20 juta unit dan menyentuh seperempat dari
-seluruh penjualan mobil baru secara global \parencite{iea2026}. Di kawasan
+seluruh penjualan mobil baru secara global \autocite{iea2026}. Di kawasan
 Asia Tenggara, penjualan mobil listrik meningkat lebih dari dua kali lipat
 dibanding tahun sebelumnya; Indonesia menjadi salah satu penggeraknya, dengan
 penjualan mobil listrik mencapai 15\% dari total penjualan mobil baru pada
 2025 dan tumbuh hampir 90\% secara tahunan pada kuartal pertama 2026,
 didorong turunnya premium harga mobil listrik dibanding kendaraan konvensional
-dari lebih 50\% pada 2024 menjadi sekitar 40\% pada 2025 \parencite{iea2026}.
+dari lebih 50\% pada 2024 menjadi sekitar 40\% pada 2025 \autocite{iea2026}.
 
 %TODO-CITE: jika ada data/laporan resmi Kemenhub atau Dishub DIY soal
 % roadmap elektrifikasi transportasi publik Indonesia secara spesifik,
@@ -37,9 +37,9 @@ global tumbuh 12\% pada 2025, dengan jangkauan rata-rata model bus listrik
 yang tersedia di pasar kini mencapai sekitar 360 km sekali pengisian penuh
 -- naik 15\% dibanding 2020, dan sudah cukup untuk menutupi kebutuhan
 operasional harian bus kota yang umumnya menempuh 150--300 km per hari
-\parencite{iea2026}. Perkembangan ini turut ditopang oleh perluasan
+\autocite{iea2026}. Perkembangan ini turut ditopang oleh perluasan
 infrastruktur \textit{depot charging} sebagai salah satu penopang utama
-kelayakan operasional dan skalabilitas armada bus listrik \parencite{iea2026}.
+kelayakan operasional dan skalabilitas armada bus listrik \autocite{iea2026}.
 
 Namun peralihan pada level armada -- bukan kendaraan individual -- membawa
 persoalan perencanaan tersendiri yang tidak muncul pada kendaraan pribadi.
@@ -137,7 +137,7 @@ asumsi kecepatan konstan ini justru menjadi sumber bias yang signifikan --
 secara analitis dan lewat eksperimen simulasi Monte Carlo berskala besar
 -- yaitu menjalankan simulasi yang sama berulang kali dengan nilai acak
 berbeda tiap perulangan, lalu mengagregasi hasilnya untuk mengestimasi
-perilaku sistem di bawah ketidakpastian \parencite{law2015} --
+perilaku sistem di bawah ketidakpastian \autocite{law2015} --
 mereka membuktikan konsumsi energi kendaraan listrik meningkat seiring
 variansi akselerasi, sehingga model yang mengabaikan dinamika lalu lintas
 (percepatan dan perlambatan) secara sistematis meremehkan konsumsi energi
@@ -323,23 +323,23 @@ masing-masing.
 		\midrule
 		Optimasi infrastruktur \& penjadwalan (MILP/MINLP) &
 		Matang secara metodologis untuk menentukan lokasi, ukuran armada, dan
-		jadwal secara simultan \parencite{he2023,rizopoulos2025,guschinsky2021,liu2021} &
+		jadwal secara simultan \autocite{he2023,rizopoulos2025,guschinsky2021,liu2021} &
 		\textcite{zhou2024} mencatat, dari tinjauan sistematis
 		lebih dari 100 studi, mayoritas memakai formulasi deterministik;
 		\textcite{guschinsky2021} secara terbuka mengakui
 		penyederhanaan ini dalam model mereka sendiri \\
 		\addlinespace
 		Manajemen baterai \& interaksi jaringan (V2G) &
-		Terbukti ekonomis pada kondisi tertentu \parencite{manzolli2022} &
+		Terbukti ekonomis pada kondisi tertentu \autocite{manzolli2022} &
 		Validasi baru pada armada berskala kecil, belum pada armada kota
 		penuh \\
 		\addlinespace
 		Simulasi (DES) untuk perencanaan infrastruktur &
 		Mampu merepresentasikan antrean dan kontensi sumber daya pada sistem
-		nyata, termasuk BRT \parencite{jefferiesgohlich2020,sebastiani2016,rios2014,casella2024} &
+		nyata, termasuk BRT \autocite{jefferiesgohlich2020,sebastiani2016,rios2014,casella2024} &
 		Umumnya masih memakai kondisi operasional deterministik/rata-rata;
 		pengecualian pada studi penjadwalan yang secara eksplisit menangani
-		ketidakpastian \parencite{avishan2023,jiang2021,debruin2023}, meski
+		ketidakpastian \autocite{avishan2023,jiang2021,debruin2023}, meski
 		studi tersebut berfokus pada penjadwalan kendaraan (\textit{vehicle
 			scheduling}), bukan perbandingan skenario lokasi/kapasitas
 		infrastruktur \\
@@ -351,8 +351,8 @@ Perbandingan pada Tabel \ref{tab:peta-riset} menunjukkan bahwa perhatian
 terhadap ketidakpastian operasional sesungguhnya sudah muncul pada
 literatur -- terutama pada studi penjadwalan kendaraan (\textit{vehicle
 	scheduling}) yang secara eksplisit memodelkan waktu tempuh sebagai variabel
-acak \parencite{avishan2023,jiang2021,debruin2023}, bahkan salah satunya
-\parencite{avishan2023} menunjukkan dampak yang cukup besar (hingga 48\% rit
+acak \autocite{avishan2023,jiang2021,debruin2023}, bahkan salah satunya
+\autocite{avishan2023} menunjukkan dampak yang cukup besar (hingga 48\% rit
 terdampak) bila ketidakpastian ini diabaikan. Namun perhatian yang sama
 belum banyak terlihat pada studi perbandingan lokasi dan kapasitas
 infrastruktur SPKLU -- arus riset ini (baris pertama Tabel
